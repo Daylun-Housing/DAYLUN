@@ -5,7 +5,9 @@ import { FaInstagram, FaFacebookF, FaXTwitter, FaYoutube, FaTiktok, FaEnvelope }
 
 export default function Header() {
   return (
-    <header className="w-full flex justify-between items-center px-6 py-4 bg-white text-blue-900 border-b border-blue-200">
+    // <header className="w-full flex justify-between items-center px-6 py-4 bg-white text-blue-900 border-b border-blue-200">
+    <header className="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-white text-blue-900 border-b border-blue-200 shadow-sm">
+
     {/* Logo Image */}
     <div className="relative w-32 h-10">
       <Image src="/logo.svg" alt="DAYLUN logo" fill className="object-contain" />
