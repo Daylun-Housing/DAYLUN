@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-export default function OurMission() {
+export default function OurProcesses() {
   return (
     <section className="relative flex flex-col md:flex-row h-screen w-full">
       {/* Left Panel */}
       <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 md:w-1/3 relative z-10">
         <div className="max-w-md mt-16">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
-            Our Mission
+            Our Processes
           </h2>
           <p className="text-lg md:text-xl leading-relaxed">
-          To develop innovative construct technologies to revolutionize the construction sector while providing sustainable and affordable housing for all. 
+          See our process on how to build a home. 
           </p>
         </div>
       </div>
