@@ -8,10 +8,10 @@ export default function Home() {
       <Header />
 
 
-      {/* Logo-on-background Section */}
+      {/* Logo-on-background */}
       <section className="relative h-screen w-full">
         <Image
-          src="/background.jpg" // Add your background image here
+          src="/background.jpg"
           alt="Background"
           fill
           className="object-cover"
