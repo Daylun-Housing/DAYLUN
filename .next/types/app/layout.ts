@@ -1,4 +1,4 @@
-// File: /home/fronxo/Desktop/DAYLUN/app/layout.tsx
+// File: C:\Users\paliu\Documents\Work\Daylun\DAYLUN\DAYLUN\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

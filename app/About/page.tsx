@@ -1,0 +1,45 @@
+import Image from "next/image";
+import Header from "../components/Header";
+import OurMission from "./Components/OurMission";
+import OurStory from "./Components/OurStory";
+import OurLeadership from "./Components/OurLeadership";
+import OurValues from "./Components/OurValues";
+import OurApproach from "./Components/OurApproach";
+
+export default function AboutPage() {
+  return (
+    <>
+      <Header />
+
+
+      {/* Logo-on-background */}
+      <section className="relative h-screen w-full">
+        <Image
+          src="/background.jpg"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30 z-10" />
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+        <div className="relative w-[500px] h-[180px] md:w-[640px] md:h-[220px]">
+            <Image
+              src="/logo-alt.svg"
+              alt="Daylun Logo Alt"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
+      </section>
+      <OurMission/>
+      <OurStory/>
+      <OurLeadership/>
+      <OurValues/>
+      <OurApproach/>
+    </>
+
+    
+  );
+}
