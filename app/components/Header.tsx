@@ -16,23 +16,23 @@ export default function Header() {
 
       {/* Center: Nav Links */}
       <nav className="hidden lg:flex gap-6 text-sm font-semibold tracking-wide">
-        <a href="./About" className="hover:text-blue-600">ABOUT</a>
-        <a href="#" className="hover:text-blue-600">House Builder</a>
-        <a href="#" className="hover:text-blue-600">Store</a>
-        <a href="#" className="hover:text-blue-600">Technologies</a>
-        <a href="#" className="hover:text-blue-600">Investors</a>
-        <a href="./ArticleTemplate" className="hover:text-blue-600">Articles</a>
-        <CgSearch className="hover:text-blue-500"/>
+        <a href="./About" className="hover:text-[#110C27]">ABOUT</a>
+        <a href="#" className="hover:text-[#110C27]">HOUSE BUILDER</a>
+        <a href="#" className="hover:text-[#110C27]">STORE</a>
+        <a href="#" className="hover:text-[#110C27]">TECHNOLOGIES</a>
+        <a href="#" className="hover:text-[#110C27]">INVESTORS</a>
+        <a href="./ArticleTemplate" className="hover:text-[#110C27]">ARTICLES</a>
+        <CgSearch className="hover:text-[#110C27]"/>
       </nav>
 
       {/* Right: Social Icons */}
-      <div className="grid grid-cols-3 gap-4 text-blue-700 text-xl">
-  <FaInstagram className="hover:text-blue-500" />
-  <FaFacebookF className="hover:text-blue-500" />
-  <FaXTwitter className="hover:text-blue-500" />
-  <FaYoutube className="hover:text-blue-500" />
-  <FaTiktok className="hover:text-blue-500" />
-  <FaEnvelope className="hover:text-blue-500" />
+      <div className="grid grid-cols-3 gap-4 text-[#0474BC] text-xl">
+  <FaInstagram className="hover:text-[#110C27]" />
+  <FaFacebookF className="hover:text-[#110C27]" />
+  <FaXTwitter className="hover:text-[#110C27]" />
+  <FaYoutube className="hover:text-[#110C27]" />
+  <FaTiktok className="hover:text-[#110C27]" />
+  <FaEnvelope className="hover:text-[#110C27]" />
 </div>
     </header>
   );

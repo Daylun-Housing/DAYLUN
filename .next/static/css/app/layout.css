@@ -626,6 +626,9 @@ video {
 .h-\[500px\] {
   height: 500px;
 }
+.h-\[600px\] {
+  height: 600px;
+}
 .h-\[700px\] {
   height: 700px;
 }
@@ -637,9 +640,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[600px\] {
-  height: 600px;
 }
 .w-1\/2 {
   width: 50%;
@@ -860,6 +860,14 @@ video {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-\[25px\] {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.px-\[275px\] {
+  padding-left: 275px;
+  padding-right: 275px;
+}
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -875,14 +883,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-.px-\[25px\] {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-.px-\[275px\] {
-  padding-left: 275px;
-  padding-right: 275px;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -919,6 +919,21 @@ video {
   font-size: 3rem;
   line-height: 1;
 }
+.text-\[100px\] {
+  font-size: 100px;
+}
+.text-\[28px\] {
+  font-size: 28px;
+}
+.text-\[30px\] {
+  font-size: 30px;
+}
+.text-\[40px\] {
+  font-size: 40px;
+}
+.text-\[50px\] {
+  font-size: 50px;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -934,21 +949,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-\[100px\] {
-  font-size: 100px;
-}
-.text-\[28px\] {
-  font-size: 28px;
-}
-.text-\[30px\] {
-  font-size: 30px;
-}
-.text-\[40px\] {
-  font-size: 40px;
-}
-.text-\[50px\] {
-  font-size: 50px;
 }
 .font-bold {
   font-weight: 700;
@@ -1020,6 +1020,14 @@ video {
 .text-white\/70 {
   color: rgb(255 255 255 / 0.7);
 }
+.text-\[\#0474BC\] {
+  --tw-text-opacity: 1;
+  color: rgb(4 116 188 / var(--tw-text-opacity, 1));
+}
+.text-\[\#04012A\] {
+  --tw-text-opacity: 1;
+  color: rgb(4 1 42 / var(--tw-text-opacity, 1));
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -1047,9 +1055,9 @@ video {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity, 1));
 }
-.hover\:text-blue-800:hover {
+.hover\:text-\[\#110C27\]:hover {
   --tw-text-opacity: 1;
-  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
+  color: rgb(17 12 39 / var(--tw-text-opacity, 1));
 }
 .hover\:opacity-90:hover {
   opacity: 0.9;

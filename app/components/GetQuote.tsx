@@ -1,6 +1,6 @@
 export default function GetQuote() {
     return (
-      <section className="bg-[#0078C7] text-white py-20 px-6 text-center">
+      <section className="bg-[#0474BC] text-white py-20 px-6 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
             HAVE A PROJECT IN <br className="md:hidden" />
@@ -13,7 +13,7 @@ export default function GetQuote() {
           <p className="text-lg mb-8">
             All materials right down to how many screws to give you or your customer instant quotes.
           </p>
-          <button className="bg-[#0d1030] text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition">
+          <button className="bg-[#04012A] text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition">
             GET A QUOTE TODAY
           </button>
         </div>
