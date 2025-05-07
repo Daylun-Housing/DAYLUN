@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { FaInstagram, FaFacebookF, FaXTwitter, FaYoutube, FaTiktok, FaEnvelope } from "react-icons/fa6";
+import { CgSearch } from "react-icons/cg";
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -15,11 +17,13 @@ export default function Header() {
 
       {/* Center: Nav Links */}
       <nav className="hidden lg:flex gap-6 text-sm font-semibold tracking-wide">
-        <a href="#" className="hover:text-blue-600">ABOUT</a>
-        <a href="#" className="hover:text-blue-600">HOW WE DO IT</a>
-        <a href="#" className="hover:text-blue-600">TECHNOLOGY</a>
-        <a href="#" className="hover:text-blue-600">BUILDERS & DEVELOPERS</a>
-        <a href="#" className="hover:text-blue-600">RECENT PROJECTS</a>
+        <a href="./About" className="hover:text-blue-600">ABOUT</a>
+        <a href="#" className="hover:text-blue-600">HOUSE BUILDER</a>
+        <a href="#" className="hover:text-blue-600">STORE</a>
+        <a href="#" className="hover:text-blue-600">TECHNOLOGIES</a>
+        <a href="#" className="hover:text-blue-600">INVESTORS</a>
+        <Link href="./ArticleTemplate" className="hover:text-blue-600">ARTICLES</Link>
+        <CgSearch className="hover:text-blue-800"/>
       </nav>
 
       {/* Right: Social Icons */}
