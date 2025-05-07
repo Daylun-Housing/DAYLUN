@@ -19,7 +19,7 @@ export default function Header() {
         <a href="./About" className="hover:text-[#110C27]">ABOUT</a>
         <a href="#" className="hover:text-[#110C27]">HOUSE BUILDER</a>
         <a href="#" className="hover:text-[#110C27]">STORE</a>
-        <a href="#" className="hover:text-[#110C27]">TECHNOLOGIES</a>
+        <a href="./Technologies" className="hover:text-[#110C27]">TECHNOLOGIES</a>
         <a href="#" className="hover:text-[#110C27]">INVESTORS</a>
         <a href="./ArticleTemplate" className="hover:text-[#110C27]">ARTICLES</a>
         <CgSearch className="hover:text-[#110C27]"/>
