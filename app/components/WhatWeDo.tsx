@@ -26,7 +26,7 @@ export default function WhatWeDo() {
         />
       </div>
 
-      {/* Blue Square Overlap */}
+      {/* Notch Thingy */}
       <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-36 h-36 bg-[#0078D7] z-20" />
 
 
