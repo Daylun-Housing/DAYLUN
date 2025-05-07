@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function RecentProjects() {
   return (
-    <section className="bg-[#0d1030] text-white py-24 px-6 md:px-12">
+    <section className="bg-[#04012A] text-white py-24 px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center">
         {/* Section Heading */}
         <h2 className="text-4xl md:text-5xl font-extrabold uppercase mb-6">
           <span className="text-white">Our </span>
           <span className="text-white">Recent </span>
-          <span className="text-[#0078C7]">Projects</span>
+          <span className="text-[#0474BC]">Projects</span>
         </h2>
 
         {/* Subheadings */}
-        <div className="flex flex-col md:flex-row justify-center gap-16 mb-10 font-extrabold text-4xl md:text-5xl text-[#0078C7] uppercase">
+        <div className="flex flex-col md:flex-row justify-center gap-16 mb-10 font-extrabold text-4xl md:text-5xl text-[#0474BC] uppercase">
           <div>
             <p>Toronto</p>
             <p>Townhome</p>
@@ -38,7 +38,7 @@ export default function RecentProjects() {
         {/* Text Content */}
         <div className="text-center max-w-2xl mx-auto space-y-6">
           <h3 className="text-2xl font-semibold uppercase">Flagship House</h3>
-          <div className="text-[#00bcd4] text-lg">
+          <div className="text-[#0474BC] text-lg">
             <p>241 Waterloo Avenue</p>
             <p>Toronto, Ontario</p>
             <p>Canada</p>
@@ -56,7 +56,7 @@ export default function RecentProjects() {
             pioneering advancements of Daylun and its product sponsors. The house will be platinum Leeds certified.
           </p>
           <p>
-            <a href="https://241waterloo.com" className="text-[#00bcd4] underline">
+            <a href="https://241waterloo.com" className="text-[#0474BC] underline">
               241waterloo.com
             </a>
           </p>

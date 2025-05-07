@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function WallSystem() {
   return (
-    <section className="relative bg-[#07072b] text-white py-24 px-4 overflow-hidden">
+    <section className="relative bg-[#04012A] text-white py-24 px-4 overflow-hidden">
       {/* Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold">TECHNOLOGY</h2>
-        <p className="text-blue-500 text-2xl md:text-3xl font-semibold mt-2">WALL SYSTEM</p>
+        <p className="text-[#0474BC] text-2xl md:text-3xl font-semibold mt-2">WALL SYSTEM</p>
         <p className="text-sm mt-4 text-white/70 max-w-xl mx-auto">
           We have patents for our innovations and sustainable solutions offerings
         </p>

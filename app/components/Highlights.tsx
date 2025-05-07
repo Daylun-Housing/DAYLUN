@@ -1,6 +1,6 @@
 export default function HighlightsSection() {
     return (
-      <section className="bg-[#07072b] text-blue-500 text-center py-24 px-6">
+      <section className="bg-[#04012A] text-[#0474BC] text-center py-24 px-6">
         <div className="text-5xl md:text-7xl font-light space-y-12">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
             <span>SPEED</span>
