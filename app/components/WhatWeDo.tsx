@@ -16,7 +16,7 @@ export default function WhatWeDo() {
         </div>
       </div>
 
-      {/* Right Image Panel */}
+      {/* Right Panel */}
       <div className="relative md:w-1/2 h-96 md:h-auto">
         <Image
           src="/what-we-do.jpg"
