@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import WhatWeDo from "./components/WhatWeDo";
 import Highlights from "./components/Highlights";
 import HowWeDoIt from "./components/HowWeDoIt";
+import WallSystem from "./components/WallSystem";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <WhatWeDo/>
       <Highlights />
       <HowWeDoIt/>
+      <WallSystem/>
     </>
 
     
