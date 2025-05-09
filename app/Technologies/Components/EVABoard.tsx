@@ -5,13 +5,13 @@ export default function EvaBoard() {
     <section className="relative flex flex-col md:flex-row h-screen w-full">
       {/* Left Panel */}
       <div className="bg-[#0474BC] flex flex-col justify-center px-10 md:px-20 w-1/2 relative z-10">
-        <div className=" absolute w-[500px] h-[200px] object-fill">
+        <div className=" absolute w-full h-full object-fill">
               <div>
                   <Image
-                    src="/DAYLUN_LOGO_blue-2b.svg"
-                    alt="Modern house"
-                    fill
+                    src="/fabric_foam.webp"
+                    alt="Modern houseEVA Board"
                     className="object-cover"
+                    fill
                   />
                 </div>
             </div>
@@ -26,15 +26,12 @@ export default function EvaBoard() {
             </h2>
             <br />
             <p className="text-lg md:text-xl leading-relaxed">
-            Plant-based glue that is as strong as epoxy. Used in our driveways and concrete.
-            <br />
-            <br />
-
-            Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect 
-            nostrud nisi intricate Content. Qui  international first-class nulla ut. Punctual adipisicing, essential lovely 
-            queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power 
-            pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki 
-            excepteur Basset hound. Zürich sleepy perfect consectetur.
+            Interior Drywall replacement Daylun developed this product as an alternative to drywall or gypsum, 
+            addressing the challenges of their heaviness and messiness. Our EVA board is 80% lighter, more manageable, 
+            and boasts tensile strength, a feature lacking in traditional drywall. Daylun’s EVA walls are built from a 
+            highly versatile polyolefin low smoke and halogen-free flame-retardant material. Created from ethyl vinyl 
+            acetate (EVA) – the same innovative material found in running shoes – this material is lightweight, boasts 
+            low density, superior sound insulation, and age-defying properties.
             </p>
           </div>
         </div>
