@@ -11,15 +11,13 @@ export default function VegetableGlue() {
           </h2>
           <br />
           <p className="text-lg md:text-xl leading-relaxed">
-          Plant-based glue that is as strong as epoxy. Used in our driveways and concrete.
-          <br />
-          <br />
-
-          Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect 
-          nostrud nisi intricate Content. Qui  international first-class nulla ut. Punctual adipisicing, essential lovely 
-          queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power 
-          pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki 
-          excepteur Basset hound. Zürich sleepy perfect consectetur.
+          Daylun's Vegetable Glue emerged from the need for an eco-friendly alternative to conventional adhesives.
+           Originating from experiences in shoe factories and a commitment to sustainability, we aimed to address 
+           the environmental and health concerns associated with traditional glues. Through extensive research and 
+           development, our technology arm, 50ul Tech, formulated a two-part organic glue that not only rivals epoxy 
+           adhesives in strength and versatility but also offers a safer and greener solution for various applications. 
+           By creating a glue that is both effective and environmentally friendly, we aim to contribute to a more 
+           sustainable future while meeting the demands of modern construction needs.
           </p>
         </div>
 
@@ -27,10 +25,10 @@ export default function VegetableGlue() {
       </div> 
       {/* Right Panel */}
       <div className="bg-[#04012A] w-1/2 items-center flex justify-center">
-        <div className=" absolute w-[500px] h-[200px] object-fill">
+        <div className=" absolute w-[500px] h-full object-fill">
             <div>
                 <Image
-                  src="/DAYLUN_LOGO_blue-2b.svg"
+                  src="/VegetableGlue.png"
                   alt="Modern house"
                   fill
                   className="object-cover"

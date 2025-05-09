@@ -1,6 +1,7 @@
 {
-  "/Investors/page": "app/Investors/page.js",
+  "/ArticleTemplate/page": "app/ArticleTemplate/page.js",
   "/Technologies/page": "app/Technologies/page.js",
-  "/About/page": "app/About/page.js",
-  "/ArticleTemplate/page": "app/ArticleTemplate/page.js"
+  "/Articles/page": "app/Articles/page.js",
+  "/Investors/page": "app/Investors/page.js",
+  "/About/page": "app/About/page.js"
 }
