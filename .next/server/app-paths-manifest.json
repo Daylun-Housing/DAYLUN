@@ -1,9 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/Technologies/page": "app/Technologies/page.js",
-  "/About/page": "app/About/page.js",
-  "/Investors/page": "app/Investors/page.js",
-  "/Articles/page": "app/Articles/page.js",
-  "/ArticleTemplate/page": "app/ArticleTemplate/page.js",
   "/page": "app/page.js"
 }
