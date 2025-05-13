@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Header from "../components/Header";
 import OurMission from "./Components/OurMission";
@@ -24,7 +26,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-black/30 z-10" />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-        <div className="relative w-[500px] h-[180px] md:w-[640px] md:h-[220px]">
+          <div className="relative w-[500px] h-[180px] md:w-[640px] md:h-[220px]">
             <Image
               src="/logo-alt.svg"
               alt="Daylun Logo Alt"

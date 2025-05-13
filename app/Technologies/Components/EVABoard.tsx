@@ -5,16 +5,14 @@ export default function EvaBoard() {
     <section className="relative flex flex-col md:flex-row h-screen w-full">
       {/* Left Panel */}
       <div className="bg-[#0474BC] flex flex-col justify-center px-10 md:px-20 w-1/2 relative z-10">
-        <div className=" absolute w-full h-full object-fill">
-              <div>
-                  <Image
-                    src="/fabric_foam.webp"
-                    alt="Modern houseEVA Board"
-                    className="object-cover"
-                    fill
-                  />
-                </div>
-            </div>
+        <div className=" absolute scale-50 hover:scale-75 duration-100 w-full h-full object-fill">
+          <Image
+            src="/fabric_foam.webp"
+            alt="EVA Board"
+            className="object-cover"
+            fill
+          />
+        </div>
 
         
       </div> 

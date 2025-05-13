@@ -1,6 +1,13 @@
 import Image from "next/image";
 
+import {useIsVisible} from "../JS_Scripts/Visible"
+import { useRef } from "react";
+
 export default function WallSystem() {
+  
+  const ref_WhatWeDo = useRef(null);
+  const is_visible_WWD = useIsVisible(ref_WhatWeDo);
+
   return (
     <section className="relative bg-[#04012A] text-white py-24 px-4 overflow-hidden">
       {/* Title */}
@@ -15,23 +22,29 @@ export default function WallSystem() {
       {/* Wall Assembly */}
       <div className="relative flex justify-center items-end h-[700px] space-x-4">
         {/* Wall 1 */}
-        <div className="relative w-[160px] h-full">
+        <div ref={ref_WhatWeDo} className={`relative w-[160px] h-full transition-all ease-in-out duration-[1200ms] ${is_visible_WWD ? "translate-x-0" : "-translate-x-[400px]"}`}>
           <Image src="/wall1.svg" alt="Wall 1" fill className="object-contain" />
         </div>
 
         {/* Wall 2 with bottom label */}
         <div className="relative w-[160px] h-full -ml-16">
-          <Image src="/wall2.svg" alt="Wall 2" fill className="object-contain" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-xs text-white text-center leading-tight mb-2">
-            <div className="w-px h-6 bg-white mx-auto mb-1" /> {/* Line pointing up */}
+          <div ref={ref_WhatWeDo} className={`relative w-[160px] h-full transition-all ease-in-out duration-[1400ms] ${is_visible_WWD ? "translate-x-0" : "-translate-x-[600px]"}`}>
+            <Image src="/wall2.svg" alt="Wall 2" fill className="object-contain" />
+          </div>
+          <div ref={ref_WhatWeDo} className={`absolute bottom-0 left-1/2 -translate-x-1/2 text-white text-center leading-tight mb-2
+                                                transition-all ease-in-out duration-[1600ms] ${is_visible_WWD ? "opacity-100" : "opacity-0"}`}>
+            <div className="text-l w-px h-6 bg-white mx-auto mb-1" /> {/* Line pointing up */}
             OSB SHEET<br />WITH<br />MEMBRANE AND ISOTOP
             </div>
         </div>
 
         {/* Wall 3 with label and line */}
         <div className="relative w-[200px] h-full -ml-16 -mr-16 z-10">
-          <Image src="/wall3.svg" alt="Wall 3" fill className="object-contain" />
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-xs text-white text-center">
+          <div ref={ref_WhatWeDo} className={`relative w-[160px] h-full transition-all ease-in-out duration-[1600ms] ${is_visible_WWD ? "translate-x-0" : "-translate-x-[800px]"}`}>
+            <Image src="/wall3.svg" alt="Wall 3" fill className="object-contain" />
+          </div>
+          <div ref={ref_WhatWeDo} className={`absolute top-10 left-1/2 -translate-x-1/2 text-l text-white text-center
+                                              transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-0"}`}>
             STEEL STRUCTURE
             <div className="w-px h-10 bg-white mx-auto mt-1" />
           </div>
@@ -39,13 +52,18 @@ export default function WallSystem() {
 
         {/* Wall 4 */}
         <div className="relative w-[160px] h-full -mr-16">
-          <Image src="/wall4.svg" alt="Wall 4" fill className="object-contain" />
+          <div ref={ref_WhatWeDo} className={`relative w-[160px] h-full transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "translate-x-0" : "-translate-x-[1000px]"}`}>
+            <Image src="/wall4.svg" alt="Wall 4" fill className="object-contain" />
+          </div>
         </div>
 
         {/* Wall 5 with label and line */}
         <div className="relative w-[160px] h-full">
-          <Image src="/wall5.svg" alt="Wall 5" fill className="object-contain" />
-          <div className="absolute -top-14 left-1/2 -translate-x-1/2 text-xs text-white text-center leading-tight">
+          <div ref={ref_WhatWeDo} className={`relative w-[160px] h-full transition-all ease-in-out duration-[2000ms] ${is_visible_WWD ? "translate-x-0" : "-translate-x-[1200px]"}`}>
+            <Image src="/wall5.svg" alt="Wall 5" fill className="object-contain" />
+          </div>
+          <div ref={ref_WhatWeDo} className={`absolute -top-5 left-1/2 -translate-x-1/2 text-l text-white text-center leading-tight
+                                            transition-all ease-in-out duration-[2000ms] ${is_visible_WWD ? "opacity-100" : "opacity-0"}`}>
             CLOSED SPRAY FOAM<br />ON THE OUTSIDE
             <div className="w-px h-12 bg-white mx-auto mt-1" />
           </div>

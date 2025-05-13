@@ -25,16 +25,14 @@ export default function VegetableGlue() {
       </div> 
       {/* Right Panel */}
       <div className="bg-[#04012A] w-1/2 items-center flex justify-center">
-        <div className=" absolute w-[500px] h-full object-fill">
-            <div>
-                <Image
-                  src="/VegetableGlue.png"
-                  alt="Modern house"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-          </div>
+        <div className=" absolute w-[500px] scale-50 hover:scale-75 duration-100 h-full object-fill">
+          <Image
+            src="/VegetableGlue.png"
+            alt="Modern house"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </section>
   );
