@@ -25,7 +25,7 @@ export default function RecentProjects() {
           <div className="relative w-full h-full mb-10 hover:scale-125 transition-all">
             <a href="./ArticleTemplate">
               <Image
-                src="/241-waterloo-building-front-e1651995234280-1024x684.jpg"
+                src="/241-waterloo.jpg"
                 alt="241 Waterloo House"
                 fill
                 className="object-cover rounded-lg"
