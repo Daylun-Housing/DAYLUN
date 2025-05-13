@@ -27,16 +27,14 @@ export default function GantryCrane() {
       </div> 
       {/* Right Panel */}
       <div className="bg-[#04012A] w-1/2 items-center flex justify-center">
-        <div className=" absolute w-[500px] h-[200px] object-fill">
-            <div>
-                <Image
-                  src="/DAYLUN_LOGO_blue-2b.svg"
-                  alt="Modern house"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-          </div>
+        <div className=" absolute scale-50 hover:scale-75 duration-100 w-[500px] h-[200px] object-fill">
+          <Image
+            src="/DAYLUN_LOGO_blue-2b.svg"
+            alt="DAYLUN LOGO"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </section>
   );

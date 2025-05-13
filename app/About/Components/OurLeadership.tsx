@@ -1,37 +1,63 @@
 import Image from "next/image";
 
+import {useIsVisible} from "../../JS_Scripts/Visible"
+import { useRef } from "react";
+
 export default function OurLeadership() {
+  const ref_WhatWeDo = useRef(null);
+  const is_visible_WWD = useIsVisible(ref_WhatWeDo);
+
   return (
     <section className="relative flex flex-col md:flex-row h-screen w-full">
       {/* Left Panel */}
-      <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 md:w-1/2 relative z-10">
-        <div className="max-w-xl mt-16 text-left">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
-            Our CEO
-          </h2>
-          <h3 className="text-xl leading-relaxed ">Arthur Zankowicz</h3>
-          <br />
-          <p className="text-lg md:text-xl leading-relaxed">
-          Body text for your whole article or post. We’ll put in some lorem ipsum to show how a filled-out page might 
-          look:
-          <br />
-          <br />
+      <div ref={ref_WhatWeDo} className={`md:w-2/3 transition-all ease-in-out duration-1000 
+                                        ${is_visible_WWD ? "translate-x-0 scale-x-100" : "-translate-x-[100px] scale-x-110"}`}>
+        <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 relative z-10 h-full ">
+          <div className="max-w-xl mt-8 text-left">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+              Our CEO
+            </h2>
+            <h3 className="text-xl leading-relaxed ">Arthur Zankowicz</h3>
+            <br />
+            <p className="text-s md:text-s leading-relaxed w-[800px]">
+            Our CEO, Arthur. is a sustainable design entrepreneur with over 25 years experience in innovating environmentally friendly
+            and creative design solutions for the sport, fashion, film, and building industries. 
 
-          Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect 
-          nostrud nisi intricate Content. Qui  international first-class nulla ut. Punctual adipisicing, essential lovely 
-          queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power 
-          pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki 
-          excepteur Basset hound. Zürich sleepy perfect consectetur.
-          </p>
+            <br /><br />
+
+            Arthur’s entrepreneurial career started in Toronto, Canada, with the 1989 launch of a company in the sporting 
+            goods sector called Pain. Arthur ran 
+            the business until 1994. Between 1996 and 2002, Arthur directed 300 commercials 
+            internationally, including for brands like IKEA Germany, Sony, and Subaru Japan. 
+
+            In 2002, Arthur launched another sporting goods company, Moreno. The innovations of Moreno are now established standards in
+             the sporting goods market and manufacturing.
+
+            After selling Moreno in April 2009, Arthur relocated to China, where he spent 
+            10 years researching and developing new products while working with some of the sharpest minds in 
+            the industry.
+
+            <br /><br />
+
+            In May 2016, he launched 50 Unlimited Co. Technologies, or 50ul, to develop and license inventions for more-eco
+            friendly sportswear. The company’s creations include micro egg technology and a vegetable-based glue.
+
+            <br /><br />
+
+            Arthur has spent years working internationally and speaks English, Polish, French, and basic Mandarin. 
+            He is now based in Canada and proud to launch Daylun.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Right Panel */}
-      <div className="relative md:w-1/2 h-96 md:h-auto items-center">
+      <div ref={ref_WhatWeDo} className={`relative md:w-1/3 h-96 md:h-auto items-center
+                                          duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[100px] scale-125"}`}>
         <div>
             <Image
-              src="/241-waterloo.jpg"
-              alt="Modern house"
+              src="/about-the-designer-Arthur-Zankowicz.jpg"
+              alt="CEO - Arthur Zankowicz"
               fill
               className="object-cover"
             />

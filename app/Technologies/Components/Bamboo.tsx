@@ -27,15 +27,13 @@ export default function Bamboo() {
       </div> 
       {/* Right Panel */}
       <div className="bg-[#04012A] w-1/2 items-center flex justify-center">
-        <div className=" absolute w-[500px] h-[700px] object-fill">
-            <div>
-                <Image
-                  src="/Bamboo.png"
-                  alt="Bamboo Breakdown"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+        <div className=" absolute w-[500px] h-[700px] scale-50 hover:scale-75 duration-100 object-fill">
+            <Image
+              src="/Bamboo.png"
+              alt="Bamboo Breakdown"
+              fill
+              className="object-cover"
+            />
           </div>
       </div>
     </section>

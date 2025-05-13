@@ -5,16 +5,14 @@ export default function PanelSystem() {
     <section className="relative flex flex-col md:flex-row h-screen w-full">
       {/* Left Panel */}
       <div className="bg-[#0474BC] flex flex-col justify-center px-10 md:px-20 w-1/2 relative z-10">
-        <div className=" absolute w-[500px] h-[200px] object-fill">
-              <div>
-                  <Image
-                    src="/DAYLUN_LOGO_blue-2b.svg"
-                    alt="Modern house"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-            </div>
+        <div className=" absolute w-[500px] h-[200px] scale-50 hover:scale-75 duration-100 object-fill">
+          <Image
+            src="/DAYLUN_LOGO_blue-2b.svg"
+            alt="DAYLUN logo"
+            fill
+            className="object-cover"
+          />
+        </div>
 
         
       </div> 
