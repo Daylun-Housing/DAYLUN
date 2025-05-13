@@ -30,14 +30,24 @@ export default function Header() {
       </nav>
 
       {/* Right: Social Icons */}
-      <div className="grid grid-cols-3 gap-4 text-[#0474BC] text-xl">
-  <FaInstagram className="hover:text-[#110C27]" />
-  <FaFacebookF className="hover:text-[#110C27]" />
-  <FaXTwitter className="hover:text-[#110C27]" />
-  <FaYoutube className="hover:text-[#110C27]" />
-  <FaTiktok className="hover:text-[#110C27]" />
-  <FaEnvelope className="hover:text-[#110C27]" />
-</div>
+      <div className="grid grid-cols-2 gap-4 text-[#0474BC] text-xl">
+        <a href="https://www.instagram.com/daylun_build/">
+          <FaInstagram className="hover:text-[#110C27]"/>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100077522941552">
+          <FaFacebookF className="hover:text-[#110C27]"/>
+        </a>
+        {/*<FaXTwitter />*/}
+        <a href="https://www.youtube.com/channel/UCDzDup0UoRaOSQNlcd99uKA">
+          <FaYoutube className="hover:text-[#110C27]"/>
+        </a>
+        <a href="https://www.tiktok.com/@daylun_build">
+          <FaTiktok className="hover:text-[#110C27]"/>
+        </a>
+  
+        {/*<FaXTwitter className="hover:text-[#110C27]" />
+        <FaEnvelope className="hover:text-[#110C27]" />*/}
+      </div>
     </header>
   );
 }
