@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Link } from "react-router-dom";
 import { BrowserRouter } from 'react-router-dom';
-import { FaInstagram, FaFacebookF, FaXTwitter, FaYoutube, FaTiktok, FaEnvelope } from "react-icons/fa6";
+import { FaInstagram, FaFacebookF, FaLinkedinIn , FaYoutube, FaTiktok, FaEnvelope } from "react-icons/fa6";
 import { CgSearch } from "react-icons/cg";
 
 export default function Header() {
@@ -20,17 +20,18 @@ export default function Header() {
 
       {/* Center: Nav Links */}
       <nav className="hidden lg:flex gap-6 text-sm font-semibold tracking-wide">
-        <a href="./About" className="hover:text-[#110C27]">ABOUT</a>
-        <a href="#" className="hover:text-[#110C27]">HOUSE BUILDER</a>
+        <a href="/About" className="hover:text-[#110C27]">ABOUT</a>
+        <a href="/HouseBuilder" className="hover:text-[#110C27]">HOUSE BUILDER</a>
         <a href="https://daylun.myshopify.com/" className="hover:text-[#110C27]">STORE</a>
-        <a href="./Technologies" className="hover:text-[#110C27]">TECHNOLOGIES</a>
-        <a href="./Investors" className="hover:text-[#110C27]">INVESTORS</a>
-        <a href="./Articles" className="hover:text-[#110C27]">ARTICLES</a>
+        <a href="/Technologies" className="hover:text-[#110C27]">TECHNOLOGIES</a>
+        <a href="/Factories" className="hover:text-[#110C27]">FACTORIES</a>
+        <a href="/Investors" className="hover:text-[#110C27]">INVESTORS</a>
+        <a href="/Articles" className="hover:text-[#110C27]">ARTICLES</a>
         <CgSearch className="hover:text-[#110C27]"/>
       </nav>
 
       {/* Right: Social Icons */}
-      <div className="grid grid-cols-2 gap-4 text-[#0474BC] text-xl">
+      <div className="grid grid-cols-3 gap-4 text-[#0474BC] text-xl">
         <a href="https://www.instagram.com/daylun_build/">
           <FaInstagram className="hover:text-[#110C27]"/>
         </a>
@@ -45,8 +46,13 @@ export default function Header() {
           <FaTiktok className="hover:text-[#110C27]"/>
         </a>
   
-        {/*<FaXTwitter className="hover:text-[#110C27]" />
-        <FaEnvelope className="hover:text-[#110C27]" />*/}
+        {/*<FaXTwitter className="hover:text-[#110C27]" />*/}
+        <a href="mailto:info@daylun.ca">
+          <FaEnvelope className="hover:text-[#110C27]"/>
+        </a>
+        <a href="https://www.linkedin.com/company/daylun/?originalSubdomain=ca">
+          <FaLinkedinIn className="hover:text-[#110C27]"/>
+        </a>
       </div>
     </header>
   );

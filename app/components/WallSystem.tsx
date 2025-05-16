@@ -15,8 +15,14 @@ export default function WallSystem() {
         <h2 className="text-4xl md:text-5xl font-extrabold">TECHNOLOGY</h2>
         <p className="text-[#0474BC] text-2xl md:text-3xl font-semibold mt-2">WALL SYSTEM</p>
         <p className="text-sm mt-4 text-white/70 max-w-xl mx-auto">
-          We have patents for our innovations and sustainable solutions offerings
+          We have patents for our innovations and sustainable solutions offerings. <br />
+          <a href="./Technologies">
+            <span className="text-sm mt-4 text-white/70 max-w-xl mx-auto">
+              See all of our <span className="text-[#0474BC] hover:text-[#0b8fd6]">Technologies</span>.
+            </span>
+          </a>
         </p>
+        
       </div>
 
       {/* Wall Assembly */}

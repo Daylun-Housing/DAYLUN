@@ -1,11 +1,19 @@
 import Image from "next/image";
 
+import {useIsVisible} from "../../JS_Scripts/Visible"
+import { useRef } from "react";
+
 export default function EvaBoard() {
+    
+  const ref_WhatWeDo = useRef(null);
+  const is_visible_WWD = useIsVisible(ref_WhatWeDo);
+
   return (
     <section className="relative flex flex-col md:flex-row h-screen w-full">
       {/* Left Panel */}
       <div className="bg-[#0474BC] flex flex-col justify-center px-10 md:px-20 w-1/2 relative z-10">
-        <div className=" absolute scale-50 hover:scale-75 duration-100 w-full h-full object-fill">
+        <div ref={ref_WhatWeDo} className={` absolute scale-50 hover:scale-75 duration-100 w-full h-full object-fill
+                                            transition-all duration-[1500ms] ease-in-out ${is_visible_WWD ? "opacity-100 scale-50" : "opacity-25 scale-[10%]"}`}>
           <Image
             src="/fabric_foam.webp"
             alt="EVA Board"
@@ -18,9 +26,10 @@ export default function EvaBoard() {
       </div> 
       {/* Right Panel */}
       <div className="bg-[#0474BC] w-1/2 items-center flex justify-center">
-        <div className="max-w-xl mt-16 text-left text-white ">
+        <div ref={ref_WhatWeDo} className={`max-w-xl mt-16 text-left text-white 
+                                          transition-all duration-[1500ms] ease-in-out ${is_visible_WWD ? "opacity-100 scale-100" : "opacity-25 scale-50"}`}>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
-              Eva Board
+              EVAN Board
             </h2>
             <br />
             <p className="text-lg md:text-xl leading-relaxed">

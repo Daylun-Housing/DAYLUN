@@ -11,10 +11,50 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/Articles/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Articles/page.js"
+    ],
+    "/All_Articles/Yukon_Factory/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/All_Articles/Yukon_Factory/page.js"
+    ],
+    "/All_Articles/241_Waterloo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/All_Articles/241_Waterloo/page.js"
+    ],
+    "/About/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/About/page.js"
+    ],
+    "/HouseBuilder/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/HouseBuilder/page.js"
+    ],
     "/Technologies/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/Technologies/page.js"
+    ],
+    "/All_Articles/Product_Launch/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/All_Articles/Product_Launch/page.js"
+    ],
+    "/Factories/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Factories/page.js"
+    ],
+    "/Investors/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Investors/page.js"
     ]
   }
 }

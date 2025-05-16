@@ -23,7 +23,7 @@ export default function RecentProjects() {
         {/* Project Image */}
         <div className="overflow-hidden h-[500px] md:h-[600px] mb-5">
           <div className="relative w-full h-full mb-10 hover:scale-125 transition-all">
-            <a href="./ArticleTemplate">
+            <a href="./All_Articles/241_Waterloo">
               <Image
                 src="/241-waterloo.jpg"
                 alt="241 Waterloo House"
@@ -59,7 +59,7 @@ export default function RecentProjects() {
               pioneering advancements of Daylun and its product sponsors. The house will be platinum Leeds certified.
             </p>
           <p className="mt-4">
-            <a href="./ArticleTemplate" className="text-[#0474BC] hover:text-[#0d3370]">
+            <a href="./All_Articles/241_Waterloo" className="text-[#0474BC] hover:text-[#0d3370]">
               Read More
             </a>
           </p>

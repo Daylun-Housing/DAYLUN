@@ -11,7 +11,7 @@ export default function Featured() {
       <section className="overflow-hidden relative flex flex-col md:flex-row h-screen w-full">
           {/* Left Panel */}
         <div ref={ref_WhatWeDo} className={`md:w-1/3 transition-all ease-in-out duration-1000 
-                                      ${is_visible_WWD ? "translate-x-0 scale-x-100" : "-translate-x-[100px] scale-x-110"}`}>
+                                      ${is_visible_WWD ? "translate-x-0 scale-x-100" : "-translate-x-[100px] scale-x-[80%]"}`}>
           <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 h-full relative z-10">
             <div className="max-w-md mt-16">
               <h2 className="text-5xl text-[#0474BC] md:text-6xl font-extrabold mb-4 leading-tight">
@@ -20,8 +20,21 @@ export default function Featured() {
               <h3 className="text-2xl md:text-3xl mb-8 font-normal leading-tight">
                 Flagship House
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed">
-              To develop innovative construct technologies to revolutionize the construction sector while providing sustainable and affordable housing for all. 
+              <p className="text-lg md:text-lg leading-relaxed">
+              241 Waterloo is an innovative sustainable, net-zero, modular home build incorporating the most revolutionary green building
+               materials and technologies.
+
+               <br />
+               <br />
+              241 Waterloo is the pinnacle of residential design for homeowners that prioritize value, luxury, and minimal environmental
+               impact . . . 
+
+               <br />
+               <br />
+
+                <a href="./All_Articles/241_Waterloo">
+                  <span className="hover:text-[#0474BC]">Continue Reading</span>
+                </a>
               </p>
             </div>
           </div>
