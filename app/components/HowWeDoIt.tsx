@@ -22,7 +22,7 @@ export default function HowWeDo() {
 
       {/* Right Panel with Text */}
       <div ref={ref_WhatWeDo} className={`md:w-1/3 transition-all ease-in-out duration-1000 
-                                        ${is_visible_WWD ? "translate-x-0 scale-x-100" : "translate-x-[100px] scale-x-110"}`}>
+                                        ${is_visible_WWD ? "translate-x-0 scale-x-100" : "translate-x-[50px] scale-x-110"}`}>
         <div className="bg-[#0474BC] h-full text-white flex flex-col justify-center px-10 md:px-20 relative z-10">
           <div className="max-w-md mt-16">
             <h2 className="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">

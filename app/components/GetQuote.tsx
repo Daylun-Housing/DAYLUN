@@ -13,9 +13,12 @@ export default function GetQuote() {
           <p className="text-lg mb-8">
             All materials right down to how many screws to give you or your customer instant quotes.
           </p>
-          <button className="bg-[#04012A] text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition">
-            GET A QUOTE TODAY
-          </button>
+          <a href="mailto:info@daylun.ca">
+            <button className="bg-[#04012A] text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition">
+              GET A QUOTE TODAY
+            </button>
+
+          </a>
         </div>
       </section>
     );

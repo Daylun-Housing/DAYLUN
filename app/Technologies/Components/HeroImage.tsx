@@ -9,7 +9,7 @@ export default function HeroImage() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-      <div className="relative w-screen h-[600px]">
+      <div className="relative w-full h-screen">
         <Image
               className="brightness-[0.70] object-cover"
               src="/Apartment.png"

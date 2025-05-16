@@ -17,10 +17,14 @@ export default function OurValues() {
             Our Values
           </h2>
           <p className="text-lg md:text-xl leading-relaxed">
-          Exquisite sophisticated iconic cutting-edge laborum deserunt Addis Ababa esse bureaux cupidatat id minim. Sharp classic 
-          the best commodo nostrud delightful. Conversation aute Rochester id. Qui sunt remarkable deserunt intricate airport handsome
-           K-pop excepteur classic esse Asia-Pacific laboris.
+            DAYLUN is dedicated to four qualities:
           </p>
+          <ul className="text-lg md:text-xl leading-relaxed mt-4 text-center font-bold text-[#04012A]">
+            <li>SPEED</li>
+            <li>COST EFFICIENCY</li>
+            <li>SUSTAINABILITY</li>
+            <li>PRECISION</li>
+          </ul>
         </div>
       </div>
 

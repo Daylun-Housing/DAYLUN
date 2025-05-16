@@ -18,7 +18,7 @@ export default function OurMission() {
               Our Mission
             </h2>
             <p className="text-lg md:text-xl leading-relaxed">
-            To develop innovative construct technologies to revolutionize the construction sector while providing sustainable and affordable housing for all. 
+            DAYLUN's mission is to develop innovative construct technologies to revolutionize the construction sector while providing sustainable and affordable housing for all. 
             </p>
           </div>
         </div>

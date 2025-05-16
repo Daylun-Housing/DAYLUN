@@ -1,8 +1,15 @@
 import Image from 'next/image';
 
+import {useIsVisible} from "../JS_Scripts/Visible"
+import { useRef } from "react";
+
 export default function Items() {
+  
+  const ref_WhatWeDo = useRef(null);
+  const is_visible_WWD = useIsVisible(ref_WhatWeDo);
+
     return (
-        <section className="flex">
+        <section ref={ref_WhatWeDo}  className={`flex transition-all duration-[1200ms] ease-in-out ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}>
             <div className="w-1/3">
                 <div className="overflow-hidden w-4/5 ">
                 

@@ -18,10 +18,13 @@ export default function WhatWeDo() {
             <h2 className="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
               WHAT WE<br />DO
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-lg md:text-xl leading-relaxed mb-4">
               Daylun integrates stylish architectural design with structural engineering quality, 
               technology and sustainable energy efficient homes.
             </p>
+            <a href="./About" className="text-lg md:text-xl leading-relaxed hover:text-[#04012A]">
+              <p>Learn more about DAYLUN</p>
+            </a>
           </div>
         </div>
         

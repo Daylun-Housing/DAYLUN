@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import {FaLinkedinIn} from "react-icons/fa6"
 import {useIsVisible} from "../../JS_Scripts/Visible"
 import { useRef } from "react";
 
@@ -8,7 +9,7 @@ export default function OurLeadership() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <section className="relative flex flex-col md:flex-row h-screen w-full">
+    <section className="relative overflow-hidden flex flex-col md:flex-row h-screen w-full">
       {/* Left Panel */}
       <div ref={ref_WhatWeDo} className={`md:w-2/3 transition-all ease-in-out duration-1000 
                                         ${is_visible_WWD ? "translate-x-0 scale-x-100" : "-translate-x-[100px] scale-x-110"}`}>
@@ -17,7 +18,13 @@ export default function OurLeadership() {
             <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
               Our CEO
             </h2>
-            <h3 className="text-xl leading-relaxed ">Arthur Zankowicz</h3>
+            <h3 className="text-xl leading-relaxed ">Arthur Zankowicz
+            </h3>
+            
+            <a href="https://www.linkedin.com/in/arthur-z-a494a517b/">
+                <FaLinkedinIn className="mt-2 text-[#0474BC] hover:text-[#045c94]"/>
+              </a>
+            
             <br />
             <p className="text-s md:text-s leading-relaxed w-[800px]">
             Our CEO, Arthur. is a sustainable design entrepreneur with over 25 years experience in innovating environmentally friendly
@@ -53,7 +60,7 @@ export default function OurLeadership() {
 
       {/* Right Panel */}
       <div ref={ref_WhatWeDo} className={`relative md:w-1/3 h-96 md:h-auto items-center
-                                          duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[100px] scale-125"}`}>
+                                          duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[100px] scale-150"}`}>
         <div>
             <Image
               src="/about-the-designer-Arthur-Zankowicz.jpg"
