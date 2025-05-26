@@ -3,8 +3,8 @@ import AwardItems from "./AwardItems";
 
 export default function Awards() {
   return (
-    <section className="bg-[#04012A] w-full h-screen text-white">
-      <div className="max-w-6xl mx-auto mb-10">
+    <section className="bg-[#04012A] w-full h-[500px] text-white">
+      <div className="max-w-6xl h-1/5 mx-auto mb-10">
         {/* Grid with heading + steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Heading Block */}
@@ -17,7 +17,11 @@ export default function Awards() {
         </div>
       </div>
 
-      <AwardItems />
+      <div className="relative flex h-4/5 justify-center">
+
+        <AwardItems />
+
+      </div>
     </section>
   );
 }

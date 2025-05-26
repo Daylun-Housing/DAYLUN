@@ -9,7 +9,7 @@ export default function FutureTech() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-[700px]">
         <Image
               className="brightness-[0.70] object-cover"
               src="/Apartment.png"
@@ -19,8 +19,8 @@ export default function FutureTech() {
           <div ref={ref_WhatWeDo} className={`absolute inset-0 flex items-center justify-center text-center
                                               transition-all duration-1000 ease-in-out ${is_visible_WWD ? "scale-100" : "scale-50"}`}>
             <div className="px-4 py-6 bg-[#0474BC] text-white text-[50px] space-y-2">
-              <p className="text-[80px] font-bold">Upcoming Technologies</p>
-              <p className="text-[30px]">See our future projects</p>
+              <p className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold">Upcoming Technologies</p>
+              <p className="text-sm md:text-lg xl:text-2xl">See our future projects</p>
             </div>
           </div>
       </div>

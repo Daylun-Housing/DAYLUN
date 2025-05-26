@@ -1,11 +1,19 @@
 import Image from "next/image";
 
+import {useIsVisible} from "../JS_Scripts/Visible"
+import { useRef } from "react";
+
 export default function RecentProjects() {
+  const ref_WhatWeDo = useRef(null);
+  const is_visible_WWD = useIsVisible(ref_WhatWeDo);
+
   return (
+    
     <section className="bg-[#04012A] text-white py-24 px-6 md:px-12">
-      <div className="max-w-4xl mx-auto text-center">
+      <div ref={ref_WhatWeDo} className={`max-w-4xl mx-auto text-center
+                      transition-all ease-in-out duration-[1500ms] ${is_visible_WWD ? "opacity-100" : "opacity-[25%]"}`}>
         {/* Section Heading */}
-        <h2 className="text-4xl md:text-5xl font-extrabold uppercase mb-6">
+        <h2 className={`text-4xl md:text-5xl font-extrabold uppercase mb-6`}>
           <span className="text-white">Featured </span>
           <br />
           <span className="text-white">Article </span>
@@ -13,7 +21,8 @@ export default function RecentProjects() {
         </h2>
 
         {/* Subheadings */}
-        <div className="flex flex-col md:flex-row justify-center gap-16 mb-10 font-extrabold text-2xl md:text-3xl text-[#0474BC] uppercase">
+        <div className={`flex flex-col md:flex-row justify-center gap-16 mb-10 font-extrabold text-2xl md:text-3xl text-[#0474BC] uppercase
+                                            transition-all ease-in-out duration-1000 ${is_visible_WWD ? "opacity-100" : "opacity-[25%]"}`}>
           <div>
             <p>Toronto</p>
             <p>Townhome</p>
@@ -21,7 +30,7 @@ export default function RecentProjects() {
         </div>
 
         {/* Project Image */}
-        <div className="overflow-hidden h-[500px] md:h-[600px] mb-5">
+        <div className={`overflow-hidden h-[500px] md:h-[600px] mb-5`}>
           <div className="relative w-full h-full mb-10 hover:scale-125 transition-all">
             <a href="./All_Articles/241_Waterloo">
               <Image
@@ -40,7 +49,7 @@ export default function RecentProjects() {
         </div>
 
         {/* Text Content */}
-        <div className="text-center max-w-2xl mx-auto space-y-6">
+        <div className={`text-center max-w-2xl mx-auto space-y-6`}>
           <h3 className="text-left text-2xl font-semibold uppercase">Flagship House</h3>
           <div className="text-left text-[#0474BC] text-lg">
             <p>241 Waterloo Avenue | Toronto, Ontario | Canada</p>

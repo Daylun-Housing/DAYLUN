@@ -9,24 +9,24 @@ export default function OurLeadership() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <section className="relative overflow-hidden flex flex-col md:flex-row h-screen w-full">
+    <section className="relative overflow-hidden flex h-[700px] w-full">
       {/* Left Panel */}
-      <div ref={ref_WhatWeDo} className={`md:w-2/3 transition-all ease-in-out duration-1000 
-                                        ${is_visible_WWD ? "translate-x-0 scale-x-100" : "-translate-x-[100px] scale-x-110"}`}>
-        <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 relative z-10 h-full ">
+      <div ref={ref_WhatWeDo} className={`w-2/3 transition-all ease-in-out duration-1000 
+                                        ${is_visible_WWD ? "translate-x-0 scale-x-100" : "-translate-x-[30%] scale-x-110"}`}>
+        <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 relative z-10 h-full w-full">
           <div className="max-w-xl mt-8 text-left">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xl font-extrabold mb-4 leading-tight">
               Our CEO
             </h2>
-            <h3 className="text-xl leading-relaxed ">Arthur Zankowicz
+            <h3 className="text-sm sm:text-md xl:text-xl leading-relaxed ">Arthur Zankowicz
             </h3>
             
             <a href="https://www.linkedin.com/in/arthur-z-a494a517b/">
-                <FaLinkedinIn className="mt-2 text-[#0474BC] hover:text-[#045c94]"/>
+                <FaLinkedinIn className="mt-2 text-sm sm:text-md xl:text-xl text-[#0474BC] hover:text-[#045c94]"/>
               </a>
             
             <br />
-            <p className="text-s md:text-s leading-relaxed w-[800px]">
+            <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed w-full">
             Our CEO, Arthur. is a sustainable design entrepreneur with over 25 years experience in innovating environmentally friendly
             and creative design solutions for the sport, fashion, film, and building industries. 
 
@@ -59,8 +59,8 @@ export default function OurLeadership() {
       </div>
 
       {/* Right Panel */}
-      <div ref={ref_WhatWeDo} className={`relative md:w-1/3 h-96 md:h-auto items-center
-                                          duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[100px] scale-150"}`}>
+      <div ref={ref_WhatWeDo} className={`relative w-1/3 h-full md:h-auto items-center
+                                          duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[10%] scale-[200%]"}`}>
         <div>
             <Image
               src="/about-the-designer-Arthur-Zankowicz.jpg"
