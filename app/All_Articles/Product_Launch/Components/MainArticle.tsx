@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function MainArticle() {
     return (
-        <div className='bg-[url(/daylun_building_balconies.jpg)] px-[275px]'>
+        <div className='bg-[url(/daylun_building_balconies.jpg)] px-[15%]'>
         <div className='bg-[#04012A] w-full'>
-          <div className="text-xl text-white px-[25px] py-[100px] whitespace-pre-wrap">
+          <div className="text-sm md:text-md lg:text-xl text-white px-[10%] py-[10px] whitespace-pre-wrap">
             <p className="first-letter:text-5xl">
               DAYLUN is proud to announce its latest product - Daylun's Exterior OSB Sheathing. Made from sustainable materials, 
               this OSB is both insulated and waterproof. 
@@ -13,7 +13,7 @@ export default function MainArticle() {
               <br />
             </p>
 
-            <div className="flex justify-center text-center py-[5px] w-full h-full object-cover">
+            <div className="flex justify-center text-center py-[5px] w-full h-full object-contain">
               <Image src="/blue-bamboo-osb.webp" alt="bamboo OSB" width={500} height={75}/>
 
             </div>
@@ -41,17 +41,17 @@ export default function MainArticle() {
 
             <ul>
               <li className="flex gap-x-4">
-                <Image src="/Recyclable.webp" alt="Recyclable" width={50} height={50}/> 
+                <Image src="/Recyclable.webp" alt="Recyclable" width={50} height={50} className = "object-contain"/> 
                 <b>Recyclable</b> - bamboo from old OSB can be reused in new OSB.
               </li>
               <br />
               <li className="flex gap-x-4">
-                <Image src="/Upcyclable.webp" alt="Upcyclable" width={50} height={50} />
+                <Image src="/Upcyclable.webp" alt="Upcyclable" width={50} height={50} className = "object-contain"/>
                 <b>Upcyclable</b> - bamboo from old OSB can be reused in new products.
               </li>
               <br />
               <li className="flex gap-x-4">
-                <Image src="/Biodegradable.webp" alt="Recyclable" width={50} height={50} />
+                <Image src="/Biodegradable.webp" alt="Recyclable" width={50} height={50} className = "object-contain"/>
                 <b>Biodegrable</b> - bamboo will degrade, reducing waste.
               </li>
 

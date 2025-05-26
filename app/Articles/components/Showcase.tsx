@@ -10,17 +10,21 @@ export default function Showcase() {
     const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
     return (
-        <section className="relative flex flex-col bg-[#0474BC] h-screen w-full text-center">
+        <section className="relative flex flex-col bg-[#0474BC] w-full text-center">
             <div className="text-5xl text-white font-bold mt-10">
                 <p>ALL ARTICLES</p>
             </div>
 
-            <div ref={ref_WhatWeDo} className={`relative flex flex-col md:flex-row h-full justify-center items-center 
-                                                transition-all ease-in-out duration-[2000ms] ${is_visible_WWD ? "opacity-100" : "opacity-0"}`}>
+            <div>
 
-                <Left />
-                <Middle />
-                <Right />
+                <div ref={ref_WhatWeDo} className={`relative flex h-[600px] justify-center items-center 
+                                                    transition-all ease-in-out duration-[2000ms] ${is_visible_WWD ? "opacity-100" : "opacity-0"}`}>
+
+                    <Left />
+                    <Middle />
+                    <Right />
+
+                </div>
 
             </div>
 

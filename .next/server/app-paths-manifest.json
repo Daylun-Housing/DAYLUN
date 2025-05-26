@@ -1,9 +1,8 @@
 {
+  "/Factories/page": "app/Factories/page.js",
+  "/Investors/page": "app/Investors/page.js",
   "/All_Articles/241_Waterloo/page": "app/All_Articles/241_Waterloo/page.js",
-  "/About/page": "app/About/page.js",
-  "/All_Articles/Product_Launch/page": "app/All_Articles/Product_Launch/page.js",
-  "/Technologies/page": "app/Technologies/page.js",
   "/Articles/page": "app/Articles/page.js",
   "/All_Articles/Yukon_Factory/page": "app/All_Articles/Yukon_Factory/page.js",
-  "/Investors/page": "app/Investors/page.js"
+  "/All_Articles/Product_Launch/page": "app/All_Articles/Product_Launch/page.js"
 }

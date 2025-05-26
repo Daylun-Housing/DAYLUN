@@ -26,6 +26,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/All_Articles/241_Waterloo/page.js"
     ],
+    "/All_Articles/Product_Launch/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/All_Articles/Product_Launch/page.js"
+    ],
     "/About/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -40,11 +45,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/Technologies/page.js"
-    ],
-    "/All_Articles/Product_Launch/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/All_Articles/Product_Launch/page.js"
     ],
     "/Factories/page": [
       "static/chunks/webpack.js",

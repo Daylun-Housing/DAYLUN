@@ -10,6 +10,7 @@ import PanelSystem from "./Components/8x8PanelSystem";
 import Bamboo from "./Components/Bamboo";
 import FutureTech from "./Components/NewTech";
 import GantryCrane from "./Components/GantryCrane";
+import GotAnIdea from "./Components/GotAnIdea";
 
 export default function TechnologyPage() {
     return (
@@ -22,6 +23,7 @@ export default function TechnologyPage() {
             <PanelSystem />
             <FutureTech />
             <GantryCrane />
+            <GotAnIdea />
             <Footer />
         </>
     )
