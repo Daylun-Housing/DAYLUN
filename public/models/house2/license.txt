@@ -1,0 +1,11 @@
+Model Information:
+* title:	Modern house
+* source:	https://sketchfab.com/3d-models/modern-house-8611bebe282b4979b370ca0760d4aba6
+* author:	Wepone (https://sketchfab.com/Wepone)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Modern house" (https://sketchfab.com/3d-models/modern-house-8611bebe282b4979b370ca0760d4aba6) by Wepone (https://sketchfab.com/Wepone) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

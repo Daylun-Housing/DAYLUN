@@ -17,7 +17,7 @@ export default function Video() {
                         House Builder
                     </h2>
                     <br />
-                    <p className="text-lg md:text-xl leading-relaxed">
+                    <p className="text-sm sm:text-lg md:text-xl leading-relaxed">
                     Daylun's House Builder tool allows you to input your specifications and we will give you the full plan as well 
                     as cost of your proposed house. This plan will include the exact number of screws and materials required, and
                     you can also download the RIVET file as well.
