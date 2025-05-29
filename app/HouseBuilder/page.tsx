@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import HeroSection from './components/HeroSection';
 import Video from './components/Video';
+import Preview from './components/Preview';
 import Footer from '../components/Footer';
 
 export default function HouseBuilder() {
@@ -12,6 +13,7 @@ export default function HouseBuilder() {
             <Header />
             <HeroSection />
             <Video />
+            <Preview />
             <Footer />
         </>
     )
