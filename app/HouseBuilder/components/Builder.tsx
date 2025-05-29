@@ -100,6 +100,12 @@ export default function Builder() {
             <p><strong>Height:</strong> {height || 'y'} ft</p>
             <p><strong>Length:</strong> {length || 'z'} ft</p>
             <p className="mt-4"><strong>Expected Price:</strong> $ {price} CAD</p>
+            <a href="mailto:info@daylun.ca">
+              <button className="mt-4 bg-[#0474BC] text-white font-bold px-2 py-1 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
+                Buy this House
+              </button>
+
+            </a>
           </div>
         </div>
       </div>
