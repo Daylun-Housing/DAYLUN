@@ -2,3 +2,4 @@ node_modules
 .update_script
 
 .next
+.vscode
