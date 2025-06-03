@@ -76,7 +76,7 @@ export default function Builder() {
         </div>
 
         <Image
-        src="/TORUS.png"
+        src="/shouses.png"
         alt="Builder Preview"
         width={1200}
         height={600}
