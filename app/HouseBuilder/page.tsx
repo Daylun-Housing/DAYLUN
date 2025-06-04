@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import HeroSection from './components/HeroSection';
 import Video from './components/Video';
 import Builder from './components/Builder';
+import Soon from './components/ComingSoon';
 import Footer from '../components/Footer';
 
 export default function HouseBuilder() {
@@ -12,8 +13,7 @@ export default function HouseBuilder() {
         <>
             <Header />
             <HeroSection />
-            <Video />
-            <Builder />
+            <Soon />
             <Footer />
         </>
     )

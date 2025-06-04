@@ -30,7 +30,7 @@ export default function PanelSystem() {
         <div ref={ref_WhatWeDo} className={`z-20 bg-[#0474BC] w-[60%] items-center flex justify-center
                                               transition-all duration-[1500ms] ease-in-out ${is_visible_WWD ? "translate-x-0 scale-100" : "translate-x-[30%] scale-110"}`}>
           <div className={`max-w-xl mt-16 text-left text-white px-5`}>
-              <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xll font-extrabold md:mb-8 leading-tight text-[#04012A]">
+              <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xl font-extrabold md:mb-8 leading-tight text-[#04012A]">
                 8x8 Panel System
               </h2>
               <br />
