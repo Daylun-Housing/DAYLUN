@@ -7,10 +7,10 @@ export default function HighlightsSection() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <section className={`bg-[#04012A] text-[#0474BC] text-center w-full py-12 md:py-24 px-6 overflow-hidden`}>
+    <section className={`bg-[#04012A] text-[#0474BC] text-center w-full py-5 sm:py-12 md:py-24 px-6 overflow-hidden`}>
      
 
-      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-bold space-y-6 md:space-y-12">
+      <div className="text-[clamp(1rem,4vw,5rem)] font-bold space-y-6 md:space-y-12">
         <div ref={ref_WhatWeDo} className={`flex flex-wrap justify-center gap-x-12 md:gap-x-24 gap-y-6 transition-all ease-in duration-500 ${is_visible_WWD ? "translate-x-[12%]" : "-translate-x-[12%]"}`}>
           <span>SPEED</span>
           <span>COST EFFICIENCY</span>
@@ -21,7 +21,7 @@ export default function HighlightsSection() {
         </div>
       </div>
 
-      <p className="mt-20 text-white text-[10px] sm:text-xs md:text-sm tracking-widest font-light">
+      <p className="mt-5 md:mt-20 text-white text-[10px] sm:text-xs md:text-sm tracking-widest font-light">
         <span className="font-bold">HOUSING</span> OF THE <span className="font-bold">FUTURE</span>
       </p>
     </section>

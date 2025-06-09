@@ -13,20 +13,20 @@ export default function OurLeadership() {
       {/* Left Panel */}
       <div ref={ref_WhatWeDo} className={`w-2/3 transition-all ease-in-out duration-1000 
                                         ${is_visible_WWD ? "translate-x-0 scale-x-100" : "-translate-x-[30%] scale-x-110"}`}>
-        <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 relative z-10 h-full w-full">
-          <div className="max-w-xl mt-8 text-left">
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xl font-extrabold mb-4 leading-tight">
+        <div className="bg-[#04012A] text-white flex flex-col justify-center px-5 md:px-20 relative z-10 h-full w-full">
+          <div className="max-w-xl mt-2 md:mt-8 text-left">
+            <h2 className="text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)] font-extrabold mb-4 leading-tight">
               Our CEO
             </h2>
-            <h3 className="text-sm sm:text-md xl:text-xl leading-relaxed ">Arthur Zankowicz
+            <h3 className="text-[clamp(0.5rem,2vw,1.5rem)] md:text-[clamp(0.5rem,2vw,1.5rem)]] leading-relaxed ">Arthur Zankowicz
             </h3>
             
             <a href="https://www.linkedin.com/in/arthur-z-a494a517b/">
-                <FaLinkedinIn className="mt-2 text-sm sm:text-md xl:text-xl text-[#0474BC] hover:text-[#045c94]"/>
+                <FaLinkedinIn className="mt-2 text-[clamp(1rem,2vw,2rem)] md:text-[clamp(1rem,2vw,2rem)]] text-[#0474BC] hover:text-[#045c94]"/>
               </a>
             
             <br />
-            <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed w-full">
+            <p className="text-[clamp(0.5rem,2vw,1.5rem)] md:text-[clamp(0.5rem,2vw,1.5rem)]] leading-relaxed w-full">
             Our CEO, Arthur. is a sustainable design entrepreneur with over 25 years experience in innovating environmentally friendly
             and creative design solutions for the sport, fashion, film, and building industries. 
 
@@ -48,11 +48,6 @@ export default function OurLeadership() {
 
             In May 2016, he launched 50 Unlimited Co. Technologies, or 50ul, to develop and license inventions for more-eco
             friendly sportswear. The company’s creations include micro egg technology and a vegetable-based glue.
-
-            <br /><br />
-
-            Arthur has spent years working internationally and speaks English, Polish, French, and basic Mandarin. 
-            He is now based in Canada and proud to launch Daylun.
             </p>
           </div>
         </div>

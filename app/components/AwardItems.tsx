@@ -12,7 +12,7 @@ export default function AwardItems() {
         <section ref={ref_WhatWeDo} className={`flex w-full h-4/5
                                                 transition-all duration-[1200ms] ease-in-out ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}>
             <div className="flex w-1/2 justify-center">
-                <div className="overflow-hidden w-[40%] justify-center">
+                <div className="overflow-hidden w-full md:w-[40%] justify-center">
                 
                     <a href= "https://techfest.london/2025/en/page/best-use-of-new-materials-in-a-project-2024" className = "relative w-full h-[300px] overflow-hidden items-center justify-center text-center">
                         
@@ -32,7 +32,7 @@ export default function AwardItems() {
                 </div>
             </div>
             <div className="flex w-1/2 justify-center">
-                <div className="overflow-hidden w-[40%] justify-center">
+                <div className="overflow-hidden w-full md:w-[40%] justify-center">
                 
                     <a href= "https://techfest.london/2025/en/page/best-use-of-technology-design-efficiency-2024" className = "relative w-full h-[400px] overflow-hidden items-center justify-center text-center">
                         

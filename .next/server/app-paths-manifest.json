@@ -1,6 +1,6 @@
 {
-  "/Investors/page": "app/Investors/page.js",
-  "/page": "app/page.js",
+  "/About/page": "app/About/page.js",
+  "/Technologies/page": "app/Technologies/page.js",
   "/HouseBuilder/page": "app/HouseBuilder/page.js",
-  "/Technologies/page": "app/Technologies/page.js"
+  "/page": "app/page.js"
 }

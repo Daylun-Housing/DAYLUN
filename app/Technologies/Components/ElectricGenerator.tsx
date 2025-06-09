@@ -35,16 +35,13 @@ export default function Generator() {
               </h2>
               <br />
               <p className="text-xs sm:text-s md:text-md lg:text-lg leading-relaxed">
-                The Daylun Electric Generator utilises solar panels to generate and store electricity to be used by power tools on job sites. This piece of
-                equipment is perfect for construction crews as it is compact and mobile. 
+                Reliable Power, Anywhere – Without the Noise
                 <br />
                 <br />
 
-                Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect 
-                nostrud nisi intricate Content. Qui  international first-class nulla ut. Punctual adipisicing, essential lovely 
-                queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power 
-                pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki 
-                excepteur Basset hound. Zürich sleepy perfect consectetur.
+                Say goodbye to gas fumes and engine noise. Daylun’s all-new 3600W Electric Generator offers silent, sustainable energy wherever you need 
+                it. With a peak output of 7200W and a 3600Wh battery (expandable for longer use), this generator is built for modern off-grid living and 
+                emergency preparedness.
               </p>
 
             <a href="./Investors">

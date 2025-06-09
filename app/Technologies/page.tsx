@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Header from "../components/Header";
+import HeaderMobile from "../components/HeaderMobile";
 import Footer from "../components/Footer";
 import HeroImage from "./Components/HeroImage";
 import VegetableGlue from "./Components/VegetableGlue";
@@ -17,6 +18,7 @@ export default function TechnologyPage() {
     return (
         <>
             <Header />
+            <HeaderMobile />
             <HeroImage />
             <VegetableGlue />
             <EvaBoard />

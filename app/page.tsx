@@ -1,6 +1,7 @@
 "use client";
 
 import Header from "./components/Header";
+import HeaderMobile from "./components/HeaderMobile";
 import HeroSection from "./components/HeroSection";
 import WhatWeDo from "./components/WhatWeDo";
 import Highlights from "./components/Highlights";
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <HeaderMobile />
       <HeroSection />
       <WhatWeDo/>
       <Highlights />

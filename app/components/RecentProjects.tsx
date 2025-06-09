@@ -30,14 +30,14 @@ export default function RecentProjects() {
         </div>
 
         {/* Project Image */}
-        <div className={`overflow-hidden h-[500px] md:h-[600px] mb-5`}>
+        <div className={`overflow-hidden h-[400px] md:h-[600px] mb-5`}>
           <div className="relative w-full h-full mb-10 hover:scale-125 transition-all">
             <a href="./All_Articles/241_Waterloo">
               <Image
                 src="/241-waterloo.jpg"
                 alt="241 Waterloo House"
                 fill
-                className="object-cover rounded-lg"
+                className="object-contain md:object-cover rounded-lg"
                 priority
               />
               <div className="transition-all font-bold text-2xl absolute h-full w-full bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100">

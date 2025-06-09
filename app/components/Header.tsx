@@ -1,15 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { Link } from "react-router-dom";
-import { BrowserRouter } from 'react-router-dom';
+import Link from "next/link";
+
 import { FaInstagram, FaFacebookF, FaLinkedinIn , FaYoutube, FaTiktok, FaEnvelope } from "react-icons/fa6";
 import { CgSearch } from "react-icons/cg";
+
+/* const Header = () =>
+{
+
+ 
+};
+
+export default Header; */
+
 
 export default function Header() {
   return (
     // <header className="w-full flex justify-between items-center px-6 py-4 bg-white text-blue-900 border-b border-blue-200">
-    <header className="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-white text-blue-900 border-b border-blue-200 shadow-sm">
+    <header className="hidden md:flex sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-white text-blue-900 border-b border-blue-200 shadow-sm">
 
     {/* Logo */}
       <div className="relative w-32 h-10 scale-[40%] sm:scale-[55%] md:scale-[70%] lg:scale-[100%]">

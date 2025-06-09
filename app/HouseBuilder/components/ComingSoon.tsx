@@ -9,10 +9,10 @@ export default function Video() {
   
     return (
         
-        <section className="bg-[#04012A] relative flex h-[700px] w-full">
-            <div ref={ref_WhatWeDo} className={`text-white flex items-center justify-center px-10 md:px-20 w-full relative z-10
+        <section className="bg-[#04012A] relative sm:flex w-full">
+            <div ref={ref_WhatWeDo} className={`text-white py-12 md:flex items-center justify-center px-10 md:px-20 w-full relative z-10
                                                 transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}>
-                <div className="w-1/2 mt-16 text-left">
+                <div className="md:w-1/2 text-left ">
                 
                     <h2 className="text-xl md:text-3xl lg:text-4xl font-extrabold mb-8 leading-tight">
                         House Builder - Coming Soon
@@ -39,8 +39,8 @@ export default function Video() {
                     
                     
                 </div>
-                <div className="w-1/2 h-full">
-                    <div className="absolute w-1/2 scale-75 h-full object-fill">
+                <div className="md:w-1/2 h-[300px] md:h-full flex justify-center">
+                    <div className="relative w-1/2 scale-75 h-full object-fill">
                         <Image
                         src="/House.gif"
                         alt="House Coming Together"

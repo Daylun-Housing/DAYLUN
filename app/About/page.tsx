@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Header from "../components/Header";
+import HeaderMobile from "../components/HeaderMobile";
 import Hero from "./Components/hero";
 import OurMission from "./Components/OurMission";
 import OurStory from "./Components/OurStory";
@@ -16,6 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
+      <HeaderMobile />
 
 
       {/* Logo-on-background */}

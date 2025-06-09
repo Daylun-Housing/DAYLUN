@@ -21,10 +21,10 @@ export default function Engineering() {
             <div className={`w-2/3`}>
                 <div className="bg-[#0474BC] text-white flex flex-col justify-center px-10 md:px-20 relative z-10 h-full ">
                 <div className="mt-8 text-left">
-                    <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xl font-extrabold mb-4 leading-tight">
+                    <h2 className="text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)]  font-extrabold mb-4 leading-tight">
                     Director of Engineering
                     </h2>
-                    <h3 className="text-sm sm:text-md xl:text-xl leading-relaxed ">Aidan Bilon
+                    <h3 className="text-[clamp(0.5rem,2vw,1.5rem)] md:text-[clamp(0.5rem,2vw,1.5rem)]] leading-relaxed ">Aidan Bilon
                     </h3>
                     
                     <a href="https://www.linkedin.com/in/jeff-luo-a8ba80217/">
@@ -32,7 +32,7 @@ export default function Engineering() {
                     </a>
                     
                     <br />
-                    <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed w-full">
+                    <p className="text-[clamp(0.5rem,2vw,1.5rem)] md:text-[clamp(0.5rem,2vw,1.5rem)]] leading-relaxed w-full">
                      
 
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis dictum consequat. Integer dapibus 
