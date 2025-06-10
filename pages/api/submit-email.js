@@ -1,3 +1,5 @@
+require('dns').setDefaultResultOrder('ipv4first');
+
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
