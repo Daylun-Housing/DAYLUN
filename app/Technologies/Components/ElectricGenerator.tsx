@@ -17,7 +17,7 @@ export default function Generator() {
                          duration-100 w-full h-full object-fill
                                               `}>
             <Image
-            src="/Generator.webp"
+            src="/power.png"
             alt="Electric Generator"
             fill
             className="object-contain -translate-x-[15%]"

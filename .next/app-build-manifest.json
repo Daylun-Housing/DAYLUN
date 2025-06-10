@@ -11,20 +11,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/About/page": [
+    "/HouseBuilder/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/About/page.js"
+      "static/chunks/app/HouseBuilder/page.js"
+    ],
+    "/Factories/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Factories/page.js"
     ],
     "/Technologies/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/Technologies/page.js"
-    ],
-    "/HouseBuilder/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/HouseBuilder/page.js"
     ]
   }
 }

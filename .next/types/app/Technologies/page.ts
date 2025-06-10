@@ -1,4 +1,4 @@
-// File: C:\Users\paliu\Documents\Work\Daylun\DAYLUN\DAYLUN\app\Technologies\page.tsx
+// File: /home/fronxo/Desktop/DAYLUN/app/Technologies/page.tsx
 import * as entry from '../../../../app/Technologies/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
