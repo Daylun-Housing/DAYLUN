@@ -27,7 +27,9 @@ export default async function handler(req, res) {
     auth: {
       user: 'john@daylun.ca',      // Automated emails will be sent from me, Jeff, for now. Will speak to Arthur soon.
       pass: 'paja axfi uyfv sjt' // IMPORTANT: APP PASSWORD, NOT REGULAR PASSWORD.
-    }
+    },
+    logger: true,   // 🔍 logs to console
+    debug: true     // 🔍 detailed SMTP traffic
   });
 
   try {
