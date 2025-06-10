@@ -20,16 +20,19 @@ export default async function handler(req, res) {
 
   // Send email.
   const transporter = nodemailer.createTransport({
-    service: 'smtp.gmail.com',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // use TLS
+
     auth: {
-      user: 'jeff@daylun.ca',      // Automated emails will be sent from me, Jeff, for now. Will speak to Arthur soon.
+      user: 'john@daylun.ca',      // Automated emails will be sent from me, Jeff, for now. Will speak to Arthur soon.
       pass: 'paja axfi uyfv sjt' // IMPORTANT: APP PASSWORD, NOT REGULAR PASSWORD.
     }
   });
 
   try {
     await transporter.sendMail({
-      from: '"Daylun AutoSender" <your_gmail_address@gmail.com>',
+      from: '"Daylun AutoSender" <jeff@daylun.ca>',
       to: email,
       subject: 'Your House Design Submission',
       text: `Thank you! We received your design:\nWidth: ${width}\nHeight: ${height}\nLength: ${length}`,
