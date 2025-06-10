@@ -1,4 +1,6 @@
-require('dns').setDefaultResultOrder('ipv4first');
+import { setDefaultResultOrder } from 'dns';
+setDefaultResultOrder('ipv4first');
+
 
 import fs from 'fs';
 import path from 'path';
