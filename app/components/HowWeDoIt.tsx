@@ -39,7 +39,7 @@ export default function HowWeDo() {
 
       {/*Notch Thingy*/}
       
-      <div ref={ref_WhatWeDo} className={`absolute left-[80%] sm:left-3/4 md:left-[70%] lg:left-2/3 top-1/2 w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "-translate-x-0 scale-100" : "translate-x-[30%] scale-110"}`}>
+      <div ref={ref_WhatWeDo} className={`absolute left-[80%] sm:left-3/4 md:left-[55%] lg:left-2/3 top-1/2 w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "-translate-x-0 scale-100" : "translate-x-[30%] scale-110"}`}>
         <div className="-translate-x-full -translate-y-1/2 w-36 h-36 scale-0 md:scale-[80%] lg:scale-100 bg-[#0474BC] -z-100" />
       </div>
     </section>

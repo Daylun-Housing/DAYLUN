@@ -17,7 +17,7 @@ export default function Showcase() {
 
             <div>
 
-                <div ref={ref_WhatWeDo} className={`relative flex h-[600px] justify-center items-center 
+                <div ref={ref_WhatWeDo} className={`relative flex flex-col md:flex-row justify-center items-center 
                                                     transition-all ease-in-out duration-[2000ms] ${is_visible_WWD ? "opacity-100" : "opacity-0"}`}>
 
                     <Left />

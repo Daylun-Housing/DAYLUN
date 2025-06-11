@@ -25,8 +25,6 @@ export default function AboutPage() {
       <OurMission/>
       <OurStory/>
       <OurLeadership/>
-      <TeamHeader />
-      <OurTeam />
       <OurValues/>
 
       <Footer />

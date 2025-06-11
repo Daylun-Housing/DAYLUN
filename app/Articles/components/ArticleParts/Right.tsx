@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Right() {
     return (
             
-        <div className="w-1/3 h-full flex items-center justify-center">
+        <div className="md:w-1/3 h-full flex items-center justify-center">
             <a href="../All_Articles/Product_Launch" className = "bg-[#04012A] w-2/3 h-2/3 text-center">
                 
                 <div className="w-full h-full overflow-hidden scale-[80%] hover:scale-100 duration-100">
