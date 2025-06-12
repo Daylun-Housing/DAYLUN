@@ -12,8 +12,8 @@ export default function HeroImage() {
       <div className="relative w-full h-screen">
         <Image
               className="brightness-[0.70] object-cover"
-              src="/Apartment.png"
-              alt="Apartment"
+              src="/factory.jpg"
+              alt="Factory"
               fill
               />
           <div ref={ref_WhatWeDo} className={`absolute inset-0 flex items-center justify-center text-center 

@@ -31,7 +31,7 @@ export default function WhatWeDo() {
       </div>
 
       {/* Right Panel */}
-      <div ref={ref_WhatWeDo} className={`relative w-full md:w-2/3 h-full bg-[#04012A] md:h-auto z-0 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[5%] scale-[140%] lg:scale-[120%]"}`}>
+      <div ref={ref_WhatWeDo} className={`relative w-full md:w-2/3 h-full bg-[#04012A] md:h-auto z-0 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-[101%]" : "-translate-x-[5%] scale-[140%] lg:scale-[120%]"}`}>
         <Image
           src="/what-we-do.jpg"
           alt="Modern house"
@@ -41,7 +41,7 @@ export default function WhatWeDo() {
       </div>
 
       {/* Notch Thingy */}
-      <div ref={ref_WhatWeDo} className={`absolute md:left-[40%] lg:left-1/3 top-1/2  w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[40%] scale-110"}`}>
+      <div ref={ref_WhatWeDo} className={`absolute md:left-[40%] lg:left-[30%] top-1/2  w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[40%] scale-110"}`}>
         <div className=" -translate-y-1/2 w-36 h-36 scale-0 md:scale-[80%] lg:scale-100 bg-[#0474BC] -z-100" />
       </div>
 

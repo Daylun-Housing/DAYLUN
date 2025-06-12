@@ -11,7 +11,7 @@ export default function Yukon() {
   return (
     <section className="relative bg-[#04012A] overflow-hidden md:flex h-[550px] md:h-[700px] w-full">
       {/* Left Panel */}
-      <div ref={ref_WhatWeDo} className={`bg-[#04012A] py-3 w-full md:w-1/2 xl:w-1/3 transition-all ease-in-out duration-1000 z-20
+      <div ref={ref_WhatWeDo} className={`bg-[#04012A] py-3 w-full h-1/2 md:h-full md:w-1/2 xl:w-1/3 transition-all ease-in-out duration-1000 z-20
                                         ${is_visible_WWD ? "translate-x-0 scale-x-100" : "md:-translate-x-[30%] scale-x-110"}`}>
         <div className="text-white flex flex-col justify-center px-10 md:px-20 w-full h-full relative">
           <div className="max-w-md">
@@ -21,7 +21,7 @@ export default function Yukon() {
             <p className="text-[clamp(0.5rem, 1vw, 1.5rem)] md:text-[clamp(0.5rem,3vw,1.5rem)] leading-relaxed">
               The Yukon Factory will be our first operation factory. Sign up to our Yukon newsletter to follow our development. 
               <br />
-              <a href="/All_Articles/241_Waterloo" className="py-[50px]">Read More</a>
+              <a href="/All_Articles/Yukon_Factory" className="py-[50px]">Read More</a>
             </p>
           </div>
           <div className="md:-translate-x-[20%] lg:-translate-x-[10%]">
@@ -32,11 +32,11 @@ export default function Yukon() {
       </div>
 
       {/* Right Panel */}
-      <div ref={ref_WhatWeDo} className={`relative w-full md:w-2/3 h-full md:h-auto z-2 transition-all ease-in-out 
+      <div ref={ref_WhatWeDo} className={`relative w-full md:w-2/3 h-1/2 md:h-full z-2 transition-all ease-in-out 
                                           duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[5%] scale-[120%]"}`}>
         <Image
-          src="/toronto-town-home.jpg"
-          alt="Town house"
+          src="/factory.jpg"
+          alt="Factory"
           fill
           className="object-contain md:object-cover object-top absolute md:p-0 "
         />
