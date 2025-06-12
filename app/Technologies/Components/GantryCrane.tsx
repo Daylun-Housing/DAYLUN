@@ -47,8 +47,8 @@ export default function GantryCrane() {
                 <div className={`relative w-full 
                          h-[80%] md:h-[10%] lg:h-[15%] xl:h-[20%] object-fill md:translate-x-[10%]`}>
                   <Image
-                    src="/DAYLUN_LOGO_blue-2b.svg"
-                    alt="DAYLUN LOGO"
+                    src="/gantry.jpg"
+                    alt="gantry crane"
                     fill
                     className="object-contain duration-100 hover:scale-[110%]"
                   />

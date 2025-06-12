@@ -26,7 +26,7 @@ export default function OurLeadership() {
               </a>
             
             <br />
-            <p className="text-[clamp(0.5rem,2vw,1.5rem)] md:text-[clamp(0.5rem,2vw,1.5rem)]] leading-relaxed w-full">
+            <p className="text-[clamp(0.5rem,2vw,1rem)] md:text-[clamp(0.5rem,2vw,1rem)]] leading-relaxed w-full">
             Our CEO, Arthur. is a sustainable design entrepreneur with over 25 years experience in innovating environmentally friendly
             and creative design solutions for the sport, fashion, film, and building industries. 
 
@@ -55,7 +55,7 @@ export default function OurLeadership() {
 
       {/* Right Panel */}
       <div ref={ref_WhatWeDo} className={`relative w-1/3 h-full md:h-auto items-center
-                                          duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[10%] scale-[200%]"}`}>
+                                          duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[10%] scale-[250%]"}`}>
         <div>
             <Image
               src="/about-the-designer-Arthur-Zankowicz.jpg"

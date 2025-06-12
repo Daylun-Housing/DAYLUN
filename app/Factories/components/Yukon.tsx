@@ -20,9 +20,11 @@ export default function Yukon() {
             </h2>
             <p className="text-[clamp(0.5rem, 1vw, 1.5rem)] md:text-[clamp(0.5rem,3vw,1.5rem)] leading-relaxed">
               The Yukon Factory will be our first operation factory. Sign up to our Yukon newsletter to follow our development. 
+              <br />
+              <a href="/All_Articles/241_Waterloo" className="py-[50px]">Read More</a>
             </p>
           </div>
-          <div className="">
+          <div className="md:-translate-x-[20%] lg:-translate-x-[10%]">
             <Newsletter />
 
           </div>

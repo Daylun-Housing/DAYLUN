@@ -36,7 +36,7 @@ export default function PastReports() {
       </div>
 
       {/* Notch Thingy */}
-      <div ref={ref_WhatWeDo} className={`absolute left-[40%] md:left-[30%] lg:left-1/3 top-1/2 w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[40%] scale-110"}`}>
+      <div ref={ref_WhatWeDo} className={`absolute left-[40%] md:left-[30%] lg:left-1/3 top-1/2 w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[45%] scale-110"}`}>
         <div className=" -translate-y-1/2 w-36 h-36 scale-[50%] sm:scale-[60%] md:scale-[80%] lg:scale-100 bg-[#04012A] -z-100" />
       </div>
     </section>

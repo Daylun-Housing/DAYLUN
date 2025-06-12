@@ -10,7 +10,7 @@ export default function OurValues() {
   return (
     <section className="relative flex h-[525px] w-full">
       {/* Left Panel */}
-      <div className={`bg-[#04012A] items-center text-white flex flex-col justify-center px-10 md:px-20 w-full relative z-10`}>
+      <div className={`bg-[#0474BC] items-center text-white flex flex-col justify-center px-10 md:px-20 w-full relative z-10`}>
         <div ref={ref_WhatWeDo} className={`max-w-3xl mt-16 text-center
                                             transition-all ease-in-out duration-1000 ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xl font-extrabold mb-8 leading-tight">
@@ -19,7 +19,7 @@ export default function OurValues() {
           <p className="text-md md:text-lg lg:text-xl leading-relaxed">
             DAYLUN is dedicated to four qualities:
           </p>
-          <ul className="text-md md:text-lg lg:text-xl leading-relaxed mt-4 text-center font-bold text-[#0474BC]">
+          <ul className="text-md md:text-lg lg:text-xl leading-relaxed mt-4 text-center font-bold text-[#04012A]">
             <li>SPEED</li>
             <li>COST EFFICIENCY</li>
             <li>SUSTAINABILITY</li>

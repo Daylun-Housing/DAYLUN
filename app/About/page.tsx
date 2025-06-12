@@ -24,7 +24,6 @@ export default function AboutPage() {
       <Hero />
       <OurMission/>
       <OurStory/>
-      <OurLeadership/>
       <OurValues/>
 
       <Footer />

@@ -33,7 +33,7 @@ export default function Header() {
         <a href="/HouseBuilder" className="hover:text-[#110C27]">HOUSE BUILDER</a>
         <a href="https://daylun.myshopify.com/" className="hover:text-[#110C27]">STORE</a>
         <a href="/Technologies" className="hover:text-[#110C27]">TECHNOLOGIES</a>
-        <a href="/Factories" className="hover:text-[#110C27]">FACTORIES</a>
+        <a href="/Factories" className="hover:text-[#110C27]">FACTORY PROJECT</a>
         <a href="/Investors" className="hover:text-[#110C27]">INVESTORS</a>
         <a href="/Articles" className="hover:text-[#110C27]">ARTICLES</a>
         <CgSearch className="hover:text-[#110C27]"/>

@@ -30,7 +30,7 @@ export const TOPBAR_ITEMS:  TopBarItem[] = [
         icon : <p className="w-[24px] h-[24px]">TECHNOLOGIES</p>
     },
     {
-        title: "FACTORIES",
+        title: "FACTORY PROJECT",
         path: "/Factories",
         icon : <p className="w-[24px] h-[24px]">FACTORIES</p>
     },

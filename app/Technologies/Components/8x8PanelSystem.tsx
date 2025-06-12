@@ -17,8 +17,8 @@ export default function PanelSystem() {
                          h-[60%] md:h-[20%] object-fill 
                                               `}> 
             <Image
-            src="/DAYLUN_LOGO_blue-2b.svg"
-            alt="DAYLUN logo"
+            src="/8x8_Panel.png"
+            alt="8x8 Panel"
             fill
             className="object-contain duration-100 hover:scale-[110%]"
           />
