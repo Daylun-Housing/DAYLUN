@@ -17,11 +17,12 @@ export default function HouseBuilder() {
             <HeroSection />
 
             {/* Current Deployment */}
-            <Soon />
+            {/* <Soon /> */}
 
             {/* Current Development */}
-            {/* <Video/>
-            <Builder/> */}
+
+            <Video/>
+            <Builder/>
 
             <Footer />
         </>
