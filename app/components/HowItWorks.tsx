@@ -27,11 +27,11 @@ export default function HowItWorks() {
           </div>
           <div className="bg-[#04012A] p-8 rounded-2xl flex flex-col items-center text-center">
             <FaHardHat className="text-cyan-400 text-4xl mb-4" />
-            <p>We will engineer according to our Patent Daylun process</p>
+            <p>We will engineer according to our patented Daylun process</p>
           </div>
           <div className="bg-[#04012A] p-8 rounded-2xl flex flex-col items-center text-center">
             <FaBookOpen className="text-cyan-400 text-4xl mb-4" />
-            <p>Daylun will provide a step by step play-book on how to</p>
+            <p>Daylun will provide a step by step playbook on how to proceed</p>
           </div>
           <div className="bg-[#04012A] p-8 rounded-2xl flex flex-col items-center text-center">
             <FaHome className="text-cyan-400 text-4xl mb-4" />
