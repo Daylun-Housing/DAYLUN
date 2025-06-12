@@ -17,7 +17,7 @@ export default function Generator() {
                          h-[80%] md:h-[50%] object-fill md:-translate-x-[10%]
                                               `}>
             <Image
-            src="/Generator.webp"
+            src="/power.png"
             alt="Electric Generator"
             fill
             className="object-contain duration-100 hover:scale-[110%]"

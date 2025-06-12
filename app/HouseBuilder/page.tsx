@@ -15,7 +15,14 @@ export default function HouseBuilder() {
             <Header />
             <HeaderMobile />
             <HeroSection />
+
+            {/* Current Deployment */}
             <Soon />
+
+            {/* Current Development */}
+            {/* <Video/>
+            <Builder/> */}
+
             <Footer />
         </>
     )

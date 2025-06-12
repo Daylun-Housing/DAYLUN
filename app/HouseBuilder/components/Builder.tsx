@@ -6,7 +6,11 @@ import {useIsVisible} from "../../JS_Scripts/Visible"
 import { useRef } from "react";
 import Model_Preview from "../../JS_Scripts/Model";
 
+
+
+
 export default function Builder() {
+
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
@@ -15,6 +19,21 @@ export default function Builder() {
   const [length, setLength] = useState('');
   let price = 0;
   let model_location = "/models/house1/scene.gltf";
+
+
+  const [email, setEmail] = useState('');
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const res = await fetch('/api/submit-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, width, height, length }),
+    });
+    const data = await res.json();
+    alert(data.message || "Thank you!");
+  };
+
 
   if (parseInt(width) > 0 && parseInt(height) > 0 && parseInt(length) > 0) {
     price = parseInt(width) * parseInt(height) * parseInt(length);
@@ -100,12 +119,26 @@ export default function Builder() {
             <p><strong>Height:</strong> {height || 'y'} ft</p>
             <p><strong>Length:</strong> {length || 'z'} ft</p>
             <p className="mt-4"><strong>Expected Price:</strong> $ {price} CAD</p>
-            <a href="mailto:info@daylun.ca">
-              <button className="mt-4 bg-[#0474BC] text-white font-bold px-2 py-1 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
-                Buy this House
-              </button>
 
-            </a>
+
+            <form onSubmit={handleEmailSubmit}>
+              <input
+                type="email"
+                placeholder="Email this to me!"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="px-3 py-1 text-black rounded-md"
+              />
+              <button
+                type="submit"
+                className="ml-2 bg-[#0474BC] text-white px-4 py-1 rounded-md hover:bg-[#015185]"
+              >
+                Submit
+              </button>
+            </form>
+
+
           </div>
         </div>
       </div>

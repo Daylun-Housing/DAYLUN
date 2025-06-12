@@ -23,7 +23,7 @@ export default function Header() {
     {/* Logo */}
       <div className="relative w-32 h-10 scale-[40%] sm:scale-[55%] md:scale-[70%] lg:scale-[100%]">
         <a href="/">
-          <Image src="/logo.svg" alt="DAYLUN logo" fill className="object-contain" />
+          <Image src="/DAYLUN.png" alt="DAYLUN logo" fill className="object-contain" />
         </a>
       </div>
 

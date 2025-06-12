@@ -18,7 +18,7 @@ import {
           <div>
             <a href="/">
               <Image
-                src="/logo-alt.svg"
+                src="/DAYLUN.png"
                 alt="Daylun Logo"
                 width={200}
                 height={80}
