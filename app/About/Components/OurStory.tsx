@@ -16,10 +16,9 @@ export default function OurStory() {
             Our Story
           </h2>
           <p className="text-[clamp(0.5rem, 1vw, 1.5rem)] md:text-[clamp(0.5rem,3vw,1.5rem)] leading-relaxed">
-          Our CEO, Arthur, launched Daylun in 2021 to leverage his insight and experience. The company is set to become a 
+          Arthur Zankowicz launched Daylun in 2021 to leverage his insight and experience in sustainable construction. The company is set to become a 
             market-changing leader in the passive home industry with an array of proprietary green building materials and technologies. 
-            With Arthur at the helm, Daylun has all of the trailblazing qualities of a leading disruptor, combining sustainability and
-             technology to deliver passive net-zero homes with greater efficiency and speed.
+            Daylun sets out to combine technology and sustainable practices to deliver passive net-zero homes with greater efficiency and speed.
           </p>
         </div>
       </div>
