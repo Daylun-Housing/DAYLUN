@@ -11,9 +11,9 @@ export default function WhatWeDo() {
   return (
     <section className="relative overflow-hidden md:flex h-[450px] sm:h-[550px] md:h-[700px] w-full">
       {/* Left Panel */}
-      <div ref={ref_WhatWeDo} className={`w-full md:w-1/2 lg:w-1/3 transition-all ease-in-out duration-1000 
+      <div ref={ref_WhatWeDo} className={`w-full md:w-1/2 lg:w-1/3 transition-all ease-in-out duration-1000 z-10
                                         ${is_visible_WWD ? "md:translate-x-0 scale-x-100" : "md:-translate-x-[30%] scale-x-110"}`}>
-        <div className="bg-[#0474BC] text-white flex h-full flex-col justify-center px-3 md:px-20 relative z-10">
+        <div className="bg-[#0474BC] text-white flex h-full flex-col justify-center px-3 md:px-20 relative ">
           <div className="max-w-md mt-4 md:mt-16">
             <h2 className="text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)] font-extrabold mb-8 leading-tight">
               WHAT WE DO
@@ -31,12 +31,12 @@ export default function WhatWeDo() {
       </div>
 
       {/* Right Panel */}
-      <div ref={ref_WhatWeDo} className={`relative w-full md:w-2/3 h-full bg-[#04012A] md:h-auto z-0 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-[101%]" : "-translate-x-[5%] scale-[140%] lg:scale-[120%]"}`}>
+      <div ref={ref_WhatWeDo} className={`relative w-full md:w-1/2 lg:w-2/3 h-full bg-[#04012A] md:h-auto z-0 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-[102%]" : "-translate-x-[5%] scale-[140%] lg:scale-[125%]"}`}>
         <Image
           src="/what-we-do.jpg"
           alt="Modern house"
           fill
-          className="object-contain md:object-cover object-top absolute p-2 md:p-0 "
+          className="object-contain md:object-cover object-top absolute"
         />
       </div>
 
