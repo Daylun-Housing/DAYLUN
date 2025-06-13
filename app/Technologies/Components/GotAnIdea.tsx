@@ -16,8 +16,8 @@ export default function GotAnIdea() {
             Got an Idea?
           </h2>
           <p className="text-lg md:text-xl leading-relaxed">
-          Have a technology concept but don't have the technologies to research and develop it? 
-          Contact us about your idea and we can partner with you bring that concept into reality.
+          Have a technology concept but not ready to research and develop it? 
+          Contact us about your ideas and together we shall bring them to life.
           </p>
 
            <br />

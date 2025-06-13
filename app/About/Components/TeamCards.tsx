@@ -7,33 +7,33 @@ const team = [
     title: "Chief Executive Officer",
     image: "/about-the-designer-Arthur-Zankowicz.jpg",
     linkedin: "https://www.linkedin.com/in/arthur-z-a494a517b/",
-    bio: "Over 25 years in sustainable design across fashion, sport, and film. Founder of Pain, Moreno, and 50 Unlimited Co."
+    bio: "Over 25 years in sustainable design across construction, fashion, sport, and film. Founder of Pain, Moreno, and 50 Unlimited Co."
   },
   {
     name: "Patrick L.",
     title: "Chief Financial Officer",
-    image: "/placeholder.png",
+    image: "/PL.jpeg",
     linkedin: "https://www.linkedin.com/in/patrick-liu-850575325/",
     bio: "Finance and operations lead with experience in high-growth situations and international scaling strategies."
   },
   {
     name: "Jeff L.",
     title: "Chief Information Officer",
-    image: "/placeholder.png",
+    image: "/JL.jpeg",
     linkedin: "https://www.linkedin.com/in/jeff-luo-a8ba80217/",
     bio: "Oversees the company’s digital infrastructure and ensures data strategy aligns with security standards."
   },
   {
     name: "Michelle Y.",
     title: "Director of AI, Operations, Marketing",
-    image: "/placeholder.png",
+    image: "/MY.jpeg",
     linkedin: "https://www.linkedin.com/in/michellejyao/",
     bio: "Leads the integration of AI into operations and marketing, focusing on advanced automation with customer engagement and growth."
   },
   {
     name: "Armaan R.",
     title: "Director of Robotics",
-    image: "/placeholder.png",
+    image: "/AR.jpeg",
     linkedin: "https://www.linkedin.com/in/armaanrasheed/",
     bio: "Designs and deploys robotics solutions for manufacturing and automation, working towards efficient, scalable production."
   },
@@ -41,7 +41,7 @@ const team = [
   {
     name: "Aidan B.",
     title: "Director of Engineering",
-    image: "/placeholder.png",
+    image: "/AB.jpeg",
     linkedin: "https://www.linkedin.com/in/bilon/",
     bio: "Manages technical teams and engineering systems. Ensures all design and development efforts meet structural/functional standards."
   },

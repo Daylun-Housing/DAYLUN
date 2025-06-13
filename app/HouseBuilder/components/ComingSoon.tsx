@@ -25,15 +25,15 @@ export default function Video() {
                         </p>
                         <ul className="list-disc pl-5 mb-4">
                             <li>Enter your custom house size</li>
-                            <li>Instantly generate a 3D model in Revit</li>
+                            <li>Instantly generate a 3D model file</li>
                             <li>Receive complete engineering drawings for permitting and construction</li>
                             <li>Get a 3D interior design model to collaborate with your architect or designer</li>
                             <li>Automatically place an order in our factory, with</li>
                             <li>Real-time pricing based on your selections and specifications</li>
                         </ul>
                         
-                        Whether you’re an architect, a designer, or planning your dream home — this tool will streamline everything from concept to construction.
-                            Stay tuned — the future of home building is almost here.
+                        Whether you’re an architect, a designer, or planning your dream home; this tool will streamline everything from concept to construction.
+                            Stay tuned. The future of home building is almost here.
                         
                     </div>
                     

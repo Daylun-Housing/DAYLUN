@@ -16,13 +16,17 @@ export default function HeroImage() {
               alt="Apartment"
               fill
               />
-          <div ref={ref_WhatWeDo} className={`absolute inset-0 flex items-center justify-center text-center 
-                                              transition-all duration-1000 ease-in-out ${is_visible_WWD ? "scale-100" : "scale-50"}`}>
-            <div className={`px-4 py-6 bg-[#0474BC] text-white text-[50px] space-y-2`}>
-              <p className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold">Technologies</p>
-              <p className="text-sm md:text-lg xl:text-2xl">See the innovative technologies our company uses</p>
-            </div>
+          <div ref={ref_WhatWeDo} className={`absolute inset-0 flex items-center justify-center text-center
+                                    transition-all duration-1000 ease-in-out ${is_visible_WWD ? "scale-100" : "scale-50"}`}>
+          <div className="backdrop-blur-sm bg-black/50 text-white px-6 py-8 rounded-xl shadow-lg max-w-3xl">
+            <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight">
+              Technologies
+            </p>
+            <p className="mt-2 text-sm md:text-lg xl:text-xl text-gray-200">
+              See the innovative technologies our company uses
+            </p>
           </div>
+        </div>
       </div>
   )
 }

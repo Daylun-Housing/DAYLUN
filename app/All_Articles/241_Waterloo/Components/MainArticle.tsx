@@ -11,10 +11,10 @@ export default function MainArticle() {
           <div className='bg-[#04012A] flex-col'>
             <div className="text-sm md:text-md lg:text-xl text-white px-[10%] py-[100px] whitespace-pre-wrap">
               <p >
-                241 Waterloo is DAYLUN's pilot project, where we are experimenting with applying our innovations to 
-                constructing a complete house. We have incorporated all of our top of the line sustainable and innovative
-                technologies into this house. This house will demonstrate all that is possible with sustainable technology
-                and showcase Daylun's industry pioneering technologies. 
+                241 Waterloo is DAYLUN's pilot project, where we experiment with our innovations in the construction 
+                of a house to completion. We've incorporated all of our top-of-the-line sustainable
+                technologies into this project. The house will exhibit the future of sustainable techniques while
+                showcasing Daylun's industry pioneering technologies. 
 
               </p>
               

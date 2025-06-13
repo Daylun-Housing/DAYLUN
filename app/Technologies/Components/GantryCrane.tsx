@@ -18,15 +18,15 @@ export default function GantryCrane() {
                     Gantry Crane
                   </h2>
                   <p className="text-[clamp(0.5rem,2vw,1rem)] leading-relaxed">
-                  lightweight crane, reduce time and labour.
+                  Lightweight crane. Reduce time and labour.
                   <br />
                   <br />
     
-                    Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect 
-                    nostrud nisi intricate Content. Qui  international first-class nulla ut. Punctual adipisicing, essential lovely 
-                    queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power 
-                    pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki 
-                    excepteur Basset hound. Zürich sleepy perfect consectetur.
+                    Say goodbye to heavy machinery bottlenecks. Daylun’s lightweight Gantry Crane offers a modular, 
+                    mobile lifting solution that streamlines setup and teardown on any job site. Built from durable, 
+                    corrosion-resistant materials, it’s ideal for moving heavy loads quickly and safely - indoors or out. 
+                    Whether you're working in construction, warehousing, or fabrication, our crane is designed to reduce 
+                    manual labor and improve overall site efficiency.
     
                     <br />
                     <br />
@@ -47,7 +47,7 @@ export default function GantryCrane() {
                 <div className={`relative w-full 
                          h-[80%] md:h-[10%] lg:h-[15%] xl:h-[20%] object-fill md:translate-x-[10%]`}>
                   <Image
-                    src="/gantry.jpg"
+                    src="/gantrycraneicon.png"
                     alt="gantry crane"
                     fill
                     className="object-contain duration-100 hover:scale-[110%]"
