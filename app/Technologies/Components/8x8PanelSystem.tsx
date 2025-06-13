@@ -40,11 +40,12 @@ export default function PanelSystem() {
                 <br />
                 <br />
 
-                Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect 
-                nostrud nisi intricate Content. Qui  international first-class nulla ut. Punctual adipisicing, essential lovely 
-                queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power 
-                pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki 
-                excepteur Basset hound. Zürich sleepy perfect consectetur.
+                Daylun’s 8x8 Panel System is the backbone of our modular construction approach. 
+                Each panel is engineered for strength, portability, and seamless integration, 
+                enabling rapid deployment and scalable configurations. Designed to interlock, 
+                the panels eliminate traditional framing complexity and allow for efficient, tool-light assembly. 
+                Whether used as structural walls, floors, or roofing elements, this system measurably reduces 
+                labor while enhancing adaptability.
               </p>
             </div>
           </div>
