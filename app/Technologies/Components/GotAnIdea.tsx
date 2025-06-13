@@ -17,7 +17,11 @@ export default function GotAnIdea() {
           </h2>
           <p className="text-lg md:text-xl leading-relaxed">
           Have a technology concept but not ready to research and develop it? 
-          Contact us about your ideas. Together we shall bring them to life.
+          Contact us! 
+          
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed">
+          Together, we can bring your ideas to life.
           </p>
 
            <br />
