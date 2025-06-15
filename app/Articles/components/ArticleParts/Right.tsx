@@ -17,7 +17,7 @@ export default function Right() {
                         <Image src="/Bamboo.jpg" alt="Bamboo OSB" fill className = "object-cover translate-x-[12%]" />
                     </div>
                     <p className="m-5 text-left text-white text-[clamp(1px,4vw,1rem)]">
-                        DAYLUN has launched its Bamboo OSB. A waterproof exterior protection layer made from easy to work with materials.
+                        DAYLUN has launched its Bamboo OSB. A waterproof exterior protection layer made from easy-to-work-with materials.
 
                         <br />
                         <br />
