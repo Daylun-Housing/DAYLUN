@@ -16,13 +16,16 @@ export default function Right() {
                     <div className = "relative w-4/5 h-[200px] ">
                         <Image src="/Bamboo.jpg" alt="Bamboo OSB" fill className = "object-cover translate-x-[12%]" />
                     </div>
-                    <p className="m-5 text-left text-white text-[clamp(1px,4vw,1rem)]">
+                    <p className="m-5 text-left text-white text-[clamp(1px,4vw,1rem)] justify-center flex flex-col">
                         DAYLUN has launched its Bamboo OSB. A waterproof exterior protection layer made from easy-to-work-with materials.
 
                         <br />
                         <br />
 
+                        
+                        <button className="bg-[#0474BC] text-white font-bold px-4 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
                         Read More
+                        </button>
                     </p>
                 </div>
                 

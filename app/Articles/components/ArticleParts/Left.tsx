@@ -16,14 +16,16 @@ export default function Left() {
                     <div className = "relative w-4/5 h-[200px] ">
                         <Image src="/how-we-do-it.jpg" alt="how we do it" fill className = "object-contain translate-x-[10%]" />
                     </div>
-                    <p className="m-5 text-[9px] text-[clamp(1px,4vw,1rem)] text-left text-white">
+                    <p className="m-5 text-[9px] text-[clamp(1px,4vw,1rem)] text-left text-white justify-center flex flex-col ">
                         Our Yukon valley will be operation soon. This will be our first, automated factory that will produce 
                         our flagship products. 
 
                         <br />
                         <br />
-
+                        <button className="bg-[#0474BC] text-white font-bold px-4 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
                         Read More
+                        </button>
+                        
                     </p>
                 </div>
                 

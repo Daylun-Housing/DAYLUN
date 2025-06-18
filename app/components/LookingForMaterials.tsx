@@ -9,7 +9,7 @@ export default function LookingForMaterials() {
         <div className="flex-col grid-cols-1 md:grid-cols-3 gap-8">
           {/* Heading Block */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-5xl md:text-6xl font-extrabold leading-tight">
+            <h2 className="text-[clamp(2.2rem,5vw,5rem)] font-extrabold leading-tight">
               Featured 
               <span className="text-[#04012A] ml-4">Products</span>
             </h2> 

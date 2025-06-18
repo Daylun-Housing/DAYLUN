@@ -16,14 +16,17 @@ export default function Middle() {
                     <div className = "relative w-4/5 h-[200px] ">
                         <Image src="/flagship-house.jpg" alt="how we do it" fill className = "object-cover translate-x-[12%]" />
                     </div>
-                    <p className="m-5 text-left text-white  text-[clamp(1px,4vw,1rem)]">
+                    <p className="m-5 text-left text-white  text-[clamp(1px,4vw,1rem)] justify-center flex flex-col">
                         241 Waterloo is a net-zero and modular home build incorporating the revolutionary
                         materials and technologies. 
 
                         <br />
                         <br />
 
+                        
+                        <button className="bg-[#0474BC] text-white font-bold px-4 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
                         Read More
+                        </button>
                     </p>
                 </div>
                 

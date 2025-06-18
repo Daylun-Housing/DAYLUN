@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function MainArticle() {
     return (
-        <div className='bg-[url(/daylun_building_balconies.jpg)] px-[15%]'>
+        <div className='bg-[url(/daylun_building_balconies.jpg)] px-[7%] md:px-[15%]'>
         <div className='bg-[#04012A] w-full'>
-          <div className="text-sm md:text-md lg:text-xl text-white px-[10%] py-[10px] whitespace-pre-wrap">
+          <div className="text-sm md:text-md lg:text-xl text-white px-[5%] py-[10px] whitespace-pre-wrap">
             <p className="first-letter:text-5xl">
               DAYLUN is proud to announce its latest product - Daylun's Exterior OSB Sheathing. Made from sustainable materials, 
               this OSB is both insulated and waterproof. 

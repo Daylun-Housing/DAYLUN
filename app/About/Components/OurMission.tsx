@@ -8,7 +8,7 @@ export default function OurMission() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <section className="relative overflow-hidden md:flex h-[450px] sm:h-[550px] md:h-[700px] w-full">
+    <section className="bg-[#04012A] relative overflow-hidden md:flex h-[450px] sm:h-[550px] md:h-[700px] w-full">
       {/* Left Panel */}
       <div ref={ref_WhatWeDo} className={`w-full md:w-1/2 lg:w-1/3 transition-all ease-in-out duration-1000 z-20
                                         ${is_visible_WWD ? "md:translate-x-0 scale-x-100" : "md:-translate-x-[30%] scale-x-110"}`}>
@@ -37,7 +37,7 @@ export default function OurMission() {
       </div>
 
       {/* Notch Thingy */}
-      <div ref={ref_WhatWeDo} className={`absolute left-[20%] sm:left-1/4 md:left-[30%] lg:left-1/3 top-1/2  w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[60%] scale-110"}`}>
+      <div ref={ref_WhatWeDo} className={`absolute left-[20%] sm:left-1/4 md:left-[40%] lg:left-1/3 top-1/2  w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[60%] scale-110"}`}>
         <div className=" -translate-y-1/2 w-36 h-36 scale-0 md:scale-[80%] lg:scale-100 bg-[#04012A] -z-100" />
       </div>
 

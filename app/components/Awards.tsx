@@ -9,7 +9,7 @@ export default function Awards() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Heading Block */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-5xl md:text-6xl py-12 font-extrabold leading-tight">
+            <h2 className="text-[clamp(2.2rem,5vw,5rem)] py-12 font-extrabold leading-tight">
               Featured 
               <span className="text-[#0474BC] ml-4">Awards</span>
             </h2> 

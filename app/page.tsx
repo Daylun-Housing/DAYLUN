@@ -3,6 +3,8 @@
 import Header from "./components/Header";
 import HeaderMobile from "./components/HeaderMobile";
 import HeroSection from "./components/HeroSection";
+import Diagram from "./components/Diagram";
+import DiagramMobile from "./components/DiagramMobile";
 import WhatWeDo from "./components/WhatWeDo";
 import Highlights from "./components/Highlights";
 import HowWeDoIt from "./components/HowWeDoIt";
@@ -23,6 +25,8 @@ export default function Home() {
       <Header />
       <HeaderMobile />
       <HeroSection />
+      <Diagram />
+      <DiagramMobile />
       <WhatWeDo/>
       <Highlights />
       <HowWeDoIt/>

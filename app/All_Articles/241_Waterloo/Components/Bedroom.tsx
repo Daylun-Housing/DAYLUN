@@ -38,7 +38,7 @@ export default function Bedroom() {
               </div>
           </div>
           
-          <div ref={ref_WhatWeDo} className={`md:flex w-full mb-10 h-[300px] md:h-[250px] justify-center
+          <div ref={ref_WhatWeDo} className={`flex flex-col md:flex-row w-full md:mt-10 mb-10 h-[300px] md:h-[250px] items-center md:justify-center
                                               transition-all duration-[1500ms] ease-in-out ${is_visible_WWD ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-[100px]"}
                                               `}>
               

@@ -13,7 +13,7 @@ export default function WhatWeDo() {
       {/* Left Panel */}
       <div ref={ref_WhatWeDo} className={`w-full md:w-1/2 lg:w-1/3 transition-all ease-in-out duration-1000 z-10
                                         ${is_visible_WWD ? "md:translate-x-0 scale-x-100" : "md:-translate-x-[30%] scale-x-110"}`}>
-        <div className="bg-[#0474BC] text-white flex h-full flex-col justify-center px-3 md:px-20 relative ">
+        <div className="bg-[#0474BC] text-white flex h-full flex-col justify-center py-5 px-3 md:px-20 relative ">
           <div className="max-w-md mt-4 md:mt-16">
             <h2 className="text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)] font-extrabold mb-8 leading-tight">
               WHAT WE DO

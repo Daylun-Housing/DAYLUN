@@ -7,9 +7,9 @@ import Bedroom from "./Bedroom";
 export default function MainArticle() {
 
     return (
-        <div className='bg-[url(/toronto-town-home.jpg)] px-[15%]'>
+        <div className='bg-[url(/toronto-town-home.jpg)] px-[7%] md:px-[15%]'>
           <div className='bg-[#04012A] flex-col'>
-            <div className="text-sm md:text-md lg:text-xl text-white px-[10%] py-[100px] whitespace-pre-wrap">
+            <div className="text-sm md:text-md lg:text-xl text-white px-[5%] py-[100px] whitespace-pre-wrap">
               <p >
                 241 Waterloo is DAYLUN's pilot project, where we experiment with our innovations in the construction 
                 of a house to completion. We've incorporated all of our top-of-the-line sustainable
