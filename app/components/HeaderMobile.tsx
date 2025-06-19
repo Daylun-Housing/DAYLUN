@@ -27,7 +27,7 @@ export default function head() {
         <div className="flex h-[47px] items-center justify-between px-4">
             <div className="relative w-32 h-10">
                 <a href="/">
-                    <Image src="/logo.svg" alt="DAYLUN logo" fill className="object-contain" />
+                    <Image src="/DAYLUN.png" alt="DAYLUN logo" fill className="object-contain" />
                 </a>
             </div>
     

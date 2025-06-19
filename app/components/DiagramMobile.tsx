@@ -28,7 +28,7 @@ export default function DiagramMobile() {
                                             ${is_visible_WWD ? "opacity-100 scale-x-100" : "opacity-0 scale-x-110"} `}>
             <div className="relative w-full h-full z-20 text-[#0474BC] text-[clamp(1rem,2vw,2rem)]">
                 <div className="absolute md:scale-0 px-4 flex justify-center w-full py-2">
-                    <li className="list-none space-y-4 grid grid-cols-2">
+                    <li className="list-none grid grid-cols-2">
                         <ul><a href="https://daylun.myshopify.com/products/roof-trusses" className="hover:text-white">1. Roof Hanger</a></ul>
                        <ul><a href="https://daylun.myshopify.com/products/waterproof-membrane-1" className="hover:text-white">2. Waterproof Membrane</a></ul> 
                        <ul><a href="https://daylun.myshopify.com/products/evan-board" className="hover:text-white">3. EVAN Board</a></ul> 

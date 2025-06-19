@@ -13,8 +13,8 @@ export default function PanelSystem() {
         {/* Left Panel */}
         <div ref={ref_WhatWeDo}  className={`bg-[#0474BC] md:bg-[#04012A] order-2 md:order-1 flex justify-center items-center h-1/3 md:h-full w-full md:w-[40%] relative -z-1000 md:h-full
                                             transition-all duration-[1500ms] ease-in-out ${is_visible_WWD ? "translate-x-0 scale-100" : "md:translate-x-[5%] scale-[175%]"}`}>
-          <div className={`flex relative w-full md:w-[80%] md:-translate-x-[10%] xl:-translate-x-[15%]
-                         h-[60%] md:h-[20%] object-fill 
+          <div className={`flex relative w-full md:-translate-x-[10%] 
+                         h-[80%] md:h-[40%] lg:h-[60%] xl:h-[80%] object-fill 
                                               `}> 
             <Image
             src="/8x8_Panel.png"
