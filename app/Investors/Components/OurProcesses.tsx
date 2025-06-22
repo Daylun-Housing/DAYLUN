@@ -10,7 +10,7 @@ export default function OurProcesses() {
             Our Processes
           </h2>
           <p className="text-lg md:text-xl leading-relaxed">
-          See our process on how to build a home. 
+            See our process on how to build a home.
           </p>
         </div>
       </div>
@@ -27,8 +27,6 @@ export default function OurProcesses() {
 
       {/* Notch Thingy */}
       <div className="absolute left-1/3 -translate-x-1/2 top-1/2 -translate-y-1/2 w-36 h-36 bg-[#04012A] z-20" />
-
-
     </section>
   );
 }

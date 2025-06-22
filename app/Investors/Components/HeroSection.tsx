@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 export default function HeroSection() {
-  
   return (
     <section className="relative h-screen w-full">
       <div>

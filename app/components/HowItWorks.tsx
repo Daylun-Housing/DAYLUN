@@ -1,4 +1,10 @@
-import { FaVectorSquare, FaHardHat, FaBookOpen, FaHome, FaTruck } from "react-icons/fa";
+import {
+  FaVectorSquare,
+  FaHardHat,
+  FaBookOpen,
+  FaHome,
+  FaTruck,
+} from "react-icons/fa";
 
 export default function HowItWorks() {
   return (
@@ -9,14 +15,16 @@ export default function HowItWorks() {
           {/* Heading Block */}
           <div className="flex flex-col justify-center">
             <h2 className="text-5xl md:text-6xl font-extrabold leading-tight">
-              HOW IT<br />
+              HOW IT
+              <br />
               <span className="text-[#e6f1ff]">WORKS</span>
               <span className="block text-4xl md:text-5xl text-[#04012A] mt-4">
                 FOR YOU
               </span>
             </h2>
             <p className="mt-4 text-lg">
-              <span className="font-semibold">5 simple steps</span> to produce the house of your dreams
+              <span className="font-semibold">5 simple steps</span> to produce
+              the house of your dreams
             </p>
           </div>
 

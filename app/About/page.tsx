@@ -21,19 +21,16 @@ export default function AboutPage() {
       <Header />
       <HeaderMobile />
 
-
       {/* Logo-on-background */}
       <Hero />
-      <OurMission/>
-      <OurStory/>
+      <OurMission />
+      <OurStory />
       {/* <OurLeadership/> */}
       {/* <TeamHeader /> */}
-      <TeamCards/>
-      <OurValues/>
+      <TeamCards />
+      <OurValues />
 
       <Footer />
     </>
-
-    
   );
 }

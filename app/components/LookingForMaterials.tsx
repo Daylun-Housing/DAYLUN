@@ -10,18 +10,21 @@ export default function LookingForMaterials() {
           {/* Heading Block */}
           <div className="flex flex-col justify-center">
             <h2 className="text-[clamp(2.2rem,5vw,5rem)] font-extrabold leading-tight">
-              Featured 
+              Featured
               <span className="text-[#04012A] ml-4">Products</span>
-            </h2> 
+            </h2>
           </div>
 
           <div className="lg:translate-x-2/3 lg:-translate-y-[25px]">
             <h3>
-              Visit our 
-                <a href="https://daylun.myshopify.com/" className="m-1 hover:text-[#110C27] font-bold">
-                  store 
-                </a>
-               to view our catalogue.
+              Visit our
+              <a
+                href="https://daylun.myshopify.com/"
+                className="m-1 hover:text-[#110C27] font-bold"
+              >
+                store
+              </a>
+              to view our catalogue.
             </h3>
           </div>
         </div>

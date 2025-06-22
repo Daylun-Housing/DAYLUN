@@ -10,17 +10,15 @@ export default function Awards() {
           {/* Heading Block */}
           <div className="flex flex-col justify-center">
             <h2 className="text-[clamp(2.2rem,5vw,5rem)] py-12 font-extrabold leading-tight">
-              Featured 
+              Featured
               <span className="text-[#0474BC] ml-4">Awards</span>
-            </h2> 
+            </h2>
           </div>
         </div>
       </div>
 
       <div className="relative flex h-4/5 justify-center">
-
         <AwardItems />
-
       </div>
     </section>
   );

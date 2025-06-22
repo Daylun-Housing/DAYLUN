@@ -16,10 +16,7 @@ import Awards from "./components/Awards";
 import GetQuote from "./components/GetQuote";
 import Footer from "./components/Footer";
 
-
-
 export default function Home() {
-
   return (
     <>
       <Header />
@@ -27,17 +24,16 @@ export default function Home() {
       <HeroSection />
       <Diagram />
       <DiagramMobile />
-      <WhatWeDo/>
+      <WhatWeDo />
       <Highlights />
-      <HowWeDoIt/>
-      <WallSystem/>
-      <HowItWorks/>
-      <RecentProjects/>
+      <HowWeDoIt />
+      <WallSystem />
+      <HowItWorks />
+      <RecentProjects />
       <LookingForMaterials />
       <Awards />
-      <GetQuote/>
-      <Footer/>
+      <GetQuote />
+      <Footer />
     </>
-    
   );
 }

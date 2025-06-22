@@ -1,5 +1,5 @@
-import { Canvas } from '@react-three/fiber';
-import { useGLTF, Stage, PresentationControls } from '@react-three/drei';
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 
 function Model({ location, ...props }) {
   const { scene } = useGLTF(location);
@@ -16,9 +16,9 @@ export default function Model_Preview({ loc }) {
         near: 0.1,
         far: 1000,
       }}
-      style={{ position: 'relative' }}
+      style={{ position: "relative" }}
     >
-      <color attach="background" args={['#0474BC']} />
+      <color attach="background" args={["#0474BC"]} />
       <PresentationControls
         key={loc} // <- force remount on model change
         speed={1.5}

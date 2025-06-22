@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Header from "../components/Header";
@@ -15,20 +15,20 @@ import Generator from "./Components/ElectricGenerator";
 import GotAnIdea from "./Components/GotAnIdea";
 
 export default function TechnologyPage() {
-    return (
-        <>
-            <Header />
-            <HeaderMobile />
-            <HeroImage />
-            <VegetableGlue />
-            <EvaBoard />
-            <Bamboo />
-            <PanelSystem />
-            <FutureTech />
-            <GantryCrane />
-            <Generator />
-            <GotAnIdea />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <HeaderMobile />
+      <HeroImage />
+      <VegetableGlue />
+      <EvaBoard />
+      <Bamboo />
+      <PanelSystem />
+      <FutureTech />
+      <GantryCrane />
+      <Generator />
+      <GotAnIdea />
+      <Footer />
+    </>
+  );
 }

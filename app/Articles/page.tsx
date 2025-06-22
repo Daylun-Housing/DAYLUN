@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Header from "../components/Header";
@@ -11,15 +11,13 @@ import Footer from "../components/Footer";
 export default function AboutPage() {
   return (
     <>
-        <Header />
-        <HeaderMobile />
+      <Header />
+      <HeaderMobile />
 
-        <Hero />
-        <Featured />
-        <Showcase />
-        <Footer />
+      <Hero />
+      <Featured />
+      <Showcase />
+      <Footer />
     </>
-
-    
   );
 }

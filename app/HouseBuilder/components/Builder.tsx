@@ -1,38 +1,38 @@
-'use client';
-import { useState } from 'react';
-import Image from 'next/image';
+"use client";
+import { useState } from "react";
+import Image from "next/image";
 
-import { useIsVisible } from '../../JS_Scripts/Visible';
-import { useRef } from 'react';
-import Model_Preview from '../../JS_Scripts/Model';
+import { useIsVisible } from "../../JS_Scripts/Visible";
+import { useRef } from "react";
+import Model_Preview from "../../JS_Scripts/Model";
 
 export default function Builder() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
-  const [width, setWidth] = useState('');
-  const [height, setHeight] = useState('');
-  const [length, setLength] = useState('');
+  const [width, setWidth] = useState("");
+  const [height, setHeight] = useState("");
+  const [length, setLength] = useState("");
 
-  const [selectedModel, setSelectedModel] = useState('house1');
+  const [selectedModel, setSelectedModel] = useState("house1");
 
   const models = {
-    house1: { name: 'Modern Home', path: '/models/house1/scene.gltf' },
-    subhouse: { name: 'Suburban', path: '/models/subhouse.glb' },
-    donut: { name: 'Experimental', path: '/models/donut.glb' },
+    house1: { name: "Modern Home", path: "/models/house1/scene.gltf" },
+    subhouse: { name: "Suburban", path: "/models/subhouse.glb" },
+    donut: { name: "Experimental", path: "/models/donut.glb" },
   };
 
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const res = await fetch('/api/submit-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("/api/submit-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, width, height, length }),
     });
     const data = await res.json();
-    alert(data.message || 'Thank you!');
+    alert(data.message || "Thank you!");
   };
 
   let model_location = models[selectedModel].path;
@@ -48,12 +48,13 @@ export default function Builder() {
       <div
         ref={ref_WhatWeDo}
         className={`grid md:grid-cols-2 gap-12 items-center
-                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? 'opacity-100' : 'opacity-25'}`}
+                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}
       >
         <div>
           <h2 className="text-4xl font-extrabold mb-4">House Builder</h2>
           <p className="mb-6">
-            Enter the specifications for your project below and view a preview of your project now.
+            Enter the specifications for your project below and view a preview
+            of your project now.
           </p>
           <form className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -105,7 +106,7 @@ export default function Builder() {
       <div
         ref={ref_WhatWeDo}
         className={`bg-[#04012A] text-white mt-16 py-12 px-6 rounded-lg
-                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? 'opacity-100' : 'opacity-25'} `}
+                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-25"} `}
       >
         <h3 className="text-3xl font-extrabold text-center mb-8">Preview</h3>
         <div className="md:flex gap-12 items-center">
@@ -118,8 +119,8 @@ export default function Builder() {
                     onClick={() => setSelectedModel(key)}
                     className={`px-4 py-2 rounded-md font-semibold transition-colors duration-200 ${
                       selectedModel === key
-                        ? 'bg-[#0474BC] text-white'
-                        : 'bg-[#D6ECFA] text-[#0474BC] hover:bg-[#A9D7F8]'
+                        ? "bg-[#0474BC] text-white"
+                        : "bg-[#D6ECFA] text-[#0474BC] hover:bg-[#A9D7F8]"
                     }`}
                   >
                     {model.name}
@@ -138,13 +139,13 @@ export default function Builder() {
               <strong>Specifications:</strong>
             </p>
             <p>
-              <strong>Width:</strong> {width || 'x'} ft
+              <strong>Width:</strong> {width || "x"} ft
             </p>
             <p>
-              <strong>Height:</strong> {height || 'y'} ft
+              <strong>Height:</strong> {height || "y"} ft
             </p>
             <p>
-              <strong>Length:</strong> {length || 'z'} ft
+              <strong>Length:</strong> {length || "z"} ft
             </p>
             <p className="mt-4">
               <strong>Expected Price:</strong> $ {price} CAD

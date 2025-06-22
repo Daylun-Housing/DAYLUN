@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import {FaLinkedinIn} from "react-icons/fa6"
-import {useIsVisible} from "../../JS_Scripts/Visible"
+import { FaLinkedinIn } from "react-icons/fa6";
+import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
 import Ops from "./TeamMembers/DirectorOfOps";
@@ -11,11 +11,10 @@ import Research from "./TeamMembers/DirectorOfResearch";
 import CFO from "./TeamMembers/ChiefFinancialOfficer";
 
 export default function OurTeam() {
-
   return (
-    <section className="bg-[#0474BC] relative overflow-hidden flex flex-col md:flex-row h-[700px] w-full">   
+    <section className="bg-[#0474BC] relative overflow-hidden flex flex-col md:flex-row h-[700px] w-full">
       <CFO />
-      <Research />   
+      <Research />
       <Engineering />
       <CIO />
       <Ops />

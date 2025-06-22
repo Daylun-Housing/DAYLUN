@@ -1,17 +1,24 @@
-'use client';
+"use client";
 
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
-import { FaInstagram, FaFacebookF, FaLinkedinIn , FaYoutube, FaTiktok, FaEnvelope } from "react-icons/fa6";
-import Image from 'next/image';
+import React, { ReactNode, useEffect, useRef, useState } from "react";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaYoutube,
+  FaTiktok,
+  FaEnvelope,
+} from "react-icons/fa6";
+import Image from "next/image";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "../../lib/utils";
 
-import { TOPBAR_ITEMS  } from '../Common/constants';
-import { TopBarItem } from '../Common/types';
-import { Icon } from '@iconify/react';
-import { motion, useCycle } from 'framer-motion';
+import { TOPBAR_ITEMS } from "../Common/constants";
+import { TopBarItem } from "../Common/types";
+import { Icon } from "@iconify/react";
+import { motion, useCycle } from "framer-motion";
 
 type MenuItemWithSubMenuProps = {
   item: TopBarItem;
@@ -19,38 +26,43 @@ type MenuItemWithSubMenuProps = {
 };
 
 export default function head() {
-
-    return (
-     <div className={cn(`md:hidden bg-white sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200`,
-        
-      )}>
-        <div className="flex h-[47px] items-center justify-between px-4">
-            <div className="relative w-32 h-10">
-                <a href="/">
-                    <Image src="/DAYLUN.png" alt="DAYLUN logo" fill className="object-contain" />
-                </a>
-            </div>
-    
+  return (
+    <div
+      className={cn(
+        `md:hidden bg-white sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200`,
+      )}
+    >
+      <div className="flex h-[47px] items-center justify-between px-4">
+        <div className="relative w-32 h-10">
+          <a href="/">
+            <Image
+              src="/DAYLUN.png"
+              alt="DAYLUN logo"
+              fill
+              className="object-contain"
+            />
+          </a>
         </div>
-    
-        <HeaderMobile />
       </div>
-    )
+
+      <HeaderMobile />
+    </div>
+  );
 }
 
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 100% 0)`,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 20,
       restDelta: 2,
     },
   }),
   closed: {
-    clipPath: 'circle(0px at 100% 0)',
+    clipPath: "circle(0px at 100% 0)",
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 400,
       damping: 40,
     },
@@ -64,55 +76,55 @@ const HeaderMobile = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    
     <motion.nav
       initial={"false"}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isOpen ? "open" : "closed"}
       custom={height}
       className={`fixed inset-0 z-50 w-full md:hidden ${
-        isOpen ? '' : 'pointer-events-none'
+        isOpen ? "" : "pointer-events-none"
       }`}
       ref={containerRef}
     >
-        
-    {isOpen && (<div className="inset-0 right-4 w-full">
-        <motion.div
+      {isOpen && (
+        <div className="inset-0 right-4 w-full">
+          <motion.div
             className="absolute inset-0 right-4 w-full bg-white"
             variants={sidebar}
-        />
-        <motion.ul
+          />
+          <motion.ul
             variants={variants}
             className={`absolute grid w-full gap-3 px-10 py-16 max-h-screen overflow-y-auto`}
-        >
+          >
             {TOPBAR_ITEMS.map((item, idx) => {
-            const isLastItem = idx === TOPBAR_ITEMS.length - 1; // Check if it's the last item
+              const isLastItem = idx === TOPBAR_ITEMS.length - 1; // Check if it's the last item
 
-            return (
+              return (
                 <div key={idx}>
-                {item.submenu ? (
+                  {item.submenu ? (
                     <MenuItemWithSubMenu item={item} toggleOpen={toggleOpen} />
-                ) : (
+                  ) : (
                     <MenuItem>
-                    <Link
+                      <Link
                         href={item.path}
                         onClick={() => toggleOpen()}
                         className={`flex w-full text-2xl text-blue-900 hover:text-[#110C27] ${
-                        item.path === pathname ? 'font-extrabold' : ''
+                          item.path === pathname ? "font-extrabold" : ""
                         }`}
-                    >
+                      >
                         {item.title}
-                    </Link>
+                      </Link>
                     </MenuItem>
-                )}
+                  )}
 
-                {!isLastItem && (
+                  {!isLastItem && (
                     <MenuItem className="my-3 h-px w-full bg-gray-300" />
-                )}
+                  )}
                 </div>
-            );
+              );
             })}
-        </motion.ul>
-      </div>)}
+          </motion.ul>
+        </div>
+      )}
       <MenuToggle toggle={toggleOpen} />
     </motion.nav>
   );
@@ -126,8 +138,8 @@ const MenuToggle = ({ toggle }: { toggle: any }) => (
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
-          closed: { d: 'M 2 2.5 L 20 2.5' },
-          open: { d: 'M 3 16.5 L 17 2.5' },
+          closed: { d: "M 2 2.5 L 20 2.5" },
+          open: { d: "M 3 16.5 L 17 2.5" },
         }}
       />
       <Path
@@ -140,8 +152,8 @@ const MenuToggle = ({ toggle }: { toggle: any }) => (
       />
       <Path
         variants={{
-          closed: { d: 'M 2 16.346 L 20 16.346' },
-          open: { d: 'M 3 2.5 L 17 16.346' },
+          closed: { d: "M 2 16.346 L 20 16.346" },
+          open: { d: "M 3 2.5 L 17 16.346" },
         }}
       />
     </svg>
@@ -188,11 +200,11 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
         >
           <div className="flex flex-row justify-between w-full items-center">
             <span
-              className={`${pathname?.includes(item.path) ? 'font-bold' : ''}`}
+              className={`${pathname?.includes(item.path) ? "font-bold" : ""}`}
             >
               {item.title}
             </span>
-            <div className={`${subMenuOpen && 'rotate-180'}`}>
+            <div className={`${subMenuOpen && "rotate-180"}`}>
               <Icon icon="lucide:chevron-down" width="24" height="24" />
             </div>
           </div>
@@ -208,7 +220,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                     href={subItem.path}
                     onClick={() => toggleOpen()}
                     className={` ${
-                      subItem.path === pathname ? 'font-bold' : ''
+                      subItem.path === pathname ? "font-bold" : ""
                     }`}
                   >
                     {subItem.title}

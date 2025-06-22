@@ -6,18 +6,16 @@ import MainArticle from "./Components/MainArticle";
 import Footer from "../components/Footer";
 
 export default function ArticleTemplatePage() {
-    return (
-      <>
-        
-        <Header />
-        <HeaderMobile />
+  return (
+    <>
+      <Header />
+      <HeaderMobile />
 
-        <HeroImage />
-        
-        <MainArticle />
+      <HeroImage />
 
-        <Footer />
-         
-      </>
-    );
-  }
+      <MainArticle />
+
+      <Footer />
+    </>
+  );
+}
