@@ -1,25 +1,26 @@
 'use client';
 import { useState } from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 
-import {useIsVisible} from "../../JS_Scripts/Visible"
-import { useRef } from "react";
-import Model_Preview from "../../JS_Scripts/Model";
-
-
-
+import { useIsVisible } from '../../JS_Scripts/Visible';
+import { useRef } from 'react';
+import Model_Preview from '../../JS_Scripts/Model';
 
 export default function Builder() {
-
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   const [width, setWidth] = useState('');
   const [height, setHeight] = useState('');
   const [length, setLength] = useState('');
-  let price = 0;
-  let model_location = "/models/house1/scene.gltf";
 
+  const [selectedModel, setSelectedModel] = useState('house1');
+
+  const models = {
+    house1: { name: 'Modern Home', path: '/models/house1/scene.gltf' },
+    subhouse: { name: 'Suburban', path: '/models/subhouse.glb' },
+    donut: { name: 'Experimental', path: '/models/donut.glb' },
+  };
 
   const [email, setEmail] = useState('');
 
@@ -31,27 +32,24 @@ export default function Builder() {
       body: JSON.stringify({ email, width, height, length }),
     });
     const data = await res.json();
-    alert(data.message || "Thank you!");
+    alert(data.message || 'Thank you!');
   };
 
+  let model_location = models[selectedModel].path;
 
-  if (parseInt(width) > 0 && parseInt(height) > 0 && parseInt(length) > 0) {
-    price = parseInt(width) * parseInt(height) * parseInt(length);
-    
-    if(price > 500) {
-      model_location = "/models/house2/scene.gltf";
-    }
-    else if(price > 100) {
-      model_location = "/models/house3/scene.gltf";
-    }  
-
-  }
+  const widthNum = parseInt(width) || 0;
+  const heightNum = parseInt(height) || 0;
+  const lengthNum = parseInt(length) || 0;
+  let price = widthNum * heightNum * lengthNum;
 
   return (
     <section className="bg-[#0474BC] text-white py-16 px-6 md:px-20">
       {/* Input */}
-      <div ref={ref_WhatWeDo} className={`grid md:grid-cols-2 gap-12 items-center
-                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}>
+      <div
+        ref={ref_WhatWeDo}
+        className={`grid md:grid-cols-2 gap-12 items-center
+                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? 'opacity-100' : 'opacity-25'}`}
+      >
         <div>
           <h2 className="text-4xl font-extrabold mb-4">House Builder</h2>
           <p className="mb-6">
@@ -95,31 +93,62 @@ export default function Builder() {
         </div>
 
         <Image
-        src="/shouses.png"
-        alt="Builder Preview"
-        width={1200}
-        height={600}
-        className="rounded-lg object-cover w-full h-128"
-      />
+          src="/shouses.png"
+          alt="Builder Preview"
+          width={1200}
+          height={600}
+          className="rounded-lg object-cover w-full h-128"
+        />
       </div>
 
       {/* Preview */}
-      <div ref={ref_WhatWeDo} className={`bg-[#04012A] text-white mt-16 py-12 px-6 rounded-lg
-                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-25"} `}>
+      <div
+        ref={ref_WhatWeDo}
+        className={`bg-[#04012A] text-white mt-16 py-12 px-6 rounded-lg
+                                        transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? 'opacity-100' : 'opacity-25'} `}
+      >
         <h3 className="text-3xl font-extrabold text-center mb-8">Preview</h3>
         <div className="md:flex gap-12 items-center">
-          <div className="bg-white w-full md:w-2/3 h-64 md:h-[300px] lg:h-[400px] xl:h-[450px] rounded-lg">
-            <Model_Preview loc={model_location}/>
+          <div className="w-full md:w-2/3 rounded-lg overflow-hidden bg-[#04012A]">
+            <div className="mb-6">
+              <div className="flex justify-center space-x-2 bg-[#04012A] p-2 rounded-t-lg">
+                {Object.entries(models).map(([key, model]) => (
+                  <button
+                    key={key}
+                    onClick={() => setSelectedModel(key)}
+                    className={`px-4 py-2 rounded-md font-semibold transition-colors duration-200 ${
+                      selectedModel === key
+                        ? 'bg-[#0474BC] text-white'
+                        : 'bg-[#D6ECFA] text-[#0474BC] hover:bg-[#A9D7F8]'
+                    }`}
+                  >
+                    {model.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="h-64 md:h-[300px] lg:h-[400px] xl:h-[450px]">
+              <Model_Preview loc={model_location} />
+            </div>
           </div>
+
           <div>
             <p className="mt-2 mb-2">
               <strong>Specifications:</strong>
             </p>
-            <p><strong>Width:</strong> {width || 'x'} ft</p>
-            <p><strong>Height:</strong> {height || 'y'} ft</p>
-            <p><strong>Length:</strong> {length || 'z'} ft</p>
-            <p className="mt-4"><strong>Expected Price:</strong> $ {price} CAD</p>
-
+            <p>
+              <strong>Width:</strong> {width || 'x'} ft
+            </p>
+            <p>
+              <strong>Height:</strong> {height || 'y'} ft
+            </p>
+            <p>
+              <strong>Length:</strong> {length || 'z'} ft
+            </p>
+            <p className="mt-4">
+              <strong>Expected Price:</strong> $ {price} CAD
+            </p>
 
             <form onSubmit={handleEmailSubmit}>
               <input
@@ -137,8 +166,6 @@ export default function Builder() {
                 Submit
               </button>
             </form>
-
-
           </div>
         </div>
       </div>
