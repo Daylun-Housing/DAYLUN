@@ -8,7 +8,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaYoutube,
-  FaTiktok,
+  FaShopify,
   FaEnvelope,
 } from "react-icons/fa6";
 import { CgSearch } from "react-icons/cg";
@@ -78,8 +78,8 @@ export default function Header() {
         <a href="https://www.youtube.com/channel/UCDzDup0UoRaOSQNlcd99uKA">
           <FaYoutube className="hover:text-[#110C27]" />
         </a>
-        <a href="https://www.tiktok.com/@daylun_build">
-          <FaTiktok className="hover:text-[#110C27]" />
+        <a href="https://daylun.myshopify.com/">
+          <FaShopify className="hover:text-[#110C27]" />
         </a>
 
         {/*<FaXTwitter className="hover:text-[#110C27]" />*/}

@@ -3,9 +3,8 @@ import {
   FaGlobe,
   FaInstagram,
   FaFacebookF,
-  FaXTwitter,
   FaYoutube,
-  FaTiktok,
+  FaShopify,
 } from "react-icons/fa6";
 import Image from "next/image";
 
@@ -73,8 +72,8 @@ export default function Footer() {
             <a href="https://www.youtube.com/channel/UCDzDup0UoRaOSQNlcd99uKA">
               <FaYoutube />
             </a>
-            <a href="https://www.tiktok.com/@daylun_build">
-              <FaTiktok />
+            <a href="https://daylun.myshopify.com/">
+              <FaShopify />
             </a>
           </div>
           <p className="text-4xl font-extrabold text-white">#DAYLUN</p>
