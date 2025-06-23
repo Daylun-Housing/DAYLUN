@@ -13,6 +13,7 @@ import TeamCards from "./Components/TeamCards";
 
 import OurValues from "./Components/OurValues";
 import OurApproach from "./Components/OurApproach";
+import Video from "./Components/Video";
 import Footer from "../components/Footer";
 
 export default function AboutPage() {
@@ -29,7 +30,7 @@ export default function AboutPage() {
       {/* <TeamHeader /> */}
       <TeamCards />
       <OurValues />
-
+      <Video />
       <Footer />
     </>
   );
