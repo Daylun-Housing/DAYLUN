@@ -75,7 +75,7 @@ export default function Header() {
           <FaFacebookF className="hover:text-[#110C27]" />
         </a>
         {/*<FaXTwitter />*/}
-        <a href="https://www.youtube.com/channel/UCDzDup0UoRaOSQNlcd99uKA">
+        <a href="https://www.youtube.com/@Daylun_Build">
           <FaYoutube className="hover:text-[#110C27]" />
         </a>
         <a href="https://daylun.myshopify.com/">

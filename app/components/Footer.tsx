@@ -69,7 +69,7 @@ export default function Footer() {
               <FaFacebookF />
             </a>
             {/*<FaXTwitter />*/}
-            <a href="https://www.youtube.com/channel/UCDzDup0UoRaOSQNlcd99uKA">
+            <a href="https://www.youtube.com/@Daylun_Build">
               <FaYoutube />
             </a>
             <a href="https://daylun.myshopify.com/">
