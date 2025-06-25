@@ -8,7 +8,7 @@ export default function Video() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <section className="relative flex h-[525px] w-full">
+    <section className="relative flex h-[600px] w-full">
       {/* Left Panel */}
       <div
         className={`bg-[#04012A] items-center text-white w-full flex flex-col justify-center px-10 md:px-20 relative z-10`}
@@ -21,10 +21,10 @@ export default function Video() {
             Collaborate with us
           </h2>
           
-          <div className="w-full h-1/2">
+          <div className="w-[3/4] h-1/2">
             <iframe
                 className="w-full aspect-video self-stretch md:min-h-96"
-                src="https://www.youtube.com/embed/JjPPEvMJHOg?si=1JEC1sOAWl_9NQCu"
+                src="https://www.youtube.com/embed/mXXeTQYeNyQ?si=w_kA5AjNMHsq"
                 title="Product Overview Video"
                 aria-hidden="true"
             />

@@ -1,11 +1,16 @@
 import Image from "next/image";
-
+import { useRouter } from 'next/navigation';
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
 export default function EvaBoard() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
+  const router = useRouter();
+
+  const goToTechnologyPages = (section: string) => {
+    router.push(`/TechnologyPages?section=${section}`);
+  };
 
   return (
     <section className="relative bg-[#0474BC] flex-col md:flex-row flex overflow-hidden h-[550px] sm:h-[550px] md:h-[700px] w-full">
@@ -57,6 +62,11 @@ export default function EvaBoard() {
                 PURCHASE NOW
               </button>
             </a>
+            <br />
+            <br />
+            <button onClick={() => goToTechnologyPages('evan_board')} className="bg-[#0474BC] hover:bg-[#015185] md:bg-[#04012A] text-white font-bold px-8 py-3 rounded-md scale-[70%] sm:scale-[75%] md:scale-[80%] lg:scale-100 hover:text-[#a7b7cf] md:hover:bg-[#080354] transition">
+              READ MORE
+            </button>
           </p>
         </div>
       </div>

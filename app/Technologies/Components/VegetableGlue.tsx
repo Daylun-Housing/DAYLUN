@@ -1,11 +1,17 @@
 import Image from "next/image";
-
+import { useRouter } from 'next/navigation';
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
+import Link from 'next/link';
 
 export default function VegetableGlue() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
+  const router = useRouter();
+
+  const goToTechnologyPages = (section: string) => {
+    router.push(`/TechnologyPages?section=${section}`);
+  };
 
   return (
     <section className="relative bg-[#04012A] overflow-hidden md:flex h-[550px] sm:h-[550px] md:h-[700px] w-full">
@@ -39,6 +45,12 @@ export default function VegetableGlue() {
               PURCHASE NOW
             </button>
           </a>
+          <br />
+          <br />
+          <button onClick={() => goToTechnologyPages('vegetable_glue')} className="bg-[#0474BC] text-white font-bold px-8 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
+            READ MORE
+          </button>
+
         </div>
       </div>
       {/* Right Panel */}
@@ -47,8 +59,7 @@ export default function VegetableGlue() {
         className={`flex bg-[#0474BC] h-1/3 md:h-full w-full md:w-[40%] items-center justify-center
                                         transition-all duration-[1500ms] ease-in-out ${is_visible_WWD ? "translate-x-0 scale-100" : "md:-translate-x-[15%] scale-[150%]"}`}
       >
-        <div
-          className={`relative w-full 
+        <div className={`relative w-full 
                          h-full md:h-[60%] object-fill`}
         >
           <Image
