@@ -36,7 +36,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 flex items-center justify-center z-20">
         <div className="relative w-2/3 h-full md:w-[640px] md:h-[220px]">
           <Image
-            src="/logo-alt.svg"
+            src="/DAYLUN.png"
             alt="Daylun Logo Alt"
             fill
             className="object-contain"

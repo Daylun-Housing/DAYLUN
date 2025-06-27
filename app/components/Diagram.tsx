@@ -58,34 +58,6 @@ export default function Diagram() {
               </div>
             </a>
           </div>
-          <div className="absolute md:scale-0 md:px-4 top-1/3">
-            <li className="list-none md:space-y-4 ">
-              <ul>
-                <a
-                  href="https://daylun.myshopify.com/products/roof-trusses"
-                  className="hover:text-white"
-                >
-                  1. Roof Hanger
-                </a>
-              </ul>
-              <ul>
-                <a
-                  href="https://daylun.myshopify.com/products/waterproof-membrane-1"
-                  className="hover:text-white"
-                >
-                  2. Waterproof Membrane
-                </a>
-              </ul>
-              <ul>
-                <a
-                  href="https://daylun.myshopify.com/products/evan-board"
-                  className="hover:text-white"
-                >
-                  3. EVAN Board
-                </a>
-              </ul>
-            </li>
-          </div>
         </div>
         <div className="relative w-3/5 h-full z-0 flex">
           <Image
@@ -99,6 +71,18 @@ export default function Diagram() {
           </div>
         </div>
         <div className="relative w-1/5 h-full text-[#0474BC] ">
+          <div className="scale-0 md:scale-100 relative top-[25%] lg:top-[20%] xl:top-[14%] z-2 w-full">
+            <a
+              href="https://daylun.myshopify.com/products/sips-walls-structural-insulated-panels"
+              className="block hover:text-white duration-100 w-full"
+            >
+              <div className="md:w-[clamp(85%,22vw,150%)] h-[2px] bg-[#0474BC] mb-2 -translate-x-[18vw]" />{" "}
+              {/* Line pointing up */}
+              <div className="translate-x-[45%] -translate-y-[20px] w-full break-words whitespace-normal xl:w-full md:w-1/2">
+                <p>SIPs Walls</p>
+              </div>
+            </a>
+          </div>
           <div className="scale-0 md:scale-100 relative top-[35%] lg:top-[30%]">
             <a
               href="https://daylun.myshopify.com/collections/frontpage"
@@ -111,7 +95,7 @@ export default function Diagram() {
               </div>
             </a>
           </div>
-          <div className="scale-0 md:scale-100 relative top-[58%] lg:top-[61%] xl:top-[65%] z-2 w-full">
+          <div className="scale-0 md:scale-100 relative top-[53%] lg:top-[56%] xl:top-[61%] z-2 w-full">
             <a
               href="https://daylun.myshopify.com/products/vegetable-glue"
               className="block hover:text-white duration-100 w-full"
@@ -122,26 +106,6 @@ export default function Diagram() {
                 <p>VEGETABLE GLUE</p>
               </div>
             </a>
-          </div>
-          <div className="absolute md:scale-0 md:px-4 top-1/3">
-            <li className="list-none md:space-y-4">
-              <ul>
-                <a
-                  href="https://daylun.myshopify.com/collections/frontpage"
-                  className="hover:text-white"
-                >
-                  4. Lumber
-                </a>
-              </ul>
-              <ul>
-                <a
-                  href="https://daylun.myshopify.com/products/vegetable-glue"
-                  className="hover:text-white"
-                >
-                  5. Vegetable Glue
-                </a>
-              </ul>
-            </li>
           </div>
         </div>
       </div>

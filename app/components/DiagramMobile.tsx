@@ -38,6 +38,9 @@ export default function DiagramMobile() {
         <div className="absolute text-white top-[clamp(16rem,15vh,20rem)] font-bold text-lg left-[72%] bg-[#0474BC] md:scale-0">
           5
         </div>
+        <div className="absolute text-white top-[clamp(2rem,10vh,6rem)] font-bold text-lg left-[65%] bg-[#0474BC] md:scale-0">
+          6
+        </div>
       </div>
       <div
         ref={ref_WhatWeDo}
@@ -85,6 +88,14 @@ export default function DiagramMobile() {
                   className="hover:text-white"
                 >
                   5. Vegetable Glue
+                </a>
+              </ul>
+              <ul>
+                <a
+                  href="https://daylun.myshopify.com/products/sips-walls-structural-insulated-panels"
+                  className="hover:text-white"
+                >
+                  6. SIPs Panels
                 </a>
               </ul>
             </li>

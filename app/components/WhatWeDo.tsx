@@ -8,7 +8,7 @@ export default function WhatWeDo() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <section className="relative overflow-hidden md:flex h-[450px] sm:h-[550px] md:h-[700px] w-full">
+    <section className="relative overflow-hidden md:flex h-[450px] bg-[#0474BC] sm:h-[550px] md:h-[700px] w-full">
       {/* Left Panel */}
       <div
         ref={ref_WhatWeDo}

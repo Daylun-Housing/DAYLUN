@@ -9,7 +9,7 @@ export default function Partnership() {
 
       <div className="flex-col">
         <div className="w-full mb-20">
-          <p className="flex-col text-sm md:text-md lg:text-xl space-y-4 m-5 w-full">
+          <p className="flex-col text-sm md:text-md lg:text-xl space-y-4 m-5 w-full px-[5%]">
             Daylun is currently interested in partnering with forward-thinking
             construction industry experts and financial investors to work
             together in developing the Yukon Factory as well as in future
@@ -18,7 +18,7 @@ export default function Partnership() {
             and affordable.
           </p>
           <a href="mailto:info@daylun.ca">
-            <h3 className="m-5 hover:brightness-[70%]">
+            <h3 className="m-5 hover:brightness-[70%] px-[5%]">
               <span className="text-[#0474BC] text-sm md:text-md lg:text-xl font-bold ">
                 CONNECT
               </span>{" "}

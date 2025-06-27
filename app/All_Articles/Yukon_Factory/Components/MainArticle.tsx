@@ -2,6 +2,7 @@ import Image from "next/image";
 import Yukon from "./WhyYukon";
 import UniqueFeatures from "./UniqueFeatures";
 import Partnership from "./Partnership";
+import Follow from "./Follow";
 
 export default function MainArticle() {
   return (
@@ -18,6 +19,7 @@ export default function MainArticle() {
           <Yukon />
           <UniqueFeatures />
           <Partnership />
+          <Follow />
         </div>
       </div>
     </div>
