@@ -91,7 +91,7 @@ export default function Diagram() {
               <div className="md:w-[clamp(85%,23vw,120%)] xl:w-[clamp(75%,25vw,130%)] h-[2px] bg-[#0474BC] mb-2 -translate-x-[22vw]" />{" "}
               {/* Line pointing up */}
               <div className="translate-x-[45%] -translate-y-[20px]">
-                LUMBER
+                SHEATHING
               </div>
             </a>
           </div>
