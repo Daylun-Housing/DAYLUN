@@ -9,11 +9,11 @@ import HeaderMobile from "../components/HeaderMobile";
 import Footer from '../components/Footer';
 import { FaStar } from 'react-icons/fa6';
 
-interface PageProps {
+interface TechProps {
   params: { section: string };
 }
 
-export default function PageBody({ params } : PageProps) {
+export default function PageBody({ params } : TechProps) {
     const searchParams = useSearchParams();
     const section = searchParams?.get('section') ?? params.section;
     const content = contentData[section];

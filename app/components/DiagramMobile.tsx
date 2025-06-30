@@ -79,7 +79,7 @@ export default function DiagramMobile() {
                   href="https://daylun.myshopify.com/collections/frontpage"
                   className="hover:text-white"
                 >
-                  4. Lumber
+                  4. Sheathing
                 </a>
               </ul>
               <ul>
