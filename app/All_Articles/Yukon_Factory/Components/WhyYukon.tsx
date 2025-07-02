@@ -30,7 +30,7 @@ export default function Yukon() {
                                                       transition-all duration-[1500ms] ease-in-out ${is_visible_WWD ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[250px]"}`}
             >
               <Image
-                src="/robot-arm.jpg"
+                src="/Robot-Arm.jpg"
                 alt="robot arm"
                 fill
                 className="object-contain"
