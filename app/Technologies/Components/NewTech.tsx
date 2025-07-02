@@ -11,7 +11,7 @@ export default function FutureTech() {
     <div className="relative w-full h-[700px]">
       <Image
         className="object-cover"
-        src="/Blueprint.png"
+        src="/blurred.jpg"
         alt="Blueprint"
         fill
       />
