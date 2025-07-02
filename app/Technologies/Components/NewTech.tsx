@@ -10,9 +10,9 @@ export default function FutureTech() {
   return (
     <div className="relative w-full h-[700px]">
       <Image
-        className="brightness-[0.70] object-cover"
-        src="/Apartment.png"
-        alt="Apartment"
+        className="object-cover"
+        src="/Blueprint.png"
+        alt="Blueprint"
         fill
       />
       <div

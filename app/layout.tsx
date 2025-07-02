@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Suspense } from "react";
 
 export default function RootLayout({
   children,
@@ -7,7 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Suspense>
+        <body>{children}</body>
+      </Suspense>
     </html>
   );
 }
