@@ -14,6 +14,7 @@ export default function HeroImage() {
         src="/Blueprint.png"
         alt="Blueprint"
         fill
+        unoptimized
       />
       <div
         ref={ref_WhatWeDo}
