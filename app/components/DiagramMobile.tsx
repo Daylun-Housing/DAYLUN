@@ -3,6 +3,82 @@ import Image from "next/image";
 import { useIsVisible } from "../JS_Scripts/Visible";
 import { useRef } from "react";
 
+
+interface Label {
+  id: string;
+  labelLeft: number;   // % position where label floats
+  labelTop: number;
+  link: string;
+}
+
+const labels: Label[] = [
+  {
+    id: "1",
+    labelLeft: 18,
+    labelTop: 55,
+    link: "https://daylun.myshopify.com/products/evan-board",
+  },
+  {
+    id: "2",
+    labelLeft: 18,
+    labelTop: 40,
+    link: "https://daylun.myshopify.com/products/waterproof-membrane-1",
+  },
+  {
+    id: "3",
+    labelLeft: 33,
+    labelTop: 15,
+    link: "https://daylun.myshopify.com/products/roof-trusses",
+  },
+  {
+    id: "4",
+    labelLeft: 70,
+    labelTop: 10,
+    link: "https://daylun.myshopify.com/products/sips-walls-structural-insulated-panels",
+  },
+  {
+    id: "5",
+    labelLeft: 65,
+    labelTop: 30,
+    link: "https://daylun.myshopify.com/collections/frontpage",
+  },
+  {
+    id: "6",
+    labelLeft: 72,
+    labelTop: 73,
+    link: "https://daylun.myshopify.com/products/vegetable-glue",
+  },
+];
+
+
+const MobileDiagram: React.FC = () => {
+  return (
+    <div className="relative w-full max-w-3xl">
+      <img
+        src="/Home_Sketch.jpg"
+        alt="Diagram labeled"
+        className="w-auto h-auto"
+      />
+
+      {/* Labels */}
+      {labels.map((label) => (
+        <a
+          key={label.id}
+          href={label.link}
+          className="absolute text-[#329fe6] hover:text-white bg-black bg-opacity-70 px-1 py-1 text-sm rounded"
+          style={{
+            top: `${label.labelTop}%`,
+            left: `${label.labelLeft}%`,
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          {label.id}
+        </a>
+      ))}
+    </div>
+  );
+};
+
 export default function DiagramMobile() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
@@ -16,32 +92,7 @@ export default function DiagramMobile() {
           OUR <span className="text-[#0474BC]">PRODUCTS</span>
         </h2>
       </div>
-      <div className="relative w-full h-[400px] z-0 flex">
-        <Image
-          src="/Home_Sketch.jpg"
-          alt="Home Sketch"
-          fill
-          className="object-contain py-2"
-        />
-        <div className="absolute text-white top-[clamp(4rem,7vh,5rem)] font-bold text-lg left-[21%] bg-[#0474BC] md:scale-0">
-          1
-        </div>
-        <div className="absolute text-white top-[clamp(10rem,10vh,12rem)] font-bold text-lg left-[21%] bg-[#0474BC] md:scale-0">
-          2
-        </div>
-        <div className="absolute text-white top-[clamp(14rem,12vh,15rem)] font-bold text-lg left-[21%] bg-[#0474BC] md:scale-0">
-          3
-        </div>
-        <div className="absolute text-white top-[clamp(10rem,10vh,12rem)] font-bold text-lg left-[55%] bg-[#0474BC] md:scale-0">
-          4
-        </div>
-        <div className="absolute text-white top-[clamp(16rem,15vh,20rem)] font-bold text-lg left-[72%] bg-[#0474BC] md:scale-0">
-          5
-        </div>
-        <div className="absolute text-white top-[clamp(2rem,10vh,6rem)] font-bold text-lg left-[65%] bg-[#0474BC] md:scale-0">
-          6
-        </div>
-      </div>
+      <MobileDiagram />
       <div
         ref={ref_WhatWeDo}
         className={` transition-all w-full h-[200px] md:h-0 duration-1000 flex md:flex-row text-xs md:text-md
