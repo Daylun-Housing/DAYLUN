@@ -1,7 +1,5 @@
 "use client";
-
-import Header from "../components/Header";
-import HeaderMobile from "../components/HeaderMobile";
+import StdLayout from "../components/StdLayout";
 import HeroSection from "./components/HeroSection";
 import Yukon from "./components/Yukon";
 import HeroImage from "../All_Articles/Yukon_Factory/Components/HeroImage";
@@ -11,13 +9,11 @@ import { Main } from "next/document";
 
 export default function FactoryPage() {
   return (
-    <>
-      <Header />
-      <HeaderMobile />
+    <StdLayout>
       {/*<Yukon />*/}
       <HeroImage />
       <MainArticle />
       <Footer />
-    </>
+    </StdLayout>
   );
 }

@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import Header from "../components/Header";
-import HeaderMobile from "../components/HeaderMobile";
+import StdLayout from "../components/StdLayout";
 import Hero from "./Components/hero";
 import OurMission from "./Components/OurMission";
 import OurStory from "./Components/OurStory";
@@ -14,10 +12,7 @@ import Footer from "../components/Footer";
 
 export default function AboutPage() {
   return (
-    <>
-      <Header />
-      <HeaderMobile />
-
+    <StdLayout>
       {/* Logo-on-background */}
       <Hero />
       <OurMission />
@@ -26,6 +21,6 @@ export default function AboutPage() {
       <OurValues />
       <Video />
       <Footer />
-    </>
+    </StdLayout>
   );
 }

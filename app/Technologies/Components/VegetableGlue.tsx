@@ -47,9 +47,10 @@ export default function VegetableGlue() {
           </a>
           <br />
           <br />
-          <button onClick={() => goToTechnologyPages('vegetable_glue')} className="bg-[#0474BC] text-white font-bold px-8 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
-            READ MORE
-          </button>
+          {/* DO NOT DELETE: RE-ENABLE ONCE SHOPIFY GETS TAKEN DOWN */}
+          {/*<button onClick={() => goToTechnologyPages('vegetable_glue')} className="bg-[#0474BC] text-white font-bold px-8 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
+            PURCHASE NOW
+          </button>*/}
 
         </div>
       </div>

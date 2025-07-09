@@ -1,23 +1,20 @@
 'use client';
 
 import Image from 'next/image';
+import StdLayout from '../components/StdLayout';
 import { contentData } from './content';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState, Suspense } from 'react';
-import Header from '../components/Header';
-import HeaderMobile from "../components/HeaderMobile";
 import Footer from '../components/Footer';
 
 function Fallback() {
   return (
-      <>
-        <Header />
-        <HeaderMobile />
+      <StdLayout>
         <div className="p-6 text-blue-600">
             <h1 className="text-xl font-bold">Section not found </h1>                  
         </div>
         <Footer />
-      </>
+      </StdLayout>
   )
 }
 
@@ -78,10 +75,8 @@ export default function Page() {
     }
 
   return (
-    <>
+    <StdLayout>
         {/*Header*/}
-        <Header />
-        <HeaderMobile />
           <div className="bg-[#04012A] text-white flex flex-col relative z-10 ">
             <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center">
               {/*Image*/}
@@ -167,6 +162,6 @@ export default function Page() {
             </div>
           </div>
         <Footer />
-      </>
+      </StdLayout>
   );
 }

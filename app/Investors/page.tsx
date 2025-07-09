@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import Header from "../components/Header";
-import HeaderMobile from "../components/HeaderMobile";
+import StdLayout from "../components/StdLayout";
 import Footer from "../components/Footer";
 import HeroSection from "./Components/HeroSection";
 import PastReports from "./Components/PastReports";
@@ -11,13 +9,11 @@ import OurProcesses from "./Components/OurProcesses";
 
 export default function Investors() {
   return (
-    <>
-      <Header />
-      <HeaderMobile />
+    <StdLayout>
       <HeroSection />
       <LookingToInvest />
       {/*<OurProcesses />*/}
       <Footer />
-    </>
+    </StdLayout>
   );
 }

@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d1030] text-white pt-16 pb-6">
+    <footer className="snap-start bg-[#0d1030] text-white pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
         {/* Logo */}
         <div>

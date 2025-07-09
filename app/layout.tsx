@@ -1,15 +1,13 @@
 import "./globals.css";
 import { Suspense } from "react";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode; }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full overflow-hidden">
       <Suspense>
-        <body>{children}</body>
+        <body className="h-full bg-[#04012A]">
+          {children}
+        </body>
       </Suspense>
     </html>
   );

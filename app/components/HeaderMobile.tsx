@@ -27,7 +27,7 @@ type MenuItemWithSubMenuProps = {
 
 export default function head() {
   return (
-    <div
+    <header
       className={cn(
         `md:hidden bg-white sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200`,
       )}
@@ -46,7 +46,7 @@ export default function head() {
       </div>
 
       <HeaderMobile />
-    </div>
+    </header>
   );
 }
 

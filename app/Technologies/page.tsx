@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import Header from "../components/Header";
-import HeaderMobile from "../components/HeaderMobile";
+import StdLayout from "../components/StdLayout";
 import Footer from "../components/Footer";
 import HeroImage from "./Components/HeroImage";
 import VegetableGlue from "./Components/VegetableGlue";
@@ -16,9 +14,7 @@ import GotAnIdea from "./Components/GotAnIdea";
 
 export default function TechnologyPage() {
   return (
-    <>
-      <Header />
-      <HeaderMobile />
+    <StdLayout>
       <HeroImage />
       <VegetableGlue />
       <EvaBoard />
@@ -29,6 +25,6 @@ export default function TechnologyPage() {
       <Generator />
       <GotAnIdea />
       <Footer />
-    </>
+    </StdLayout>
   );
 }

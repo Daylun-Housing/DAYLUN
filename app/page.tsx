@@ -1,7 +1,6 @@
 "use client";
 
-import Header from "./components/Header";
-import HeaderMobile from "./components/HeaderMobile";
+import StdLayout from "./components/StdLayout";
 import HeroSection from "./components/HeroSection";
 import DiagramSection from "./components/DiagramSection";
 import DiagramMobile from "./components/DiagramMobile";
@@ -18,9 +17,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <HeaderMobile />
+    <StdLayout>
       <HeroSection />
       <DiagramSection />
       <DiagramMobile />
@@ -34,6 +31,6 @@ export default function Home() {
       <Awards />
       <GetQuote />
       <Footer />
-    </>
+    </StdLayout>
   );
 }
