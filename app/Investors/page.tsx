@@ -15,7 +15,6 @@ export default function Investors() {
       <Header />
       <HeaderMobile />
       <HeroSection />
-      <PastReports />
       <LookingToInvest />
       {/*<OurProcesses />*/}
       <Footer />

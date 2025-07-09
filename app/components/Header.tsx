@@ -38,9 +38,9 @@ export default function Header() {
       </div>
 
       {/* Center: Nav Links */}
-      <nav className="flex gap-1 sm:gap-2 md:gap-6 text-[7px] md:text-[10px] lg:text-sm md:font-semibold tracking-wide text-center">
-        <a href="/About" className="hover:text-[#110C27]">
-          ABOUT
+      <nav className="flex gap-1 md:gap-2 lg:gap-3 xl:gap-6 text-[7px] md:text-[10px] lg:text-sm md:font-semibold tracking-wide text-center">
+        <a href="/" className="hover:text-[#110C27]">
+          HOME
         </a>
         <a href="/HouseBuilder" className="hover:text-[#110C27]">
           HOUSE BUILDER
@@ -62,6 +62,9 @@ export default function Header() {
         </a>
         <a href="/Articles" className="hover:text-[#110C27]">
           ARTICLES
+        </a>
+        <a href="/About" className="hover:text-[#110C27]">
+          ABOUT
         </a>
         <CgSearch className="hover:text-[#110C27]" />
       </nav>
