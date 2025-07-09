@@ -3,6 +3,7 @@
 import StdLayout from "../components/StdLayout";
 import HeroSection from "./components/HeroSection";
 import Builder from "./components/Builder";
+import Video from "./components/ComingSoon";
 import Soon from "./components/ComingSoon";
 import Footer from "../components/Footer";
 
@@ -12,12 +13,11 @@ export default function HouseBuilder() {
       <HeroSection />
 
       {/* Current Deployment */}
-      {/* <Soon /> */}
+      <Soon />
 
-      {/* Current Development */}
-
-      <Video />
-      <Builder />
+      {/* For When the Builder is Ready */}
+      {/*<Video />*/}
+      {/* <Builder /> */}
 
       <Footer />
     </StdLayout>
