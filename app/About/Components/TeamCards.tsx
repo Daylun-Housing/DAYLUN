@@ -41,7 +41,7 @@ const team = [
   {
     name: "Aidan B.",
     title: "Director of Engineering",
-    image: "/AB.jpeg",
+    image: "/AB.png",
     linkedin: "https://www.linkedin.com/in/bilon/",
     bio: "Manages technical teams and engineering systems. Ensures all design and development efforts meet structural/functional standards.",
   },
