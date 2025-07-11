@@ -13,6 +13,10 @@ export default function VegetableGlue() {
     router.push(`/TechnologyPages?section=${section}`);
   };
 
+  const gotoInfoPages = (section: string) => {
+    router.push(`/TechInfoPages?section=${section}`);
+  };
+
   return (
     <section className="relative bg-[#04012A] overflow-hidden md:flex h-[550px] sm:h-[550px] md:h-[700px] w-full">
       {/* Left Panel */}
@@ -51,6 +55,9 @@ export default function VegetableGlue() {
           {/*<button onClick={() => goToTechnologyPages('vegetable_glue')} className="bg-[#0474BC] text-white font-bold px-8 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
             PURCHASE NOW
           </button>*/}
+          <button onClick={() => gotoInfoPages('vegetable_glue')} className="bg-[#0474BC] text-white font-bold px-8 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[#d4d5d6] hover:bg-[#015185] transition">
+            MORE INFO
+          </button>
 
         </div>
       </div>

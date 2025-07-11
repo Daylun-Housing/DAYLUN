@@ -4,7 +4,7 @@ import Image from 'next/image';
 import StdLayout from '../components/StdLayout';
 import { contentData } from './content';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 
 function Fallback() {
