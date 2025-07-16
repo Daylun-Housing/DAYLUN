@@ -32,7 +32,7 @@ export const TOPBAR_ITEMS: TopBarItem[] = [
   },
   {
     title: "FACTORY PROJECT",
-    path: "/Factories",
+    path: "https://bimalun.vercel.app/",
     icon: <p className="w-[24px] h-[24px]">FACTORIES</p>,
   },
   {
