@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export interface SectionData {
     id: string; // Unique ID for the section
     type: string;
@@ -15,6 +17,9 @@ export interface SectionData {
     botimageUrl? : string;
     botimagealt? : string;
     img_num? : number;
+
+    embed? : boolean;
+    link? : string;
 
     bgcolor1?: string;
     bgcolor2?: string;
@@ -73,6 +78,19 @@ export const contentData: Record<string, InfoContent> = {
                             SOLUTIONS`,
                 subheading2: "VEGETABLE" /* For Emphasize Title */
             },
+            {
+                id: 'intro_video',
+                type: 'vid_showcase',
+                title: `INTRODUCING the`,
+                subheading1: " VEGETABLE GLUE",
+                bgcolor1: "bg-[radial-gradient(circle_at_center,_#3c3c3c,_#1c2424)]", /* Left is inside, right is outside  BG for the left side*/
+                textcolor1: "text-white", /*Main text colour, for title */
+                textcolor2: "text-[#edc337]", /*For the Titles */
+                textcolor3: "text-[#168edb]", /* Emphasis on special words */
+                embed: true,
+                link: "https://www.youtube.com/embed/7tYkK2P40ho?si=UpcLlufCEKFd1ICP",
+                img_num: 1
+            }, 
             {
                 id: 'story',
                 type: 'story',
@@ -305,7 +323,7 @@ export const contentData: Record<string, InfoContent> = {
             {
                 id: 'applications-4',
                 type: 'applications',
-                title: 'NON PERMEABLE STRUCTURES',
+                title: 'NON-PERMEABLE STRUCTURES',
                 bgcolor1: "bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)]", /* Left is inside, right is outside  BG for the left side*/
                 textcolor1: "text-white", /* Main text colour, for text */
                 textcolor2: "text-[#edc337]", /*For the Titles */
