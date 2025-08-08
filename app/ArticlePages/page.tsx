@@ -29,7 +29,7 @@ export default function Page() {
 
     const [data, setData] = useState<any>(null);
 
-    if (!val) {
+    if (!val || !content) {
         return (
           <>
             <Fallback />
@@ -38,7 +38,7 @@ export default function Page() {
     }
 
     return (
-        <SnapLayout>
+        <StdLayout>
             {content.sections.map((sub, index) => (
               <TemplateSection key={sub.id} section={sub}/>
             ))}
@@ -52,6 +52,6 @@ export default function Page() {
             <section className="snap-start relative bg-[#0474BC] overflow-hidden flex h-full w-full">
             </section>*/}
             <Footer />
-        </SnapLayout>
+        </StdLayout>
     );
 }

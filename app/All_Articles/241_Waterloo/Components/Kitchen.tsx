@@ -7,7 +7,7 @@ export default function Kitchen() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <>
+    <div className="">
       <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mt-6 mb-4 font-bold">
         The <span className="text-[#0474BC]">Kitchen</span>
       </h1>
@@ -59,6 +59,6 @@ export default function Kitchen() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

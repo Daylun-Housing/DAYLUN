@@ -9,10 +9,6 @@ export default function VegetableGlue() {
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
   const router = useRouter();
 
-  const goToTechnologyPages = (section: string) => {
-    router.push(`/TechnologyPages?section=${section}`);
-  };
-
   const gotoInfoPages = (section: string) => {
     router.push(`/TechInfoPages?section=${section}`);
   };

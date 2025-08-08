@@ -30,16 +30,6 @@ export default function Page() {
     const [why, setWhy] = useState('');
     const [features, setFeatures] = useState('');
 
-    useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(`/api/tech?section=${val}`);
-      const json = await res.json();
-      setData(json);
-    }
-
-    fetchData();
-  }, [val]);
-
     const handleButtonPressImpact = () => {
 
       if(!impact) {

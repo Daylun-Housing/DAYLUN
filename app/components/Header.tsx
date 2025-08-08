@@ -54,7 +54,7 @@ export default function Header() {
         <a href="/Technologies" className="hover:text-[#110C27]">
           TECHNOLOGIES
         </a>
-        <a href="https://bimalun.vercel.app/" className="hover:text-[#110C27]">
+        <a href="https://bimalun.com/" className="hover:text-[#110C27]">
           FACTORY PROJECT
         </a>
         <a href="/Investors" className="hover:text-[#110C27]">

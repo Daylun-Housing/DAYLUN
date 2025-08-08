@@ -57,7 +57,7 @@ bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)] -> Gradient Tan Brown, 
 
 export const contentData: Record<string, InfoContent> = {
     vegetable_glue: {
-        title:"Vegetable Glue",
+        title: "Vegetable Glue",
         sections: [
             {
                 id: 'intro',
