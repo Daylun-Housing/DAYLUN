@@ -200,8 +200,8 @@ export default function CareersPage() {
             <h3 className="text-lg font-semibold">Don’t see a fit?</h3>
             <p className="mt-1 text-gray-700">
               We’re always meeting great builders. Send a short note and resume to{" "}
-              <a href="mailto:careers@daylun.ca" className="text-[#0474BC] underline">
-                careers@daylun.ca
+              <a href="mailto:info@daylun.ca" className="text-[#0474BC] underline">
+                info@daylun.ca
               </a>
               .
             </p>

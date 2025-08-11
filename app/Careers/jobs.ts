@@ -29,7 +29,7 @@ const JOBS: Job[] = [
   //     "Familiarity with AMRs and mobile manipulation is a plus",
   //     "Proven track record delivering complex robotics projects from design to deployment is a plus",
   //   ],
-  //   applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20Robotics%20Engineer%20(Lead)",
+  //   applyUrl: "mailto:info@daylun.ca?subject=Application%20-%20Robotics%20Engineer%20(Lead)",
   // },
 ]
 
