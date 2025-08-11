@@ -18,7 +18,7 @@ const team = [
   },
   {
     name: "Armaan R.",
-    title: "Founding Robotics Engineer",
+    title: "Director of Robotics Engineering",
     image: "/AR.jpeg",
     linkedin: "https://www.linkedin.com/in/armaanrasheed/",
     bio: "Designs and deploys robotics solutions for manufacturing and automation, working towards efficient, scalable production.",
