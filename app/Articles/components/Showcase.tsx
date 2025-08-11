@@ -1,6 +1,5 @@
-import Left from "./ArticleParts/Left";
-import Middle from "./ArticleParts/Middle";
-import Right from "./ArticleParts/Right";
+import { contentData } from "./ArticleParts/content";
+import Button_Template from "./ArticleParts/buttons";
 
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
@@ -18,12 +17,12 @@ export default function Showcase() {
       <div>
         <div
           ref={ref_WhatWeDo}
-          className={`relative flex flex-col md:flex-row justify-center items-center 
+          className={`relative grid grid-cols-1 md:grid-cols-3 justify-center items-center 
                                                     transition-all ease-in-out duration-[2000ms] ${is_visible_WWD ? "opacity-100" : "opacity-0"}`}
-        >
-          <Left />
-          <Middle />
-          <Right />
+        > 
+          {contentData.map((sub, idx) => (
+            <Button_Template key={idx} art_button={sub} />
+          ))}
         </div>
       </div>
     </section>

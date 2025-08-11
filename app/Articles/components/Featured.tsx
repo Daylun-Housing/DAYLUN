@@ -1,9 +1,16 @@
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
 export default function Featured() {
+  const router = useRouter();
+
+  const gotoarticle = (section: string) => {
+    router.push(`/ArticlePages?section=${section}`);
+  };
+
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
@@ -34,9 +41,9 @@ export default function Featured() {
               . .
               <br />
               <br />
-              <a href="./All_Articles/241_Waterloo">
-                <span className="hover:text-[#0474BC]">Continue Reading</span>
-              </a>
+            </p>
+            <p onClick={() => gotoarticle('Waterloo_241')} className="text-xs lg:text-lg cursor-pointer hover:text-[#0474BC]">
+              Continue Reading
             </p>
           </div>
         </div>
