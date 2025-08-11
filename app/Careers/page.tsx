@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
 
 type Job = {
@@ -169,6 +169,7 @@ export default function CareersPage() {
   const [department, setDepartment] = useState<string>("All");
   const [location, setLocation] = useState<string>("All");
   const [employmentType, setEmploymentType] = useState<string>("All");
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
   const departments = useMemo(
     () => ["All", ...Array.from(new Set(JOBS.map((j) => j.department)))],
@@ -324,13 +325,13 @@ export default function CareersPage() {
                 <ul className="space-y-3">
                     {jobs.map((job) => (
                     <li key={job.id}>
-                        <JobCard job={job} />
+                      <JobCard job={job} onViewDetails={() => setSelectedJob(job)} />
                     </li>
-                    ))}
+                  ))}
                 </ul>
-                </div>
+              </div>
             ))}
-            </section>
+          </section>
         )}
 
         {/* Footer blurb */}
@@ -345,17 +346,18 @@ export default function CareersPage() {
             </p>
         </section>
         </main>
+        {selectedJob && (
+        <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
+      )}
     </div>
   );
 }
 
-function JobCard({ job }: { job: Job }) {
+function JobCard({ job, onViewDetails }: { job: Job; onViewDetails: () => void }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div
-      className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
-    >
+    <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow">
       <button
         onClick={() => setOpen((v) => !v)}
         className="w-full text-left px-4 md:px-6 py-4 md:py-5 flex items-start justify-between gap-4"
@@ -403,15 +405,91 @@ function JobCard({ job }: { job: Job }) {
             >
               Apply now
             </a>
-            <Link
-              href={`/Careers/${job.id}`}
+            <button
+              onClick={onViewDetails}
               className="rounded-xl border border-gray-300 px-4 py-2 hover:bg-gray-50"
             >
               View details
-            </Link>
+            </button>
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
+  // Close on ESC
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="job-title"
+      className="fixed inset-0 z-[100] flex items-center justify-center"
+    >
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-black/40"
+        onClick={onClose}
+      />
+
+      {/* Modal panel */}
+      <div className="relative z-[101] w-[95vw] max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl bg-white shadow-xl">
+        <div className="sticky top-0 flex items-center justify-between border-b px-5 py-3 bg-white/90 backdrop-blur">
+          <h3 id="job-title" className="text-lg font-semibold">{job.title}</h3>
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            className="rounded-md border px-2 py-1 hover:bg-gray-50"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div className="px-6 py-5">
+          <p className="text-sm text-gray-600">
+            {job.location} • {job.employmentType} • {job.department}
+          </p>
+
+          <p className="mt-4 text-gray-800">{job.description}</p>
+
+          <div className="mt-6 grid gap-8 md:grid-cols-2">
+            <div>
+              <h4 className="font-semibold">Responsibilities</h4>
+              <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
+                {job.responsibilities.map((r, i) => <li key={i}>{r}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold">Requirements</h4>
+              <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
+                {job.requirements.map((r, i) => <li key={i}>{r}</li>)}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 flex gap-3">
+            <a
+              href={job.applyUrl || "mailto:careers@daylun.ca"}
+              className="rounded-xl bg-[#0474BC] px-4 py-2 text-white hover:bg-[#0267a8]"
+            >
+              Apply now
+            </a>
+            <button
+              onClick={onClose}
+              className="rounded-xl border border-gray-300 px-4 py-2 hover:bg-gray-50"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
