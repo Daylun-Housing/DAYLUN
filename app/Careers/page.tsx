@@ -1,169 +1,13 @@
 "use client";
 
-import React, { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
+import type { Job } from "./types";
+import JOBS_DATA from "./jobs"; // default export from jobs.ts
 
-type Job = {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  employmentType: "Full-time" | "Part-time" | "Internship" | "Contract";
-  description: string;
-  responsibilities: string[];
-  requirements: string[];
-  applyUrl?: string; // link to Lever/Greenhouse/Ashby or mailto
-};
+// Use the imported data, typed
+const JOBS: Job[] = JOBS_DATA;
 
-///////////////////////////////////////////////////////////////////////////////
-// CAREERS DATA
-///////////////////////////////////////////////////////////////////////////////
-const JOBS: Job[] = [
-  {
-    id: "rbt-ml-eng-001",
-    title: "Robotics ML Engineer",
-    department: "Engineering",
-    location: "Toronto, ON (Hybrid)",
-    employmentType: "Full-time",
-    description:
-      "Own perception and controls features for our robotic construction platform. Ship production code that affects real builds.",
-    responsibilities: [
-      "Design, train, and evaluate ML models for perception and planning",
-      "Deploy models to edge devices; monitor performance and reliability",
-      "Collaborate with robotics, platform, and product teams",
-    ],
-    requirements: [
-      "2+ years with Python and modern DL frameworks",
-      "Experience with ROS/ROS2 and real-time systems",
-      "Strong data pipeline and evaluation skills",
-    ],
-    applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20Robotics%20ML%20Engineer",
-  },
-  {
-    id: "mech-int-002",
-    title: "Mechanical Engineering Intern (Winter/Spring)",
-    department: "Engineering",
-    location: "Toronto, ON (Onsite)",
-    employmentType: "Internship",
-    description:
-      "Support mechanical design, prototyping, and testing for new automation cells and end effectors.",
-    responsibilities: [
-      "Create and review CAD for mechanisms and fixtures",
-      "Prototype, test, and iterate with cross-functional teams",
-      "Document findings and prepare handoff packages",
-    ],
-    requirements: [
-      "Proficiency with a major CAD tool (e.g., SolidWorks, Fusion, NX)",
-      "Hands-on prototyping experience",
-      "Curiosity and bias to action",
-    ],
-    applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20Mechanical%20Engineering%20Intern",
-  },
-  {
-    id: "pm-003",
-    title: "Technical Product Manager",
-    department: "Product",
-    location: "Remote (Canada)",
-    employmentType: "Full-time",
-    description:
-      "Lead roadmap and delivery for core platform capabilities. Align engineering efforts with business impact.",
-    responsibilities: [
-      "Own roadmap, specs, and release planning",
-      "Define success metrics and drive experiments",
-      "Partner with Engineering and Ops for execution",
-    ],
-    requirements: [
-      "3+ years in PM or EM with technical background",
-      "Strong communication and stakeholder alignment",
-      "Data-informed decision making",
-    ],
-    applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20Technical%20Product%20Manager",
-  },
-  {
-    id: "elec-eng-004",
-    title: "Electrical Engineer",
-    department: "Engineering",
-    location: "Toronto, ON (Hybrid)",
-    employmentType: "Full-time",
-    description:
-      "Design, prototype, and validate electrical systems for robotic modules and factory automation equipment.",
-    responsibilities: [
-      "Develop schematics and PCB layouts",
-      "Oversee wiring harness design and integration",
-      "Collaborate with mechanical and software teams for system bring-up",
-    ],
-    requirements: [
-      "Bachelor in Electrical Engineering or related field",
-      "Experience with PCB design tools (Altium, KiCad, etc.)",
-      "Familiarity with industrial communication protocols",
-    ],
-    applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20Electrical%20Engineer",
-  },
-  {
-    id: "soft-eng-005",
-    title: "Full Stack Software Engineer",
-    department: "Software",
-    location: "Remote (Canada)",
-    employmentType: "Full-time",
-    description:
-      "Build and maintain internal and customer-facing tools that support robotic construction workflows.",
-    responsibilities: [
-      "Develop web dashboards and APIs for monitoring and control",
-      "Integrate cloud-based data pipelines with on-site systems",
-      "Write clean, maintainable, and well-tested code",
-    ],
-    requirements: [
-      "Proficiency in TypeScript, Node.js, and React",
-      "Experience with cloud services (AWS, GCP, or Azure)",
-      "Understanding of REST and GraphQL APIs",
-    ],
-    applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20Full%20Stack%20Software%20Engineer",
-  },
-  {
-    id: "ops-coord-006",
-    title: "Operations Coordinator",
-    department: "Operations",
-    location: "Toronto, ON (Onsite)",
-    employmentType: "Full-time",
-    description:
-      "Support daily operations, procurement, and logistics for active construction and R&D projects.",
-    responsibilities: [
-      "Manage vendor relationships and purchase orders",
-      "Coordinate delivery schedules and inventory management",
-      "Assist in planning and executing on-site builds",
-    ],
-    requirements: [
-      "Strong organizational and communication skills",
-      "Experience with inventory management tools",
-      "Ability to work in fast-paced environments",
-    ],
-    applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20Operations%20Coordinator",
-  },
-  {
-    id: "hr-gen-007",
-    title: "HR Generalist",
-    department: "People",
-    location: "Toronto, ON (Hybrid)",
-    employmentType: "Full-time",
-    description:
-      "Manage recruitment, onboarding, and employee engagement initiatives across the company.",
-    responsibilities: [
-      "Coordinate recruitment efforts and candidate pipelines",
-      "Lead onboarding sessions and maintain HR records",
-      "Assist in developing company culture and engagement programs",
-    ],
-    requirements: [
-      "2+ years in HR or recruitment",
-      "Knowledge of Canadian employment law",
-      "Strong interpersonal skills",
-    ],
-    applyUrl: "mailto:careers@daylun.ca?subject=Application%20-%20HR%20Generalist",
-  },
-];
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-
-// ======== PAGE ========
 export default function CareersPage() {
   const [q, setQ] = useState("");
   const [department, setDepartment] = useState<string>("All");
@@ -202,7 +46,6 @@ export default function CareersPage() {
     });
   }, [q, department, location, employmentType]);
 
-  // Group by department for a sectioned look like many career sites
   const grouped = useMemo(() => {
     const map = new Map<string, Job[]>();
     filtered.forEach((j) => {
@@ -214,116 +57,133 @@ export default function CareersPage() {
   }, [filtered]);
 
   return (
-    <div
-      className="h-screen overflow-y-auto bg-gray-50"
-      suppressHydrationWarning
-    >
+    <div className="h-screen overflow-y-auto bg-gray-50" suppressHydrationWarning>
+      <Link href="/" className="absolute top-4 left-6 z-50">
+        <img
+          src="/DAYLUN MAIN LOGO.jpg"
+          alt="DAYLUN Logo"
+          className="h-10 w-auto hover:opacity-80 transition-opacity"
+        />
+      </Link>
+
       <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
         {/* Hero */}
-        <section className="mb-8 text-center">
-            <h1 className="text-4xl font-semibold tracking-tight">Careers at DAYLUN</h1>
-            <p className="mt-3 text-gray-600">
-            Build the future of automated construction. Join a small, focused team shipping real houses.
-            </p>
+        <section className="mb-10 text-center max-w-3xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
+            Careers at{" "}
+            <span className="bg-gradient-to-r from-[#0474BC] to-blue-400 text-transparent bg-clip-text">
+              DAYLUN
+            </span>
+          </h1>
+          <div className="h-12" />
+          <div className="mt-3 h-1 w-24 mx-auto bg-[#0474BC] rounded-full" />
+          <div className="h-4" />
+          <p className="mt-5 text-lg md:text-xl text-gray-500 leading-relaxed">
+            Join a small, focused team shipping{" "}
+            <span className="font-semibold text-[#0474BC]">real houses</span>.
+          </p>
         </section>
 
         {/* Filters */}
         <section className="mb-8 rounded-2xl border border-blue-100 bg-white p-4 md:p-6 shadow-sm">
-            <div className="grid gap-3 md:grid-cols-4">
+          <div className="grid gap-3 md:grid-cols-4">
             <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Search
-                </label>
-                <input
+              </label>
+              <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Search titles, skills, keywords…"
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                />
+              />
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Department
-                </label>
-                <select
+              </label>
+              <select
                 value={department}
                 onChange={(e) => setDepartment(e.target.value)}
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300"
-                >
+              >
                 {departments.map((d) => (
-                    <option key={d} value={d}>
+                  <option key={d} value={d}>
                     {d}
-                    </option>
+                  </option>
                 ))}
-                </select>
+              </select>
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Location
-                </label>
-                <select
+              </label>
+              <select
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300"
-                >
+              >
                 {locations.map((l) => (
-                    <option key={l} value={l}>
+                  <option key={l} value={l}>
                     {l}
-                    </option>
+                  </option>
                 ))}
-                </select>
+              </select>
             </div>
 
             <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Employment Type
-                </label>
-                <select
+              </label>
+              <select
                 value={employmentType}
                 onChange={(e) => setEmploymentType(e.target.value)}
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300"
-                >
+              >
                 {employmentTypes.map((t) => (
-                    <option key={t} value={t}>
+                  <option key={t} value={t}>
                     {t}
-                    </option>
+                  </option>
                 ))}
-                </select>
+              </select>
             </div>
 
             <div className="flex items-end">
-                <button
+              <button
                 onClick={() => {
-                    setQ("");
-                    setDepartment("All");
-                    setLocation("All");
-                    setEmploymentType("All");
+                  setQ("");
+                  setDepartment("All");
+                  setLocation("All");
+                  setEmploymentType("All");
                 }}
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 hover:bg-gray-50"
-                >
+              >
                 Clear filters
-                </button>
+              </button>
             </div>
-            </div>
+          </div>
         </section>
 
         {/* Results summary */}
         <div className="mb-3 text-sm text-gray-600">
-            Showing <span className="font-semibold">{filtered.length}</span> role{filtered.length === 1 ? "" : "s"}
+          Showing <span className="font-semibold">{filtered.length}</span> role
+          {filtered.length === 1 ? "" : "s"}
         </div>
 
         {/* Jobs grouped by department */}
-        {grouped.length === 0 ? (
-            <EmptyState />
+        {JOBS.length === 0 ? (
+          <NoOpenRoles />
+        ) : grouped.length === 0 ? (
+          <EmptyState />
         ) : (
-            <section className="space-y-8">
+          <section className="space-y-8">
             {grouped.map(([dept, jobs]) => (
-                <div key={dept}>
+              <div key={dept}>
                 <h2 className="mb-3 text-xl font-semibold">{dept}</h2>
                 <ul className="space-y-3">
-                    {jobs.map((job) => (
+                  {jobs.map((job) => (
                     <li key={job.id}>
                       <JobCard job={job} onViewDetails={() => setSelectedJob(job)} />
                     </li>
@@ -335,18 +195,21 @@ export default function CareersPage() {
         )}
 
         {/* Footer blurb */}
-        <section className="mt-12 rounded-2xl border border-blue-100 bg-blue-50/40 p-6">
+        {JOBS.length > 0 && (
+          <section className="mt-12 rounded-2xl border border-blue-100 bg-blue-50/40 p-6">
             <h3 className="text-lg font-semibold">Don’t see a fit?</h3>
             <p className="mt-1 text-gray-700">
-            We’re always meeting great builders. Send a short note and resume to{" "}
-            <a href="mailto:careers@daylun.ca" className="text-[#0474BC] underline">
+              We’re always meeting great builders. Send a short note and resume to{" "}
+              <a href="mailto:careers@daylun.ca" className="text-[#0474BC] underline">
                 careers@daylun.ca
-            </a>
-            .
+              </a>
+              .
             </p>
-        </section>
-        </main>
-        {selectedJob && (
+          </section>
+        )}
+      </main>
+
+      {selectedJob && (
         <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
       )}
     </div>
@@ -370,7 +233,9 @@ function JobCard({ job, onViewDetails }: { job: Job; onViewDetails: () => void }
           </p>
         </div>
         <span
-          className={`mt-1 inline-block h-5 w-5 rotate-0 border-b-2 border-r-2 border-gray-400 transition-transform ${open ? "rotate-45" : "-rotate-45"}`}
+          className={`mt-1 inline-block h-5 w-5 rotate-0 border-b-2 border-r-2 border-gray-400 transition-transform ${
+            open ? "rotate-45" : "-rotate-45"
+          }`}
           aria-hidden
         />
       </button>
@@ -419,9 +284,10 @@ function JobCard({ job, onViewDetails }: { job: Job; onViewDetails: () => void }
 }
 
 function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
-  // Close on ESC
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
@@ -433,16 +299,13 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
       aria-labelledby="job-title"
       className="fixed inset-0 z-[100] flex items-center justify-center"
     >
-      {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-black/40"
-        onClick={onClose}
-      />
+      <div className="absolute inset-0 bg-black/40" onClick={onClose} />
 
-      {/* Modal panel */}
       <div className="relative z-[101] w-[95vw] max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl bg-white shadow-xl">
         <div className="sticky top-0 flex items-center justify-between border-b px-5 py-3 bg-white/90 backdrop-blur">
-          <h3 id="job-title" className="text-lg font-semibold">{job.title}</h3>
+          <h3 id="job-title" className="text-lg font-semibold">
+            {job.title}
+          </h3>
           <button
             onClick={onClose}
             aria-label="Close"
@@ -463,13 +326,17 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
             <div>
               <h4 className="font-semibold">Responsibilities</h4>
               <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
-                {job.responsibilities.map((r, i) => <li key={i}>{r}</li>)}
+                {job.responsibilities.map((r, i) => (
+                  <li key={i}>{r}</li>
+                ))}
               </ul>
             </div>
             <div>
               <h4 className="font-semibold">Requirements</h4>
               <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
-                {job.requirements.map((r, i) => <li key={i}>{r}</li>)}
+                {job.requirements.map((r, i) => (
+                  <li key={i}>{r}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -497,7 +364,25 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
 function EmptyState() {
   return (
     <div className="rounded-2xl border border-dashed border-gray-300 p-10 text-center">
-      <p className="text-gray-600">No roles match your filters. Try clearing them or changing search terms.</p>
+      <p className="text-gray-600">
+        No roles match your filters. Try clearing them or changing search terms.
+      </p>
+    </div>
+  );
+}
+
+function NoOpenRoles() {
+  return (
+    <div className="rounded-2xl border border-blue-100 bg-blue-50/40 p-10 text-center">
+      <h3 className="text-lg font-semibold text-gray-900">No open roles right now</h3>
+      <p className="mt-2 text-gray-700">
+        We’re not listing any positions at the moment. If you’re interested in working at Daylun,
+        please email{" "}
+        <a href="mailto:info@daylun.ca?subject=General%20Interest%20-%20Daylun" className="text-[#0474BC] underline">
+          info@daylun.ca
+        </a>{" "}
+        and check back here soon for new openings.
+      </p>
     </div>
   );
 }
