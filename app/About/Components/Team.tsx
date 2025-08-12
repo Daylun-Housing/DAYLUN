@@ -4,21 +4,21 @@ import { FaLinkedinIn } from "react-icons/fa6";
 const team = [
   {
     name: "Abdullah A.",
-    title: "Electromechanical Engineer",
+    title: "Electromechanical Engineering Assistant",
     image: "/AA.jpg",
     linkedin: "https://www.linkedin.com/in/abdullah-amir-m/",
     bio: "Experienced Engineer bringing his experience with electronics and hardware to assist the development of our robots.",
   },
   {
     name: "David H.",
-    title: "Artifical Intelligence and Machine Learning Software Engineer",
+    title: "Artifical Intelligence and Machine Learning Software Engineering Assistant",
     image: "/DH.jpg",
     linkedin: "https://www.linkedin.com/in/ddavid-he/",
     bio: "Integrating AI into our factory and leveraging AI software in marketing to attract new customers and improving customer relationships.",
   },
   {
     name: "Harsharan R.",
-    title: "Robotics Software Engineer",
+    title: "Robotics Software Engineering Assistant",
     image: "/HR.jpg",
     linkedin: "https://www.linkedin.com/in/harsharanr/",
     bio: "Robotics engineer developing the software solutions for our robotics factory. ",
@@ -32,14 +32,14 @@ const team = [
   },
   {
     name: "Khaled A.",
-    title: "Reinforcement Learning Software Engineer",
+    title: "Reinforcement Learning Software Engineering Assistant",
     image: "/KA.jpg",
     linkedin: "https://www.linkedin.com/in/khaled-yaakoub-agha-b733361a4/",
     bio: "Developing training procedures for the AI models of the factory robots by bringing his experience with robotics and reinforcement learning.",
   },
   {
     name: "Michael D.",
-    title: "Robotics Software Engineer",
+    title: "Robotics Software Engineering Assistant",
     image: "/MD.jpg",
     linkedin: "https://www.linkedin.com/in/michael-denissov/",
     bio: "Software engineer with deep experience with robotics in charge of programming our factory robots.",
@@ -53,14 +53,14 @@ const team = [
   },
   {
     name: "Shifan H.",
-    title: "Computer Engineer",
+    title: "Computer Engineering Assistant",
     image: "/placeholder.png",
     linkedin: "https://www.linkedin.com/in/shifan-he/",
     bio: "Computer engineer working to develop our D2M House Designer Software.",
   },
   {
     name: "Yash P.",
-    title: "Robotics Software Engineer",
+    title: "Robotics Software Engineering Assistant",
     image: "/YP.jpg",
     linkedin: "https://www.linkedin.com/in/yash-patel-33276b218/",
     bio: "Robotics engineer with vast experience in robots in a factory setting developing the capabilities of our robots.",

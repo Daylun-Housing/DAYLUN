@@ -1,9 +1,16 @@
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 import { useIsVisible } from "../JS_Scripts/Visible";
 import { useRef } from "react";
 
 export default function RecentProjects() {
+  const router = useRouter();
+
+  const gotoarticle = (section: string) => {
+    router.push(`/ArticlePages?section=${section}`);
+  };
+
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
@@ -36,7 +43,7 @@ export default function RecentProjects() {
         {/* Project Image */}
         <div className={`overflow-hidden h-[400px] md:h-[600px] mb-5`}>
           <div className="relative w-full h-full mb-10 hover:scale-125 transition-all">
-            <a href="./All_Articles/241_Waterloo">
+            <div onClick={() => gotoarticle('Waterloo_241')} className="cursor-pointer">
               <Image
                 src="/241-waterloo.jpg"
                 alt="241 Waterloo House"
@@ -47,7 +54,7 @@ export default function RecentProjects() {
               <div className="transition-all font-bold text-2xl absolute h-full w-full bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100">
                 View Article
               </div>
-            </a>
+            </div>
           </div>
         </div>
 
@@ -79,13 +86,8 @@ export default function RecentProjects() {
               through the pioneering advancements of Daylun and its product
               sponsors. The house will be platinum Leeds certified.
             </p>
-            <p className="mt-4">
-              <a
-                href="./All_Articles/241_Waterloo"
-                className="text-[#0474BC] hover:text-[#0d3370]"
-              >
+            <p onClick={() => gotoarticle('Waterloo_241')} className="mt-4 text-[#0474BC] hover:text-[#0d3370] cursor-pointer">
                 Read More
-              </a>
             </p>
           </div>
         </div>

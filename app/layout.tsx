@@ -10,7 +10,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
         <link rel="icon" href="/favicon.ico" />
       </head>
       <Suspense>
-        <body className="h-full bg-[#04012A]">
+        <body className="h-full">
           {children}
         </body>
       </Suspense>
