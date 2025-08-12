@@ -1,11 +1,11 @@
 export interface Job {
   id: string;
   title: string;
-  department: string;
+  department: "Engineering" | "Product" | "Software" | "Operations" | "People";
   location: string;
-  employmentType: string;
+  employmentType: "Full-time" | "Part-time" | "Internship" | "Contract";
   description: string;
   responsibilities: string[];
   requirements: string[];
-  applyUrl: string; // URL to apply to job to be added in the future
+  applyUrl?: string; // link to Airtable form that is referenced in NoSQL database
 }

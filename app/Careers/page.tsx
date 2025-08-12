@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
+import Header from "../components/Header";
 import Link from "next/link";
 import type { Job } from "./types";
 import JOBS_DATA from "./jobs"; // default export from jobs.ts
@@ -58,13 +59,7 @@ export default function CareersPage() {
 
   return (
     <div className="h-screen overflow-y-auto bg-gray-50" suppressHydrationWarning>
-      <Link href="/" className="absolute top-4 left-6 z-50">
-        <img
-          src="/DAYLUN MAIN LOGO.jpg"
-          alt="DAYLUN Logo"
-          className="h-10 w-auto hover:opacity-80 transition-opacity"
-        />
-      </Link>
+      <Header />
 
       <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
         {/* Hero */}
