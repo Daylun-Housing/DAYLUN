@@ -1,31 +1,35 @@
 "use client";
 
 import React, { ReactNode, useEffect, useRef, useState } from "react";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaYoutube,
-  FaTiktok,
-  FaEnvelope,
-} from "react-icons/fa6";
 import Image from "next/image";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "../../lib/utils";
 
-import { TOPBAR_ITEMS } from "../Common/constants";
-import { TopBarItem } from "../Common/types";
+import { TOPBAR_ITEMS } from "./HeaderParts/constants";
+import { TopBarItem } from "./HeaderParts/types";
 import { Icon } from "@iconify/react";
 import { motion, useCycle } from "framer-motion";
+
+{/*
+  # MENU TYPE
+  #
+  # Type configuration for the menu
+*/}
 
 type MenuItemWithSubMenuProps = {
   item: TopBarItem;
   toggleOpen: () => void;
 };
 
-export default function head() {
+{/*
+  # MOBILE HEADER  
+  #
+  # Mobile Header that is shown when the menu is closed. Shows only the button and the company icon. 
+  # Hidden on larger screens
+*/}
+export default function MobileHeader() {
   return (
     <header
       className={cn(
@@ -45,7 +49,7 @@ export default function head() {
         </div>
       </div>
 
-      <HeaderMobile />
+      <HeaderMenu />
     </header>
   );
 }
@@ -69,7 +73,14 @@ const sidebar = {
   },
 };
 
-const HeaderMobile = () => {
+{/*
+  # Header Menu  
+  #
+  # The actual menu and the toggle button.
+  # Menu items are only shown when the Menu is toggled open. 
+  # Items are mapped from the imported configuration
+*/}
+const HeaderMenu = () => {
   const pathname = usePathname();
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -89,7 +100,7 @@ const HeaderMobile = () => {
         <div className="inset-0 right-4 w-full">
           <motion.div
             className="absolute inset-0 right-4 w-full bg-white"
-            variants={sidebar}
+            
           />
           <motion.ul
             variants={variants}
@@ -130,6 +141,12 @@ const HeaderMobile = () => {
   );
 };
 
+{/*
+  # TOGGLE BUTTON 
+  #
+  # The button that shows the menu. When the menu is opened, transforms into a x. 
+  # Otherwise, shows as three lines. 
+*/}
 const MenuToggle = ({ toggle }: { toggle: any }) => (
   <button
     onClick={toggle}
@@ -160,6 +177,11 @@ const MenuToggle = ({ toggle }: { toggle: any }) => (
   </button>
 );
 
+{/*
+  # PATH LINE
+  #
+  # Path line that is used in MenuToggle to draw symbols. 
+*/}
 const Path = (props: any) => (
   <motion.path
     fill="transparent"
@@ -170,6 +192,13 @@ const Path = (props: any) => (
   />
 );
 
+{/*
+  # MENU ITEM
+  #
+  # These are the clickable options. 
+  # className - tailwind modifiers
+  # children  - child nodes, e.g. links, text, etc.
+*/}
 const MenuItem = ({
   className,
   children,
@@ -184,6 +213,13 @@ const MenuItem = ({
   );
 };
 
+{/*
+  # SUBMENU ITEM
+  #
+  # Menu options that can be toggled open and close, e.g. submenus.
+  # For itself, shows as a MenuItem with a special option to open. 
+  # When SubMenu is open, maps over submenu items and shows them. 
+*/}
 const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
   item,
   toggleOpen,
@@ -235,6 +271,11 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
   );
 };
 
+{/*
+  # MENU ITEM VARIANTS
+  #
+  # Visual information for opening and closing menus. 
+*/}
 const MenuItemVariants = {
   open: {
     y: 0,
@@ -253,6 +294,11 @@ const MenuItemVariants = {
   },
 };
 
+{/*
+  # VARIANTS
+  #
+  # Visual information for opening and closing menus. 
+*/}
 const variants = {
   open: {
     transition: { staggerChildren: 0.02, delayChildren: 0.15 },
@@ -262,6 +308,12 @@ const variants = {
   },
 };
 
+
+{/*
+  # DIMENSIONS
+  #
+  # function to modify the height of the Menus
+*/}
 const useDimensions = (ref: any) => {
   const dimensions = useRef({ width: 0, height: 0 });
 

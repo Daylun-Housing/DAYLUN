@@ -1,6 +1,13 @@
 
-import Header from "./components/Header";
-import HeaderMobile from "./components/HeaderMobile"
+import Header from "./Common/Header";
+import HeaderMobile from "./Common/HeaderMobile"
+
+{/*
+  # SNAP LAYOUT
+  #
+  # Layout for sections where the user can snap between sections.
+  # Used for TechInfoPages
+*/}
 
 export default function SnapLayout({ children }: { children: React.ReactNode }) {
   return (

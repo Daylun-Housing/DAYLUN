@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection";
 import Builder from "./components/Builder";
 import Video from "./components/ComingSoon";
 import Soon from "./components/ComingSoon";
-import Footer from "../components/Footer";
+import Footer from "../Common/Footer";
 
 export default function HouseBuilder() {
   return (

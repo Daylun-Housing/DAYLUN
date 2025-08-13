@@ -1,5 +1,13 @@
 import React from "react";
 
+
+{/*
+  # NEWSLETTER
+  #
+  # Subscription form. 
+  # Known Issues: Still needs functionality added
+*/}
+
 const Newsletter = () => {
   return (
     <form className="z-50 rounded px-8 pt-6 pb-8 mb-4 max-w-1/2">

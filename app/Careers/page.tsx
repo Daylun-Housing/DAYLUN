@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
-import Header from "../components/Header";
+import Header from "../Common/Header";
 import Link from "next/link";
 import type { Job } from "./types";
 import JOBS_DATA from "./jobs"; // default export from jobs.ts

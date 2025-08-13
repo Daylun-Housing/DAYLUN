@@ -7,7 +7,7 @@ import StdLayout from '../components/StdLayout';
 import { contentData } from './content';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState} from 'react';
-import Footer from "../components/Footer";
+import Footer from "../Common/Footer";
 
 function Fallback() {
   return (

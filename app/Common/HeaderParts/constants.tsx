@@ -1,6 +1,12 @@
-import { Icon } from "@iconify/react";
 import { TopBarItem } from "./types";
 import Image from "next/image";
+
+{/* 
+  # MOBILE HEADER CONSTANTS
+  #
+  # See Types for Configuration Requirements
+  # Each item is a clickable item on the Mobile Bar
+*/}
 
 export const TOPBAR_ITEMS: TopBarItem[] = [
   {
@@ -32,7 +38,7 @@ export const TOPBAR_ITEMS: TopBarItem[] = [
   },
   {
     title: "FACTORY PROJECT",
-    path: "https://bimalun.vercel.app/",
+    path: "https://bimalun.com/",
     icon: <p className="w-[24px] h-[24px]">FACTORIES</p>,
   },
   {

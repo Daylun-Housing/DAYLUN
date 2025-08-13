@@ -8,9 +8,16 @@ import {
 } from "react-icons/fa6";
 import Image from "next/image";
 
+{/*
+  # FOOTER
+  #
+  # Footer for the website. Has three sections, the left with partners  
+  # Center for contact information, and socials on the right
+*/}
+
 export default function Footer() {
   return (
-    <footer className="snap-start bg-[#0d1030] text-white pt-16 pb-6">
+    <footer className="snap-start bg-[var(--footer-blue)] text-[var(--txt-bright)] pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
         {/* Logo */}
         <div>

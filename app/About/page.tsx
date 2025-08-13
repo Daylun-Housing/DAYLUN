@@ -1,6 +1,6 @@
 "use client";
 
-import StdLayout from "../components/StdLayout";
+import StdLayout from "../Common/StdLayout";
 import Hero from "./Components/hero";
 import OurMission from "./Components/OurMission";
 import OurStory from "./Components/OurStory";
@@ -9,7 +9,7 @@ import TeamCards from "./Components/Team";
 import ConsultantsCards from "./Components/Consultants";
 import OurValues from "./Components/OurValues";
 import Video from "./Components/Video";
-import Footer from "../components/Footer";
+import Footer from "../Common/Footer";
 
 export default function AboutPage() {
   return (

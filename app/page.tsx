@@ -1,6 +1,6 @@
 "use client";
 
-import StdLayout from "./components/StdLayout";
+import StdLayout from "./Common/StdLayout";
 import HeroSection from "./components/HeroSection";
 import DiagramSection from "./components/DiagramSection";
 import DiagramMobile from "./components/DiagramMobile";
@@ -13,7 +13,7 @@ import RecentProjects from "./components/RecentProjects";
 import LookingForMaterials from "./components/LookingForMaterials";
 import Awards from "./components/Awards";
 import GetQuote from "./components/GetQuote";
-import Footer from "./components/Footer";
+import Footer from "./Common/Footer";
 
 export default function Home() {
   return (

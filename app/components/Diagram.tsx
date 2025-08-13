@@ -96,7 +96,7 @@ const LabeledImageWithLines: React.FC = () => {
         <a
           key={label.id}
           href={label.link}
-          className="absolute text-[#329fe6] hover:text-white bg-black bg-opacity-70 px-1 py-1 text-xs rounded"
+          className="absolute text-[var(--lighter-blue)] hover:text-[var(--txt-bright)] bg-[var(--label-bg-color)] bg-opacity-70 px-1 py-1 text-xs rounded"
           style={{
             top: `${label.labelTop}%`,
             left: `${label.labelLeft}%`,

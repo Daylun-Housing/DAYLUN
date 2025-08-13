@@ -1,7 +1,7 @@
 "use client";
 
 import StdLayout from "../components/StdLayout";
-import Footer from "../components/Footer";
+import Footer from "../Common/Footer";
 import HeroImage from "./Components/HeroImage";
 import VegetableGlue from "./Components/VegetableGlue";
 import EvaBoard from "./Components/EVABoard";
