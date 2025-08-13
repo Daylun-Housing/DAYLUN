@@ -37,7 +37,7 @@ export default function ConsultantsCards() {
   return (
     <section className="bg-[#04012A] text-white py-16 px-6 md:px-20">
       <h2 className="text-4xl font-extrabold mb-10 text-center">
-        Key Consultants
+        Consulting
       </h2>
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {team.map((person, idx) => (

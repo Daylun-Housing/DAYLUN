@@ -28,7 +28,7 @@ const team = [
     title: "Chief Information Officer",
     image: "/JL.jpeg",
     linkedin: "https://www.linkedin.com/in/jeff-luo-a8ba80217/",
-    bio: "Oversees the company’s digital infrastructure and lead developer on D2M.",
+    bio: "Lead developer on D2M.",
   },
   {
     name: "Khaled A.",
@@ -53,7 +53,7 @@ const team = [
   },
   {
     name: "Shifan H.",
-    title: "Computer Engineering Assistant",
+    title: "Software Engineering Assistant",
     image: "/placeholder.png",
     linkedin: "https://www.linkedin.com/in/shifan-he/",
     bio: "Software Developer working to develop our D2M House Designer Software, and operate finance and operations.",
@@ -71,7 +71,7 @@ export default function TeamCards() {
   return (
     <section className="bg-[#0474BC] text-white py-16 px-6 md:px-20">
       <h2 className="text-4xl font-extrabold mb-10 text-center">
-        Our Team
+        The Team
       </h2>
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {team.map((person, idx) => (
