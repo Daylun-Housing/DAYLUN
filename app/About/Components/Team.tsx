@@ -7,7 +7,7 @@ const team = [
     title: "Electromechanical Engineering Assistant",
     image: "/AA.jpg",
     linkedin: "https://www.linkedin.com/in/abdullah-amir-m/",
-    bio: "Experienced Engineer bringing his experience with electronics and hardware to assist the development of our robots.",
+    bio: "Bringing his experience with electronics and hardware to assist the development of our robots.",
   },
   {
     name: "David H.",
@@ -21,7 +21,7 @@ const team = [
     title: "Robotics Software Engineering Assistant",
     image: "/HR.jpg",
     linkedin: "https://www.linkedin.com/in/harsharanr/",
-    bio: "Robotics engineer developing the software solutions for our robotics factory. ",
+    bio: "Deverloper for software solutions for our robotics factory. ",
   },
   {
     name: "Jeff L.",
@@ -42,28 +42,28 @@ const team = [
     title: "Robotics Software Engineering Assistant",
     image: "/MD.jpg",
     linkedin: "https://www.linkedin.com/in/michael-denissov/",
-    bio: "Software engineer with deep experience with robotics in charge of programming our factory robots.",
+    bio: "Bringing his deep experience with robotics to program our factory robots.",
   },
   {
     name: "Mustafa H.",
     title: "Robotics Integration",
     image: "/MH.jpg",
     linkedin: "https://www.linkedin.com/in/mustafahamoody/",
-    bio: "Robotics engineer integrating the robots into a smooth assembly line process.",
+    bio: "Integrating the robots into a smooth assembly line process by contributing his robotics experience.",
   },
   {
     name: "Shifan H.",
     title: "Computer Engineering Assistant",
     image: "/placeholder.png",
     linkedin: "https://www.linkedin.com/in/shifan-he/",
-    bio: "Computer engineer working to develop our D2M House Designer Software.",
+    bio: "Software Developer working to develop our D2M House Designer Software, and operate finance and operations.",
   },
   {
     name: "Yash P.",
     title: "Robotics Software Engineering Assistant",
     image: "/YP.jpg",
     linkedin: "https://www.linkedin.com/in/yash-patel-33276b218/",
-    bio: "Robotics engineer with vast experience in robots in a factory setting developing the capabilities of our robots.",
+    bio: "Developing the capabilities of our robots through his vast experience with robots in a factory setting.",
   },
 ];
 
