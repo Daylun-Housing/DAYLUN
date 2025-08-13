@@ -1,7 +1,7 @@
 export interface Job {
   id: string;
   title: string;
-  department: "Engineering" | "Product" | "Software" | "Operations" | "People";
+  department: "Engineering" | "Product" | "Software" | "Operations" | "People" | "Create your own";
   location: string;
   employmentType: "Full-time" | "Part-time" | "Internship" | "Contract";
   description: string;
