@@ -1,3 +1,16 @@
+/*
+    ARTICLE BUTTON CONFIGURATION
+        defintion for the configuration for an article button. 
+        Way for users to access articles. 
+
+        title:  title for the button. 
+        src:    image source
+        alt:    alt text
+        text:   blurb about the article
+        goto:   the button will ALWAYS route to ArticlePages. To go to an article, 
+                the route needs to have the same value as the key in the Article Record. 
+                e.g. to go to product_launch page, goto = "product_launch"
+*/
 
 export interface art_button {
     title: string;

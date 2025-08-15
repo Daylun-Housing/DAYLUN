@@ -3,6 +3,11 @@ import Image from "next/image";
 import { useIsVisible } from "../JS_Scripts/Visible";
 import { useRef } from "react";
 
+/**
+ * AWARD ITEMS
+ * @returns {JSX.Element}
+ * The items (awards) shown in the award section.
+ */
 export default function AwardItems() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
@@ -11,7 +16,7 @@ export default function AwardItems() {
     <section
       ref={ref_WhatWeDo}
       className={`flex w-full h-4/5
-                                                transition-all duration-[1200ms] ease-in-out ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}
+                  transition-all duration-[1200ms] ease-in-out ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}
     >
       <div className="flex w-1/2 justify-center">
         <div className="overflow-hidden w-full md:w-[40%] justify-center">
@@ -20,7 +25,7 @@ export default function AwardItems() {
             className="relative w-full h-[300px] overflow-hidden items-center justify-center text-center"
           >
             <div className="flex duration-100 hover:scale-110 overflow-hidden w-full h-full justify-center [&>*:last-child]:hover:brightness-50">
-              <div className="transition-all font-bold text-white text-2xl absolute h-full w-full flex items-center justify-center opacity-0 hover:opacity-100 z-20">
+              <div className="transition-all font-bold text-[var(--txt-bright)] text-2xl absolute h-full w-full flex items-center justify-center opacity-0 hover:opacity-100 z-20">
                 View More
               </div>
 
@@ -43,7 +48,7 @@ export default function AwardItems() {
             className="relative w-full h-[400px] overflow-hidden items-center justify-center text-center"
           >
             <div className="flex duration-100 hover:scale-110 w-full h-full justify-center [&>*:last-child]:hover:brightness-50">
-              <div className="transition-all font-bold text-white text-2xl absolute h-full w-full flex items-center justify-center opacity-0 hover:opacity-100 z-20">
+              <div className="transition-all font-bold text-[var(--txt-bright)] text-2xl absolute h-full w-full flex items-center justify-center opacity-0 hover:opacity-100 z-20">
                 View More
               </div>
 

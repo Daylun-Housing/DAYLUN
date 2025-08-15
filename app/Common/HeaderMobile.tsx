@@ -1,37 +1,43 @@
 "use client";
 
 import React, { ReactNode, useEffect, useRef, useState } from "react";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaYoutube,
-  FaTiktok,
-  FaEnvelope,
-} from "react-icons/fa6";
 import Image from "next/image";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "../../lib/utils";
 
-import { TOPBAR_ITEMS } from "../Common/constants";
-import { TopBarItem } from "../Common/types";
+import { TOPBAR_ITEMS } from "./HeaderParts/constants";
+import { TopBarItem } from "./HeaderParts/types";
 import { Icon } from "@iconify/react";
 import { motion, useCycle } from "framer-motion";
 
+/**
+ * MENU TYPE
+ * Type configuration for the menu
+ *  item:       option in the menu
+ *  toggleOpen: handles if submenu is open
+ */
 type MenuItemWithSubMenuProps = {
   item: TopBarItem;
   toggleOpen: () => void;
 };
 
-export default function head() {
+/**
+ * MOBILE HEADER
+ * @returns {JSX.Element}
+ * 
+ * Mobile Header that is shown when the menu is closed. Shows only the button and the company icon. 
+ * Hidden on larger screens
+ */
+export default function MobileHeader() {
   return (
     <header
       className={cn(
         `md:hidden bg-white sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200`,
       )}
     >
+      {/* DAYLUN LOGO */}
       <div className="flex h-[47px] items-center justify-between px-4">
         <div className="relative w-32 h-10">
           <a href="/">
@@ -45,11 +51,16 @@ export default function head() {
         </div>
       </div>
 
-      <HeaderMobile />
+      {/* The Actual Navigation Menu */}
+      <HeaderMenu />
     </header>
   );
 }
 
+/**
+ * SIDEBAR
+ * Animation information for opening and closing the sidebar.
+ */
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 100% 0)`,
@@ -69,7 +80,14 @@ const sidebar = {
   },
 };
 
-const HeaderMobile = () => {
+/**
+ * HEADER MENU
+ * @returns {JSX.Element}
+ * The actual menu and the toggle button.
+ * Menu items are only shown when the Menu is toggled open. 
+ * Items are mapped from the imported configuration
+ */
+const HeaderMenu = () => {
   const pathname = usePathname();
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -85,11 +103,15 @@ const HeaderMobile = () => {
       }`}
       ref={containerRef}
     >
+      {/**
+       *  When Open, renders the sidebar by mapping over the items list.
+       *  If it is a submenu, then renders it as a submenu. 
+       * */}
       {isOpen && (
         <div className="inset-0 right-4 w-full">
           <motion.div
             className="absolute inset-0 right-4 w-full bg-white"
-            variants={sidebar}
+            
           />
           <motion.ul
             variants={variants}
@@ -107,7 +129,7 @@ const HeaderMobile = () => {
                       <Link
                         href={item.path}
                         onClick={() => toggleOpen()}
-                        className={`flex w-full text-2xl text-blue-900 hover:text-[#110C27] ${
+                        className={`flex w-full text-2xl text-blue-900 hover:text-[var(--dark-blue)] ${
                           item.path === pathname ? "font-extrabold" : ""
                         }`}
                       >
@@ -125,11 +147,22 @@ const HeaderMobile = () => {
           </motion.ul>
         </div>
       )}
+
+      {/* Button to toggle on or off the sidebar */}
       <MenuToggle toggle={toggleOpen} />
     </motion.nav>
   );
 };
 
+/**
+ * TOGGLE BUTTON
+ * @param any // Function that triggers when button is clicked. 
+ * @returns {JSX.Element}
+ * 
+ * The button that shows the menu. When the menu is opened, transforms into a x. 
+ * Otherwise, shows as three lines. 
+ * Closed and Open define what it looks like at different states.
+ */
 const MenuToggle = ({ toggle }: { toggle: any }) => (
   <button
     onClick={toggle}
@@ -160,6 +193,11 @@ const MenuToggle = ({ toggle }: { toggle: any }) => (
   </button>
 );
 
+{/*
+  # PATH LINE
+  #
+  # Path line that is used in MenuToggle to draw symbols. 
+*/}
 const Path = (props: any) => (
   <motion.path
     fill="transparent"
@@ -170,6 +208,17 @@ const Path = (props: any) => (
   />
 );
 
+/**
+ * MENU ITEM
+ * @param className
+ * @param children 
+ * @returns {JSX.Element}
+ * 
+ * Standard Menu Item
+ * These are the clickable options. 
+ * className - tailwind modifiers
+ * children  - child nodes, e.g. links, text, etc.
+ */
 const MenuItem = ({
   className,
   children,
@@ -184,6 +233,16 @@ const MenuItem = ({
   );
 };
 
+/**
+ * SUBMENU ITEM
+ * @param MenuItemWithSubMenuProps
+ * @returns {JSX.Element}
+ * 
+ * 
+ * Special menu item that can be toggled open and close, e.g. submenus.
+ * For itself, shows as a MenuItem with a special option to open. 
+ * When SubMenu is open, maps over submenu items and shows them. 
+ */
 const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
   item,
   toggleOpen,
@@ -193,6 +252,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
 
   return (
     <>
+      {/* Items accessible by this menu */}
       <MenuItem>
         <button
           className="flex w-full text-2xl"
@@ -210,6 +270,8 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
           </div>
         </button>
       </MenuItem>
+
+      {/* Menu Item that opens/closes and shows the sub options */}
       <div className="mt-2 ml-2 flex flex-col space-y-2">
         {subMenuOpen && (
           <>
@@ -235,6 +297,10 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
   );
 };
 
+/**
+ * MENU ITEM VARIANTS
+ * Visual information for opening and closing menus. 
+ */
 const MenuItemVariants = {
   open: {
     y: 0,
@@ -253,6 +319,10 @@ const MenuItemVariants = {
   },
 };
 
+/**
+ * VARIANTS
+ * Visual information for opening and closing menus. 
+ */
 const variants = {
   open: {
     transition: { staggerChildren: 0.02, delayChildren: 0.15 },
@@ -262,6 +332,11 @@ const variants = {
   },
 };
 
+/**
+ * DIMENSIONS
+ * @param ref 
+ * function to modify the height of the Menus
+ */
 const useDimensions = (ref: any) => {
   const dimensions = useRef({ width: 0, height: 0 });
 

@@ -3,6 +3,12 @@ import Image from "next/image";
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
+/**
+ * OUR VALUES
+ * 
+ * @returns {JSX.Element}
+ * This is the our values section. Just has simple centered text.
+ */
 export default function OurValues() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
@@ -11,7 +17,7 @@ export default function OurValues() {
     <section className="relative flex h-[525px] w-full">
       {/* Left Panel */}
       <div
-        className={`bg-[#0474BC] items-center text-white flex flex-col justify-center px-10 md:px-20 w-full relative z-10`}
+        className={`bg-[var(--light-blue)] items-center text-[var(--txt-bright)] flex flex-col justify-center px-10 md:px-20 w-full relative z-10`}
       >
         <div
           ref={ref_WhatWeDo}
@@ -19,12 +25,12 @@ export default function OurValues() {
                                             transition-all ease-in-out duration-1000 ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xl font-extrabold mb-8 leading-tight">
-            Our Values
+            Our <span className="text-[var(--dark-blue)]">Values</span>
           </h2>
           <p className="text-md md:text-lg lg:text-xl leading-relaxed">
             DAYLUN is dedicated to four qualities:
           </p>
-          <ul className="text-md md:text-lg lg:text-xl leading-relaxed mt-4 text-center font-bold text-[#04012A]">
+          <ul className="text-md md:text-lg lg:text-xl leading-relaxed mt-4 text-center font-bold text-[var(--dark-blue)]">
             <li>SPEED</li>
             <li>COST EFFICIENCY</li>
             <li>SUSTAINABILITY</li>

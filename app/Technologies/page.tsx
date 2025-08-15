@@ -1,7 +1,7 @@
 "use client";
 
-import StdLayout from "../components/StdLayout";
-import Footer from "../components/Footer";
+import StdLayout from "../Common/StdLayout";
+import Footer from "../Common/Footer";
 import HeroImage from "./Components/HeroImage";
 import VegetableGlue from "./Components/VegetableGlue";
 import EvaBoard from "./Components/EVABoard";
@@ -12,6 +12,12 @@ import GantryCrane from "./Components/GantryCrane";
 import Generator from "./Components/ElectricGenerator";
 import GotAnIdea from "./Components/GotAnIdea";
 
+/**
+ * TECHNOLOGY PAGE
+ * @returns {JSX.Element}
+ * 
+ * Amalgamation of the parts of the technology page. 
+ */
 export default function TechnologyPage() {
   return (
     <StdLayout>

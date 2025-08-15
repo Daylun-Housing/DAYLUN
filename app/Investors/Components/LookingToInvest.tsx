@@ -5,6 +5,12 @@ import { FaEnvelope } from "react-icons/fa6";
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
+/**
+ * LOOKING TO INVEST
+ * 
+ * @returns {JSX.Element}
+ * Section asking investors to contact us and invest.
+ */
 export default function LookingToInvest() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
@@ -31,9 +37,9 @@ export default function LookingToInvest() {
         className={`w-1/2 md:w-1/3 transition-all ease-in-out duration-1000 
                                         ${is_visible_WWD ? "translate-x-0 scale-x-100" : "translate-x-[30%] scale-x-110"}`}
       >
-        <div className="bg-[#0474BC] text-white h-full flex flex-col justify-center px-10 md:px-20 relative z-10">
+        <div className="bg-[var(--light-blue)] text-[var(--txt-bright)] h-full flex flex-col justify-center px-10 md:px-20 relative z-10">
           <div className="max-w-md md:mt-16">
-            <h2 className="text-[#110C27] text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)] font-extrabold mb-8 leading-tight">
+            <h2 className="text-[var(--dark-blue)] text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)] font-extrabold mb-8 leading-tight">
               LOOKING
               <br />
               TO INVEST?
@@ -43,7 +49,7 @@ export default function LookingToInvest() {
             </p>
 
             <br />
-            <button className="bg-[#04012A] text-white font-bold px-2 md:px-8 py-1 sm:py-3 rounded-md text-[clamp(0.5rem,2vw,1rem)] hover:text-[#a7b7cf] hover:bg-[#080354] transition">
+            <button className="bg-[var(--dark-blue)] text-[var(--txt-bright)] font-bold px-2 md:px-8 py-1 sm:py-3 rounded-md text-[clamp(0.5rem,2vw,1rem)] hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-dark-blue)] transition">
               <a href="mailto:info@daylun.ca">Contact us to learn more</a>
             </button>
           </div>
@@ -56,7 +62,7 @@ export default function LookingToInvest() {
         ref={ref_WhatWeDo}
         className={`absolute left-[60%] md:left-[70%] lg:left-2/3 top-1/2 w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "-translate-x-0 scale-100" : "translate-x-[50%] scale-110"}`}
       >
-        <div className="-translate-x-full -translate-y-1/2 w-36 h-36 scale-[50%] sm:scale-[60%] md:scale-[80%] lg:scale-100 bg-[#0474BC] -z-100" />
+        <div className="-translate-x-full -translate-y-1/2 w-36 h-36 scale-[50%] sm:scale-[60%] md:scale-[80%] lg:scale-100 bg-[var(--light-blue)] -z-100" />
       </div>
     </section>
   );

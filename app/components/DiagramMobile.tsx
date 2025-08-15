@@ -3,10 +3,16 @@ import Image from "next/image";
 import { useIsVisible } from "../JS_Scripts/Visible";
 import { useRef } from "react";
 
-
+/**
+ * Configuration for the mobile version of the labels. 
+ *  id:         unique number identification
+ *  labelLeft:  position for the label
+ *  labelTop:   position for the label
+ *  link:       link to shopify for the given item.
+ */
 interface Label {
   id: string;
-  labelLeft: number;   // % position where label floats
+  labelLeft: number;   
   labelTop: number;
   link: string;
 }
@@ -50,7 +56,12 @@ const labels: Label[] = [
   },
 ];
 
-
+/**
+ * MOBILE DIAGRAM
+ * @returns {JSX.Element}
+ * The mobile version of the actual image. Maps the label configuration and
+ * labels the image as a whole. 
+ */
 const MobileDiagram: React.FC = () => {
   return (
     <div className="relative w-full max-w-3xl">
@@ -65,7 +76,7 @@ const MobileDiagram: React.FC = () => {
         <a
           key={label.id}
           href={label.link}
-          className="absolute text-[#329fe6] hover:text-white bg-black bg-opacity-70 px-1 py-1 text-sm rounded"
+          className="absolute text-[var(--diagram-txt)] hover:text-[var(--txt-bright)] bg-[var(--label-bg-color)] bg-opacity-70 px-1 py-1 text-sm rounded"
           style={{
             top: `${label.labelTop}%`,
             left: `${label.labelLeft}%`,
@@ -79,32 +90,42 @@ const MobileDiagram: React.FC = () => {
   );
 };
 
+/**
+ * DIAGRAM MOBILE
+ * @returns {JSX.Element}
+ * Generates a mobile version of the diagram section. Has the labelled diagram and legend at the button.
+ */
 export default function DiagramMobile() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
     <section
-      className={`h-full md:h-0 bg-[#04012A] text-white overflow-hidden w-full`}
+      className={`h-full md:h-0 bg-[var(--dark-blue)] text-[var(--txt-bright)] overflow-hidden w-full`}
     >
+      {/* Heading */}
       <div className="flex relative w-full justify-center">
         <h2 className="text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)] font-extrabold m-4 leading-tight">
-          OUR <span className="text-[#0474BC]">PRODUCTS</span>
+          OUR <span className="text-[var(--light-blue)]">PRODUCTS</span>
         </h2>
       </div>
+
+      {/* Diagram */}
       <MobileDiagram />
+
+      {/* Legend */}
       <div
         ref={ref_WhatWeDo}
         className={` transition-all w-full h-[200px] md:h-0 duration-1000 flex md:flex-row text-xs md:text-md
                                             ${is_visible_WWD ? "opacity-100 scale-x-100" : "opacity-0 scale-x-110"} `}
       >
-        <div className="relative w-full h-full z-20 text-[#0474BC] text-[clamp(1rem,2vw,2rem)]">
+        <div className="relative w-full h-full z-20 text-[var(--light-blue)] text-[clamp(1rem,2vw,2rem)]">
           <div className="absolute md:scale-0 px-4 flex justify-center w-full py-2">
             <li className="list-none grid grid-cols-2">
               <ul>
                 <a
                   href="https://daylun.myshopify.com/products/roof-trusses"
-                  className="hover:text-white"
+                  className="hover:text-[var(--txt-bright)]"
                 >
                   1. Roof Hanger
                 </a>
@@ -112,7 +133,7 @@ export default function DiagramMobile() {
               <ul>
                 <a
                   href="https://daylun.myshopify.com/products/waterproof-membrane-1"
-                  className="hover:text-white"
+                  className="hover:text-[var(--txt-bright)]"
                 >
                   2. Waterproof Membrane
                 </a>
@@ -120,7 +141,7 @@ export default function DiagramMobile() {
               <ul>
                 <a
                   href="https://daylun.myshopify.com/products/evan-board"
-                  className="hover:text-white"
+                  className="hover:text-[var(--txt-bright)]"
                 >
                   3. EVAN Board
                 </a>
@@ -128,7 +149,7 @@ export default function DiagramMobile() {
               <ul>
                 <a
                   href="https://daylun.myshopify.com/collections/frontpage"
-                  className="hover:text-white"
+                  className="hover:text-[var(--txt-bright)]"
                 >
                   4. Sheathing
                 </a>
@@ -136,7 +157,7 @@ export default function DiagramMobile() {
               <ul>
                 <a
                   href="https://daylun.myshopify.com/products/vegetable-glue"
-                  className="hover:text-white"
+                  className="hover:text-[var(--txt-bright)]"
                 >
                   5. Vegetable Glue
                 </a>
@@ -144,7 +165,7 @@ export default function DiagramMobile() {
               <ul>
                 <a
                   href="https://daylun.myshopify.com/products/sips-walls-structural-insulated-panels"
-                  className="hover:text-white"
+                  className="hover:text-[var(--txt-bright)]"
                 >
                   6. SIPs Panels
                 </a>

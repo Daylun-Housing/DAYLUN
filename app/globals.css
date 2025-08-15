@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --dark-blue: #04012A;
+    --hover-dark-blue: #080354;
+    --less-dark-blue: #070245;
+    --medium-blue: #0D47A1;
+    --basic-blue: #110C27;
+    --key-card-bg: #0A083D;
+    --light-blue: #0474BC;
+    --diagram-txt: #329fe6;
+    --hover-med-blue: #015185;
+    --lighter-blue: #329fe6;
+    --icon-teal: #26C6DA;
+    --faint-blue: #c9dcff;
+    --label-bg-color: black;
+    --txt-bright: white;
+    --txt-faint-grey: #87a0b4;
+    --txt-dark: black;
+    --footer-blue: #0d1030;
+    --header-bg: white;
+    --hover-bg: 0, 0, 0;
+}

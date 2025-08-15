@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+/**
+ * HERO SECTION
+ * 
+ * @returns {JSX.Element}
+ * Basic Hero image that shifts between 4 images, plus Daylun logo.
+ */
 export default function HeroSection() {
   return (
     <section className="relative h-screen w-full">

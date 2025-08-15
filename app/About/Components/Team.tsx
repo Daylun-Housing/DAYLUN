@@ -1,6 +1,18 @@
 import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa6";
 
+/**
+  * TEAM
+  * 
+  * Configuration for the team section of the About page. To add a new team member, 
+  * simply modify the team array below and fill in the information. 
+  * 
+  * name: person name (string)
+  * title: job title (string)
+  * image: location of person photo in the public folder (string)
+  * linkedin: link to linkedin, optional (string)
+  * bio: biography of the person (string)
+  */
 const team = [
   {
     name: "Abdullah A.",
@@ -67,17 +79,24 @@ const team = [
   },
 ];
 
+/**
+ * TEAM CARDS  
+ * 
+ * @returns {JSX.Element}
+ * Team section of the About page. The configurations are mapped into cards that are 
+ * set in a grid of 3 columns. 
+ */
 export default function TeamCards() {
   return (
-    <section className="bg-[#0474BC] text-white py-16 px-6 md:px-20">
+    <section className="bg-[var(--light-blue)] text-[var(--txt-bright)] py-16 px-6 md:px-20">
       <h2 className="text-4xl font-extrabold mb-10 text-center">
-        The Team
+        Our <span className="text-[var(--dark-blue)]">Team</span>
       </h2>
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {team.map((person, idx) => (
           <div
             key={idx}
-            className="bg-[#0A083D] rounded-xl shadow-lg p-6 flex flex-col items-center text-center"
+            className="bg-[var(--key-card-bg)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center"
           >
             <div className="w-32 h-32 relative rounded-full overflow-hidden mb-4">
               <Image
@@ -88,16 +107,16 @@ export default function TeamCards() {
               />
             </div>
             <h3 className="text-xl font-bold">{person.name}</h3>
-            <p className="text-sm text-[#87a0b4]">{person.title}</p>
+            <p className="text-sm text-[var(--txt-faint-grey)]">{person.title}</p>
             <p className="text-sm mt-4">{person.bio}</p>
-            <a
+            {(person.linkedin && <a
               href={person.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 text-[#0474BC] hover:text-[#0f99e0]"
+              className="mt-4 text-[var(--light-blue)] hover:text-[var(--lighter-blue)]"
             >
               <FaLinkedinIn size={20} />
-            </a>
+            </a>)}
           </div>
         ))}
       </div>

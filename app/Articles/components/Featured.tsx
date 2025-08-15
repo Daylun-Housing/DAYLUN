@@ -4,9 +4,21 @@ import { useRouter } from 'next/navigation';
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
+/**
+ * FEATURED
+ * 
+ * @returns {JSX.Element}
+ * Featured section, presenting a featured article. Left section with text
+ * Right has an image and left slides in. 
+ */
 export default function Featured() {
   const router = useRouter();
 
+
+  /** 
+   * gotoarticle
+   * route to the ArticlePage with key = section
+   */
   const gotoarticle = (section: string) => {
     router.push(`/ArticlePages?section=${section}`);
   };
@@ -22,9 +34,9 @@ export default function Featured() {
         className={`w-full md:w-1/3 transition-all ease-in-out duration-1000 
                                       ${is_visible_WWD ? "translate-x-0 scale-x-100" : "md:-translate-x-[30%] scale-x-[110%]"}`}
       >
-        <div className="bg-[#04012A] text-white flex flex-col justify-center px-10 md:px-20 h-full relative z-10">
+        <div className="bg-[var(--dark-blue)] text-[var(--txt-bright)] flex flex-col justify-center px-10 md:px-20 h-full relative z-10">
           <div className="max-w-md py-4 md:mt-16">
-            <h2 className="text-[#0474BC] text-xl sm:text-2xl lg:text-4xl xl:text-6xl font-extrabold mb-4 leading-tight">
+            <h2 className="text-[var(--light-blue)] text-xl sm:text-2xl lg:text-4xl xl:text-6xl font-extrabold mb-4 leading-tight">
               FEATURED ARTICLE
             </h2>
             <h3 className="text-lg sm:text-2xl xl:text-4xl mb-8 font-normal leading-tight">
@@ -42,7 +54,7 @@ export default function Featured() {
               <br />
               <br />
             </p>
-            <p onClick={() => gotoarticle('Waterloo_241')} className="text-xs lg:text-lg cursor-pointer hover:text-[#0474BC]">
+            <p onClick={() => gotoarticle('Waterloo_241')} className="text-xs lg:text-lg cursor-pointer hover:text-[var(--light-blue)]">
               Continue Reading
             </p>
           </div>
@@ -69,7 +81,7 @@ export default function Featured() {
         ref={ref_WhatWeDo}
         className={`absolute left-[25%] md:left-[30%] lg:left-1/3 top-1/2 w-1/3 transition-all ease-in-out duration-1000 ${is_visible_WWD ? "translate-x-0 scale-100" : "-translate-x-[30%] scale-110"}`}
       >
-        <div className=" -translate-y-1/2 w-36 h-36 scale-0 sm:scale-[60%] md:scale-[80%] lg:scale-100 bg-[#04012A] -z-100" />
+        <div className=" -translate-y-1/2 w-36 h-36 scale-0 sm:scale-[60%] md:scale-[80%] lg:scale-100 bg-[var(--dark-blue)] -z-100" />
       </div>
     </section>
   );

@@ -8,9 +8,16 @@ import {
 } from "react-icons/fa6";
 import Image from "next/image";
 
+
+/**
+ * FOOTER
+ * @returns {JSX.Element}
+ * Footer for the website. Has three sections, the left with partners  
+ * Center for contact information, and socials on the right
+ */
 export default function Footer() {
   return (
-    <footer className="snap-start bg-[#0d1030] text-white pt-16 pb-6">
+    <footer className="snap-start bg-[var(--footer-blue)] text-[var(--txt-bright)] pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
         {/* Logo */}
         <div>
@@ -39,7 +46,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h2 className="text-4xl font-extrabold text-[#0078C7] mb-4">
+          <h2 className="text-4xl font-extrabold text-[var(--light-blue)] mb-4">
             CONTACTS
           </h2>
           <ul className="space-y-2">
@@ -56,7 +63,7 @@ export default function Footer() {
 
         {/* Social */}
         <div>
-          <h2 className="text-4xl font-extrabold text-[#0078C7] mb-2">
+          <h2 className="text-4xl font-extrabold text-[var(--light-blue)] mb-2">
             FOLLOW
             <br />
             <span className="block">US</span>
@@ -76,12 +83,12 @@ export default function Footer() {
               <FaShopify />
             </a>
           </div>
-          <p className="text-4xl font-extrabold text-white">#DAYLUN</p>
+          <p className="text-4xl font-extrabold text-[var(--txt-bright)]">#DAYLUN</p>
         </div>
       </div>
 
       {/* Bottom copyright */}
-      <div className="border-t border-gray-500 mt-12 pt-4 text-center text-sm text-gray-300">
+      <div className="border-t border-[var(--txt-faint-grey)] mt-12 pt-4 text-center text-sm text-[var(--txt-faint-grey)]">
         © 2025 DAYLUN
       </div>
     </footer>
