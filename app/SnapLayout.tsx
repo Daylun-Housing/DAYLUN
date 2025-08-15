@@ -2,13 +2,12 @@
 import Header from "./Common/Header";
 import HeaderMobile from "./Common/HeaderMobile"
 
-{/*
-  # SNAP LAYOUT
-  #
-  # Layout for sections where the user can snap between sections.
-  # Used for TechInfoPages
-*/}
-
+/**
+ * SNAP LAYOUT
+ * @param {React.ReactNode} 
+ * @returns {JSX.Element}
+ * Layout that allows snap scroll. 
+ */
 export default function SnapLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="h-screen overflow-hidden relative">

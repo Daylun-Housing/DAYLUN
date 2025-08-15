@@ -3,15 +3,22 @@ import Image from "next/image";
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
+/**
+ * COMING SOON
+ * 
+ * @returns {JSX.Element}
+ * COMING SOON page for the House Builder, explains what it is and
+ * features a video.  
+ */
 export default function Video() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
 
   return (
-    <section className="bg-[#04012A] relative sm:flex w-full">
+    <section className="bg-[var(--dark-blue)] relative sm:flex w-full">
       <div
         ref={ref_WhatWeDo}
-        className={`text-white py-12 md:flex items-center justify-center px-10 md:px-20 w-full relative z-10
+        className={`text-[var(--txt-bright)] py-12 md:flex items-center justify-center px-10 md:px-20 w-full relative z-10
                                                 transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}
       >
         <div className="md:w-1/2 text-left ">

@@ -1,11 +1,26 @@
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 
+/**
+ * MODEL 
+ * @param {*}  
+ * @returns {primitive}
+ * 
+ * DEFUNCT: generates a model to view.
+ */
 function Model({ location, ...props }) {
   const { scene } = useGLTF(location);
   return <primitive object={scene} {...props} />;
 }
 
+/**
+ * MODEL PREVIEW
+ * @param {*} loc 
+ * @returns {JSX.Element}
+ * 
+ * DEFUNCT: creates the preivew section; this is used in the House Builder section 
+ * but D2M will replace this.
+ */
 export default function Model_Preview({ loc }) {
   return (
     <Canvas

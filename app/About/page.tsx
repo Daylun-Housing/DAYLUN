@@ -11,6 +11,12 @@ import OurValues from "./Components/OurValues";
 import Video from "./Components/Video";
 import Footer from "../Common/Footer";
 
+/**
+ * ABOUT PAGE
+ * 
+ * @returns {JSX.Element}
+ * This is just an amalgation of all the ABOUT sections. 
+ */
 export default function AboutPage() {
   return (
     <StdLayout>

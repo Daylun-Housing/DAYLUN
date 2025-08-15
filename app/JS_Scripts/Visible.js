@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
 
+/**
+ * USE IS VISIBLE
+ * @param {*} ref 
+ * @returns {boolean}
+ * 
+ * checks if the current object is being viewed by the user.
+ */
 export function useIsVisible(ref) {
   
 

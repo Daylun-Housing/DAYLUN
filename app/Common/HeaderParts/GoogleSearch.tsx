@@ -2,19 +2,19 @@
 "use client";
 import { useEffect } from "react";
 
-{/*
-  # EMBEDDED SEARCH
-  # 
-  # Embbed Search Bar, use info@daylun.ca to access and modify
-  # Other than sizing, modifications to visuals must be done there
-  # Known Bugs: It seems that the engine only searches main 
-*/}
-
+/**
+ * EMBEDDED SEARCH
+ * 
+ * @returns {JSX.Element}
+ * Embbed Search Bar, use info@daylun.ca to access and modify
+ * Other than sizing, modifications to visuals must be done there
+ * Known Bugs: It seems that the engine only searches main 
+ */
 export default function SearchGoogle() {
   useEffect(() => {
     if (!document.querySelector("script[src*='cse.google.com/cse.js']")) {
       const script = document.createElement("script");
-      script.src = "https://cse.google.com/cse.js?cx=f73b4d6ad88ce4eb5"; 
+      script.src = "https://cse.google.com/cse.js?cx=f73b4d6ad88ce4eb5"; // This our custom search engine. 
       script.async = true;
       document.body.appendChild(script);
     }

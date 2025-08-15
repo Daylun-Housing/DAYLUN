@@ -1,13 +1,11 @@
 import { TopBarItem } from "./types";
 import Image from "next/image";
 
-{/* 
-  # MOBILE HEADER CONSTANTS
-  #
-  # See Types for Configuration Requirements
-  # Each item is a clickable item on the Mobile Bar
-*/}
-
+/**
+ * MOBILE HEADER CONSTANTS
+ * See types for configuration requirements
+ * Each item is a clickable item on the Mobile Bar
+ */
 export const TOPBAR_ITEMS: TopBarItem[] = [
   {
     title: "HOME",

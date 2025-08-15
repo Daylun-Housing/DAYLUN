@@ -3,7 +3,7 @@
 import SnapLayout from "../SnapLayout";
 import TemplateSection from "./templates";
 import Image from 'next/image';
-import StdLayout from '../components/StdLayout';
+import StdLayout from '../Common/StdLayout';
 import { contentData } from './content';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState} from 'react';

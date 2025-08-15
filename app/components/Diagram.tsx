@@ -1,4 +1,13 @@
-
+/**
+ * Configuration for the labels on the diagram
+ *  id:         unique number id
+ *  text:       label text
+ *  anchorLeft: where does the line point on the image
+ *  anchorTop:  where does the line point on the image
+ *  labelLeft:  where the label is positioned
+ *  labelTop:   where the label is positioned
+ *  link:       link to shopify with given item
+ */
 interface Label {
   id: string;
   text: string;
@@ -9,6 +18,11 @@ interface Label {
   link: string;
 }
 
+/**
+ * labels
+ * list of label configurations.
+ * To add another label, add to the array.
+ */
 const labels: Label[] = [
   {
     id: "1",
@@ -66,17 +80,24 @@ const labels: Label[] = [
   },
 ];
 
-
+/**
+ * LABELED IMAGE WITH LINES
+ * @returns {JSX.Element}
+ * The computer version of the diagram. Maps the label configuration and
+ * labels the image as a whole. 
+ */
 const LabeledImageWithLines: React.FC = () => {
   return (
     <div className="relative w-full max-w-3xl">
+
+      {/* Image that is labelled */}
       <img
         src="/Home_Sketch.jpg"
         alt="Car labeled"
         className="w-auto h-auto"
       />
 
-      {/* SVG Lines */}
+      {/* SVG Lines pointing to the image */}
       <svg className="absolute top-0 left-0 w-full h-full pointer-events-none">
         {labels.map((label) => (
           <line
@@ -85,7 +106,7 @@ const LabeledImageWithLines: React.FC = () => {
             y1={`${label.anchorTop}%`}
             x2={`${label.labelLeft}%`}
             y2={`${label.labelTop}%`}
-            stroke="#0474BC"
+            stroke="var(--light-blue)"
             strokeWidth={2}
           />
         ))}
@@ -96,7 +117,7 @@ const LabeledImageWithLines: React.FC = () => {
         <a
           key={label.id}
           href={label.link}
-          className="absolute text-[var(--lighter-blue)] hover:text-[var(--txt-bright)] bg-[var(--label-bg-color)] bg-opacity-70 px-1 py-1 text-xs rounded"
+          className="absolute text-[var(--diagram-txt)] hover:text-[var(--txt-bright)] bg-[var(--label-bg-color)] bg-opacity-70 px-1 py-1 text-xs rounded"
           style={{
             top: `${label.labelTop}%`,
             left: `${label.labelLeft}%`,

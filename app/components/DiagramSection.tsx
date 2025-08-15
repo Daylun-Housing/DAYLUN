@@ -1,15 +1,13 @@
 import Image from "next/image";
 import LabeledImageWithLines from "./Diagram";
 
-{/* 
-  
-  # Section to Handle the Diagram
-  # Handles Higher Screens, 
-  # Outputs a section with a Header and the Diagram from LabeledImageWithLines
-  # 
-  
-  */}
-
+/**
+ * DIAGRAM SECTION
+ * @returns {JSX.Element}
+ * Section to Handle the Diagram
+ * Handles Higher Screens, 
+ * Outputs a section with a Header and the Diagram from LabeledImageWithLines
+ */
 export default function DiagramSection() {
 
   return (

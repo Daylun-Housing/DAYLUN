@@ -1,8 +1,14 @@
 import Image from "next/image";
 
 import { useIsVisible } from "../JS_Scripts/Visible";
-import { useRef } from "react";
+import { JSX, useRef } from "react";
 
+/**
+ * ITEMS
+ * @returns {JSX.Element}
+ * 
+ * Shows products available. 
+ */
 export default function Items() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
@@ -12,6 +18,8 @@ export default function Items() {
       ref={ref_WhatWeDo}
       className={`flex flex-col md:flex-row justify-center transition-all duration-[1200ms] ease-in-out ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}
     >
+
+      {/* Left Item - Classic Bamboo OSB */}
       <div className="md:w-1/3 py-2 justify-center items-center flex">
         <div className="overflow-hidden w-4/5 relative">
           <a href="https://daylun.myshopify.com/products/bamboo-osb-board">
@@ -20,7 +28,7 @@ export default function Items() {
                 View in Store
               </div>
 
-              <div className="bg-[#04012A] w-full h-[400px] items-center justify-center text-center">
+              <div className="bg-[var(--dark-blue)] w-full h-[400px] items-center justify-center text-center">
                 <div className="relative w-full h-4/5 items-center flex justify-center">
                   <Image
                     src="/Bamboo_Basic.webp"
@@ -38,6 +46,7 @@ export default function Items() {
         </div>
       </div>
 
+      {/* Middle Item - Waterproof Bamboo OSB */}
       <div className="md:w-1/3 py-2 justify-center items-center flex">
         <div className="overflow-hidden w-4/5 relative">
           <a href="https://daylun.myshopify.com/products/waterproofed-bamboo-barrier-tech">
@@ -46,7 +55,7 @@ export default function Items() {
                 View in Store
               </div>
 
-              <div className="bg-[#04012A] w-full h-[400px] items-center justify-center text-center">
+              <div className="bg-[var(--dark-blue)] w-full h-[400px] items-center justify-center text-center">
                 <div className="relative w-full h-4/5 items-center flex justify-center">
                   <Image
                     src="/Waterproofed.webp"
@@ -64,6 +73,7 @@ export default function Items() {
         </div>
       </div>
 
+      {/* Right Item - Bamboo OSB */}
       <div className="md:w-1/3 py-2 justify-center items-center flex">
         <div className="overflow-hidden w-4/5 relative">
           <a href="https://daylun.myshopify.com/products/spec-sheet">
@@ -72,7 +82,7 @@ export default function Items() {
                 View in Store
               </div>
 
-              <div className="bg-[#04012A] w-full h-[400px] items-center justify-center text-center">
+              <div className="bg-[var(--dark-blue)] w-full h-[400px] items-center justify-center text-center">
                 <div className="relative w-full md:h-[70%] xl:h-4/5 h-3/5 items-center flex justify-center">
                   <Image
                     src="/Bamboo.png"

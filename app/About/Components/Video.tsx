@@ -3,6 +3,11 @@ import Image from "next/image";
 import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 
+/**
+ * COLLABORATE WITH US
+ * @returns {JSX.Element}
+ * This is the our video section. Just has a video
+ */
 export default function Video() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
@@ -11,14 +16,14 @@ export default function Video() {
     <section className="relative flex h-[600px] w-full">
       {/* Left Panel */}
       <div
-        className={`bg-[#04012A] items-center text-white w-full flex flex-col justify-center px-10 md:px-20 relative z-10`}
+        className={`bg-[var(--dark-blue)] items-center text-[var(--txt-bright)] w-full flex flex-col justify-center px-10 md:px-20 relative z-10`}
       >
         <div
           ref={ref_WhatWeDo}
           className={`max-w-3xl mt-16 text-center transition-all ease-in-out duration-1000 ${is_visible_WWD ? "opacity-100" : "opacity-25"}`}
         >
           <h2 className="text-[clamp(1.5rem,2vw,3rem)] md:text-[clamp(1.5rem,4vw,3rem)] font-extrabold mb-8 leading-tight">
-            Collaborate with us
+            <span className="text-[var(--light-blue)]">Collaborate</span> with us
           </h2>
           
           <div className="w-[3/4] h-1/2">

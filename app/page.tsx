@@ -15,6 +15,12 @@ import Awards from "./components/Awards";
 import GetQuote from "./components/GetQuote";
 import Footer from "./Common/Footer";
 
+/**
+ * HOME
+ * @returns {JSX.Element} 
+ * 
+ * Amalgamation of items for home page
+ */
 export default function Home() {
   return (
     <StdLayout>

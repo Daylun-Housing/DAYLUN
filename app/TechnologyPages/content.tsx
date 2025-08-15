@@ -1,3 +1,21 @@
+/**
+ * TECH PAGE CONTENT
+ *      Configuration for the product information pages
+ *      Effectively a copy of Shopify
+ *      title:          title of product
+ *      price:          price of the product
+ *      TechImage:      Image for the product
+ *      ImageAlt:       Alt text
+ *      description:    description of the product
+ *      specifications: list of specs
+ *      link:           link to product page
+ *      impact :        sustainability impact of the product
+ *      why:            why the product was created
+ *      features:       listed features of the product
+ *      recyclable:     Is it recyclable?
+ *      upcyclable:     Is it upcyclable?
+ *      biodegrable:    Is it biodegrable?
+ */
 export interface TechPageContent {
     title: string;
     price: number;
@@ -14,6 +32,11 @@ export interface TechPageContent {
     biodegrable?: boolean;
 }
 
+/**
+ * CONTENT DATA
+ *      Record that stores the product pages of different products as a key-value pair. 
+ *      Key is product name, value is the configuration for the page. 
+ */
 export const contentData: Record<string, TechPageContent> = {
     vegetable_glue: {
         title: "Vegetable Glue",

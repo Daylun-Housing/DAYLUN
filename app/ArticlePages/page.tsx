@@ -3,23 +3,37 @@
 import SnapLayout from "../SnapLayout";
 import TemplateSection from "./templates";
 import Image from 'next/image';
-import StdLayout from '../components/StdLayout';
+import StdLayout from "../Common/StdLayout";
 import { contentData } from './content';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState} from 'react';
 import Footer from "../Common/Footer";
 
+/**
+ * FALLBACK
+ * @returns {JSX.Element}
+ * 
+ * Page for when there is an error. 
+ */
 function Fallback() {
   return (
       <StdLayout>
-        <div className="p-6 text-blue-600">
-            <h1 className="text-xl font-bold">Section not found </h1>                  
+        <div className="p-6 bg-[var(--dark-blue)] h-screen">
+            <h1 className="text-xl font-bold text-[var(--txt-bright)]">Section not found </h1>                  
         </div>
         <Footer />
       </StdLayout>
   )
 }
 
+/**
+ * PAGE
+ * @returns {JSX.Element}
+ * 
+ * User should only be routed to this page by routes that set Section to a valid article. (See Content.tsx)
+ * Searches for the Article Configuration based on value of section passed. If no content is yielded, makes
+ * a Fallback page, otherwise builds the webpage using the information passed. 
+ */
 export default function Page() {
 
     const searchParams = useSearchParams();
@@ -40,17 +54,8 @@ export default function Page() {
     return (
         <StdLayout>
             {content.sections.map((sub, index) => (
-              <TemplateSection key={sub.id} section={sub}/>
+              <TemplateSection key={sub.id} content={sub}/>
             ))}
-            {/*<section className="snap-start relative bg-[#04012A] overflow-hidden flex h-full w-full items-center justify-center">
-              <p className="text-xl text-white ">{content.title}</p>
-            </section>
-            <section className="snap-start relative bg-[#0474BC] overflow-hidden flex h-full w-full">
-            </section>
-            <section className="snap-start relative bg-[#04012A] overflow-hidden flex h-full w-full">
-            </section>
-            <section className="snap-start relative bg-[#0474BC] overflow-hidden flex h-full w-full">
-            </section>*/}
             <Footer />
         </StdLayout>
     );

@@ -7,7 +7,12 @@ import Featured from "./components/Featured";
 import Showcase from "./components/Showcase";
 import Footer from "../Common/Footer";
 
-export default function AboutPage() {
+/**
+ * ARTICLE PAGE 
+ * @returns {JSX.Element}
+ * Amalgamation of the Article Page.
+ */
+export default function ArticlePage() {
   return (
     <StdLayout>
 

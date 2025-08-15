@@ -5,14 +5,12 @@ import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube, FaShopify, FaEnvelop
 import { FiChevronDown } from "react-icons/fi";
 import dynamic from "next/dynamic";
 
-
-{/*
-  # HEADER
-  #
-  # Main Header for the Website, has 3 sections, left with the company logo, center with main navigation
-  # and search bar, and right with social icons. 
-*/}
-
+/**
+ * HEADER
+ * @returns {JSX.Element}
+ * Main Header for the Website, has 3 sections, left with the company logo, center with main navigation
+ * and search bar, and right with social icons. 
+ */
 export default function Header() {
 
   const GoogleSearchNoSSR = dynamic(() => import("./HeaderParts/GoogleSearch"), { ssr: false });

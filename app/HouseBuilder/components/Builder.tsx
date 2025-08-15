@@ -6,6 +6,12 @@ import { useIsVisible } from "../../JS_Scripts/Visible";
 import { useRef } from "react";
 import Model_Preview from "../../JS_Scripts/Model";
 
+/**
+ * HOUSE BUILDER
+ * 
+ * @returns {JSX.Element}
+ * Prototype. DEFUNCT
+ */
 export default function Builder() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
@@ -43,7 +49,7 @@ export default function Builder() {
   let price = widthNum * heightNum * lengthNum;
 
   return (
-    <section className="bg-[#0474BC] text-white py-16 px-6 md:px-20">
+    <section className="bg-[var(--light-blue)] text-[var(--txt-bright)] py-16 px-6 md:px-20">
       {/* Input */}
       <div
         ref={ref_WhatWeDo}
@@ -64,7 +70,7 @@ export default function Builder() {
                 placeholder="x"
                 value={width}
                 onChange={(e) => setWidth(e.target.value)}
-                className="w-32 px-3 py-1 text-black"
+                className="w-32 px-3 py-1 text-[var(--txt-dark)]"
               />
               <span>ft</span>
             </div>
@@ -75,7 +81,7 @@ export default function Builder() {
                 placeholder="y"
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
-                className="w-32 px-3 py-1 text-black"
+                className="w-32 px-3 py-1 text-[var(--txt-dark)]"
               />
               <span>ft</span>
             </div>
@@ -86,7 +92,7 @@ export default function Builder() {
                 placeholder="z"
                 value={length}
                 onChange={(e) => setLength(e.target.value)}
-                className="w-32 px-3 py-1 text-black"
+                className="w-32 px-3 py-1 text-[var(--txt-dark)]"
               />
               <span>ft</span>
             </div>
@@ -105,22 +111,22 @@ export default function Builder() {
       {/* Preview */}
       <div
         ref={ref_WhatWeDo}
-        className={`bg-[#04012A] text-white mt-16 py-12 px-6 rounded-lg
+        className={`bg-[var(--dark-blue)] text-[var(--txt-bright)] mt-16 py-12 px-6 rounded-lg
                                         transition-all ease-in-out duration-[1800ms] ${is_visible_WWD ? "opacity-100" : "opacity-25"} `}
       >
         <h3 className="text-3xl font-extrabold text-center mb-8">Preview</h3>
         <div className="md:flex gap-12 items-center">
-          <div className="w-full md:w-2/3 rounded-lg overflow-hidden bg-[#04012A]">
+          <div className="w-full md:w-2/3 rounded-lg overflow-hidden bg-[var(--dark-blue)]">
             <div className="mb-6">
-              <div className="flex justify-center space-x-2 bg-[#04012A] p-2 rounded-t-lg">
+              <div className="flex justify-center space-x-2 bg-[var(--dark-blue)] p-2 rounded-t-lg">
                 {Object.entries(models).map(([key, model]) => (
                   <button
                     key={key}
                     onClick={() => setSelectedModel(key)}
                     className={`px-4 py-2 rounded-md font-semibold transition-colors duration-200 ${
                       selectedModel === key
-                        ? "bg-[#0474BC] text-white"
-                        : "bg-[#D6ECFA] text-[#0474BC] hover:bg-[#A9D7F8]"
+                        ? "bg-[var(--dark-blue)] text-[var(--txt-bright)]"
+                        : "bg-[var(--txt-faint-grey)] text-[var(--light-blue)] hover:bg-[var(--faint-blue)]"
                     }`}
                   >
                     {model.name}
@@ -162,7 +168,7 @@ export default function Builder() {
               />
               <button
                 type="submit"
-                className="ml-2 bg-[#0474BC] text-white px-4 py-1 rounded-md hover:bg-[#015185]"
+                className="ml-2 bg-[var(--light-blue)] text-[var(--txt-bright)] px-4 py-1 rounded-md hover:bg-[var(--diagram-txt)]"
               >
                 Submit
               </button>
