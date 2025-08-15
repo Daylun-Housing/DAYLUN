@@ -1,5 +1,4 @@
 import { InfoContent } from "./types"
-
 /*
 
 COLOUR GUIDES

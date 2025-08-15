@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SectionData, Paragraph } from "./content";
+import { SectionData, Paragraph } from "./types";
 import clsx from "clsx";
 
 function TemplatePara({ paragraph }: { paragraph: Paragraph }) {
