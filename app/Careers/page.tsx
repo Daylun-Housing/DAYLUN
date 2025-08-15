@@ -16,10 +16,13 @@ export default function CareersPage() {
   const [employmentType, setEmploymentType] = useState<string>("All");
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
-  const departments = useMemo(
-    () => ["All", ...Array.from(new Set(JOBS.map((j) => j.department)))],
-    []
-  );
+  const departments = useMemo(() => {
+    const set = Array.from(new Set(JOBS.map((j) => j.department)));
+    const special = "Create your own";
+    const normal = set.filter((d) => d !== special).sort((a, b) => a.localeCompare(b));
+    return ["All", ...normal, ...(set.includes(special) ? [special] : [])];
+  }, []);
+  
   const locations = useMemo(
     () => ["All", ...Array.from(new Set(JOBS.map((j) => j.location)))],
     []
@@ -50,11 +53,16 @@ export default function CareersPage() {
   const grouped = useMemo(() => {
     const map = new Map<string, Job[]>();
     filtered.forEach((j) => {
-      const key = j.department;
-      if (!map.has(key)) map.set(key, []);
-      map.get(key)!.push(j);
+      if (!map.has(j.department)) map.set(j.department, []);
+      map.get(j.department)!.push(j);
     });
-    return Array.from(map.entries()).sort(([a], [b]) => a.localeCompare(b));
+
+    const special = "Create your own";
+    return Array.from(map.entries()).sort(([a], [b]) => {
+      if (a === special && b !== special) return 1;   // a goes after b
+      if (b === special && a !== special) return -1;  // b goes after a
+      return a.localeCompare(b);                      // normal alphabetical
+    });
   }, [filtered]);
 
   return (
@@ -213,6 +221,7 @@ export default function CareersPage() {
 
 function JobCard({ job, onViewDetails }: { job: Job; onViewDetails: () => void }) {
   const [open, setOpen] = useState(false);
+  const isCreateYourOwn = job.department === "Create your own";
 
   return (
     <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow">
@@ -224,7 +233,9 @@ function JobCard({ job, onViewDetails }: { job: Job; onViewDetails: () => void }
         <div>
           <h3 className="text-base md:text-lg font-medium">{job.title}</h3>
           <p className="mt-1 text-xs md:text-sm text-gray-600">
-            {job.location} • {job.employmentType}
+            {isCreateYourOwn
+              ? `${job.location} ${job.employmentType}`
+              : `${job.location} • ${job.employmentType}`}
           </p>
         </div>
         <span
@@ -239,24 +250,26 @@ function JobCard({ job, onViewDetails }: { job: Job; onViewDetails: () => void }
         <div className="px-4 md:px-6 pb-5 md:pb-6 border-t border-gray-100">
           <p className="mt-4 text-gray-700">{job.description}</p>
 
-          <div className="mt-5 grid gap-6 md:grid-cols-2">
-            <div>
-              <h4 className="font-semibold">Responsibilities</h4>
-              <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
-                {job.responsibilities.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+          {!isCreateYourOwn && (
+            <div className="mt-5 grid gap-6 md:grid-cols-2">
+              <div>
+                <h4 className="font-semibold">Responsibilities</h4>
+                <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
+                  {job.responsibilities.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold">Requirements</h4>
+                <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
+                  {job.requirements.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <h4 className="font-semibold">Requirements</h4>
-              <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
-                {job.requirements.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          )}
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -265,12 +278,16 @@ function JobCard({ job, onViewDetails }: { job: Job; onViewDetails: () => void }
             >
               Apply now
             </a>
-            <button
-              onClick={onViewDetails}
-              className="rounded-xl border border-gray-300 px-4 py-2 hover:bg-gray-50"
-            >
-              View details
-            </button>
+
+            {/* Only show "View details" if NOT Create your own */}
+            {!isCreateYourOwn && (
+              <button
+                onClick={onViewDetails}
+                className="rounded-xl border border-gray-300 px-4 py-2 hover:bg-gray-50"
+              >
+                View details
+              </button>
+            )}
           </div>
         </div>
       )}
