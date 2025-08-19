@@ -16,7 +16,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 const team = [
   {
     name: "Patrick L.",
-    title: "Financial Advisor",
+    title: "Financial Digital Advisor",
     image: "/PL.jpeg",
     linkedin: "https://www.linkedin.com/in/patrick-liu-850575325/",
     bio: "Finance and operations advisor with experience in high-growth situations and international scaling strategies.",

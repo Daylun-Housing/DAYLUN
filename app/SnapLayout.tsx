@@ -15,7 +15,7 @@ export default function SnapLayout({ children }: { children: React.ReactNode }) 
       <Header />
       <HeaderMobile />
       {/* Snap Scroll Container */}
-      <div className="absolute top-16 left-0 right-0 bottom-0 h-full overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+      <div className="absolute top-16 left-0 right-0 bottom-0 h-[95vh] overflow-y-scroll snap-y snap-mandatory scroll-smooth">
         {children}
       </div>
     </div>

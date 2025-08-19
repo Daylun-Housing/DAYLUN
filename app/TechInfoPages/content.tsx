@@ -10,24 +10,27 @@ bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)] -> Gradient Tan Brown, 
 
 */
 
+/**
+ * contentData
+ *  contentData is the configuration for the articles accessible via TechInfoPages.
+ */
 export const contentData: Record<string, InfoContent> = {
     vegetable_glue: {
         title: "Vegetable Glue",
         sections: [
             {
                 id: 'intro',
-                type: 'intro-left-right',
+                type: 'intro',
                 title: `VEGETABLE 
                 GLUE`,
-                imageUrl:"/VG_GLUE.png",
-                imagealt: "Vegetable Glue",
-                bgcolor1: "bg-[#0474BC]", /* BG for right side */
-                bgcolor2: "bg-[radial-gradient(circle_at_center,_#466b61,_#2e403b)]", /* Left is inside, right is outside  BG for the left side*/
+                img:"/VG_GLUE.png",
+                imgAlt: "Vegetable Glue",
+                bgColor: "bg-[radial-gradient(circle_at_center,_#466b61,_#2e403b)]", /* Left is inside, right is outside  BG for the left side*/
                 logo: true,
-                textcolor1: "text-[#edc337]", /*Main text colour, for title */
-                textcolor2: "text-[#cbd4d1]", /* Text color for subtitles, e.g. descriptions */
-                textcolor3: "text-[#466b61]", /* Text color for the faint emphasis title */
-                subheading1:`SUSTAINABLE
+                textColor: "text-[#edc337]", /*Main text colour, for title */
+                textColorSub: "text-[#cbd4d1]", /* Text color for subtitles, e.g. descriptions */
+                textColorSub2: "text-[#466b61]", /* Text color for the faint emphasis title */
+                subheading:`SUSTAINABLE
                             HOUSING
                             CONSTRUCTION
                             SOLUTIONS`,
@@ -35,16 +38,15 @@ export const contentData: Record<string, InfoContent> = {
             },
             {
                 id: 'intro_video',
-                type: 'vid_showcase',
+                type: 'video',
                 title: `INTRODUCING the`,
-                subheading1: " VEGETABLE GLUE",
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#3c3c3c,_#1c2424)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /*Main text colour, for title */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#168edb]", /* Emphasis on special words */
+                subheading: " VEGETABLE GLUE",
+                bgColor: "bg-[radial-gradient(circle_at_center,_#3c3c3c,_#1c2424)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /*Main text colour, for title */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#168edb]", /* Emphasis on special words */
                 embed: true,
                 link: "https://www.youtube.com/embed/7tYkK2P40ho?si=UpcLlufCEKFd1ICP",
-                img_num: 1
             }, 
             {
                 id: 'story',
@@ -53,27 +55,36 @@ export const contentData: Record<string, InfoContent> = {
                 content: `At Daylun, our journey towards developing our revolutionary vegetable glue began with a commitment to sustainability, led by our CEO, Arthur Zankowicz. With extensive experience in sustainable product development within the fashion industry, Arthur was committed to creating eco-friendly solutions. While overseeing the production of a sustainable sandal in Asia, he faced a significant challenge: the overwhelming odors from the conventional adhesives used, despite rigorous ventilation. This moment of discomfort sparked a realization that a truly earth-friendly product couldn’t rely on harsh, chemical-laden glues.
 
                             Determined to find a better solution, Arthur spearheaded the development of an organic adhesive. The result was a vegetable-based glue that not only matched the strength of traditional epoxy but also eliminated harmful fumes and chemicals. Embracing this innovation, Daylun has since expanded the application of our vegetable glue beyond fashion accessories to the housing construction industry, offering a sustainable alternative for builders aiming to reduce chemical use and enhance environmental friendliness in their projects`,
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#2e5d71,_#1c3945)]", /* Left is inside, right is outside  BG for the left side*/
-                bgcolor2: "bg-white", /* Adjust other images */
-                textcolor1: "text-white", /*Main text colour, for title */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#0474BC]", /* Emphasis on special words */
-                imageUrl: "/Shoe.png",
-                imagealt: "shoe",
-                imageUrl2: "/Lab.png",
-                imagealt2: "lab",
-                imageUrl3: "/Factory.png",
-                imagealt3: "Factory Interior"
+                bgColor: "bg-[radial-gradient(circle_at_center,_#2e5d71,_#1c3945)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /*Main text colour, for title */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#0474BC]", /* Emphasis on special words */
+                imgBgColor: "bg-white",
+                cols: 2,
+                imgs: [
+                    {
+                        img: "/Shoe.png",
+                        alt: "shoe"
+                    },
+                    {
+                        img: "/Lab.png",
+                        alt: "lab",
+                    },
+                    {
+                        img: "/Factory.png",
+                        alt: "Factory Interior"
+                    }
+                ]
             }, 
             {
                 id: 'applications-1',
                 type: 'applications',
                 title: `PERMEABLE DRIVEWAY`,
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#466b61,_#2e403b)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /*Main text colour, for title */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#168edb]", /* Emphasis on special words */
-                content_arr: [
+                bgColor: "bg-[radial-gradient(circle_at_center,_#466b61,_#2e403b)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /*Main text colour, for title */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#168edb]", /* Emphasis on special words */
+                contentArr: [
                     {
                         id: "pd-1",
                         paragraph: `Daylun brings innovative solutions right to your driveway, utilizing our unique vegetable glue 
@@ -124,37 +135,51 @@ export const contentData: Record<string, InfoContent> = {
                         paragraph: `Choose the Daylun permeable driveway to make your home a model of sustainability and 
                         practicality, prepared for the future while caring for the planet today.`       
                     }
-                ]
+                ],
+                cols: 0,
+                imgs: [],
             }, 
             {
                 id: 'image_showcase',
                 type: 'img_showcase',
                 title: `APPLICATIONS - `,
-                subheading1: "PERMEABLE DRIVEWAY",
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /*Main text colour, for title */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#168edb]", /* Emphasis on special words */
-                imageUrl: "/CitySolutions.png",
-                imagealt: "CITY SOLUTIONS",
-                imageUrl2: "/ParkingLot.png",
-                imagealt2: "PARKING LOT",
-                imageUrl3: "/Durability.png",
-                imagealt3: "DURABILITY",
-                img_num: 3
+                subheading: "PERMEABLE DRIVEWAY",
+                bgColor: "bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /*Main text colour, for title */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#168edb]", /* Emphasis on special words */
+                cols: 3,
+                imgs: [
+                    {
+                        img: "/CitySolutions.png",
+                        alt: "CITY SOLUTIONS",
+                    },
+                    {
+                        img: "/ParkingLot.png",
+                        alt: "PARKING LOT",
+                    },
+                    {
+                        img: "/Durability.png",
+                        alt: "DURABILITY",
+                    }
+                ]
             }, 
             {
                 id: 'applications-2',
                 type: 'applications',
                 title: 'IRRIGATION WATER HARVESTING',
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#3c3c3c,_#1c2424)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /*Main text colour, for title */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#168edb]", /* Emphasis on special words */
-                imageUrl: "/Irrigation.png",
-                imagealt: "Irrigation System",
-                img_num: 1,
-                content_arr: [
+                bgColor: "bg-[radial-gradient(circle_at_center,_#3c3c3c,_#1c2424)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /*Main text colour, for title */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#168edb]", /* Emphasis on special words */
+                cols: 1,
+                imgs: [
+                    {
+                        img: "/Irrigation.png",
+                        alt: "Irrigation System",
+                    }
+                ],
+                contentArr: [
                     {
                         id: "iwh-1",
                         paragraph: `In today’s environmentally conscious world, Daylun's permeable roadway system 
@@ -211,16 +236,20 @@ export const contentData: Record<string, InfoContent> = {
                 id: 'applications-3',
                 type: 'applications',
                 title: 'ARCHITECTURAL',
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#2e5d71,_#1c3945)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /* Main text colour, for text */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#31a0e8]", /* Emphasis on special words */
-                imageUrl: "/Garden.png",
-                imagealt: "Garden",
-                botimageUrl: "/ColourPicker.png",
-                botimagealt: "Colour options",
-                img_num: 1,
-                content_arr: [
+                bgColor: "bg-[radial-gradient(circle_at_center,_#2e5d71,_#1c3945)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /* Main text colour, for text */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#31a0e8]", /* Emphasis on special words */
+                botImg: "/ColourPicker.png",
+                botImgAlt: "Colour options",
+                cols: 1,
+                imgs: [
+                    {
+                        img: "/Garden.png",
+                        alt: "Garden",
+                    },
+                ],
+                contentArr: [
                     {
                         id: "a-1",
                         paragraph: ` Explore the creative possibilities in landscape design with Daylun’s 
@@ -279,18 +308,24 @@ export const contentData: Record<string, InfoContent> = {
                 id: 'applications-4',
                 type: 'applications',
                 title: 'NON-PERMEABLE STRUCTURES',
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /* Main text colour, for text */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#168edb]", /* Emphasis on special words */
-                imageUrl: "/garden-house.jpg",
-                imagealt: "garden house",
-                imageUrl2: "/LakeHouse.png",
-                imagealt2: "Lake House",
-                botimageUrl: "/Specs.png",
-                botimagealt: "Bonding Performance",
-                img_num: 2,
-                content_arr: [
+                bgColor: "bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /* Main text colour, for text */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#168edb]", /* Emphasis on special words */
+                botImg: "/Specs.png",
+                botImgAlt: "Bonding Performance",
+                cols: 1,
+                imgs: [
+                    {
+                        img: "/garden-house.jpg",
+                        alt: "garden house",
+                    },
+                    {
+                        img: "/LakeHouse.png",
+                        alt: "Lake House",
+                    }
+                ],
+                contentArr: [
                     {
                         id: "NPS-1",
                         first: `Revolutionizing Construction with Eco-Friendly Vegetable Glue`,
@@ -328,14 +363,18 @@ export const contentData: Record<string, InfoContent> = {
                 id: 'applications-5',
                 type: 'applications',
                 title: 'NON PERMEABLE STRUCTURES',
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#466b61,_#2e403b)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /* Main text colour, for text */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#168edb]", /* Emphasis on special words */
-                imageUrl: "/how-we-do-it.jpg",
-                imagealt: "Our Blocks",
-                img_num: 1,
-                content_arr: [
+                bgColor: "bg-[radial-gradient(circle_at_center,_#466b61,_#2e403b)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /* Main text colour, for text */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#168edb]", /* Emphasis on special words */
+                cols: 1,
+                imgs: [
+                    {
+                        img: "/how-we-do-it.jpg",
+                        alt: "Our Blocks",
+                    }
+                ],
+                contentArr: [
                     {
                         id: "NPS-01",
                         paragraph: `At Daylun, we are committed to pioneering sustainable solutions in the 
@@ -393,14 +432,18 @@ export const contentData: Record<string, InfoContent> = {
                 id: 'applications-6',
                 type: 'applications',
                 title: 'WATERPROOFING',
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#0874bc,_#0474BC)]", /* Left is inside, right is outside  BG for the left side*/
-                textcolor1: "text-white", /* Main text colour, for text */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#04012A]", /* Emphasis on special words */
-                imageUrl: "/Waterproofing.png",
-                imagealt: "Waterproof",
-                img_num: 1,
-                content_arr: [
+                bgColor: "bg-[radial-gradient(circle_at_center,_#0874bc,_#0474BC)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /* Main text colour, for text */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#04012A]", /* Emphasis on special words */
+                cols: 1,
+                imgs: [
+                    {
+                        img: "/Waterproofing.png",
+                        alt: "Waterproof",
+                    }
+                ],
+                contentArr: [
                     {
                         id: "W-1",
                         paragraph: `Daylun, innovation and sustainability are at the core of our mission. Building 
@@ -444,21 +487,29 @@ export const contentData: Record<string, InfoContent> = {
                 id: 'delivery',
                 type: 'article_gen',
                 title: 'DELIVERY',
-                bgcolor1: "bg-[radial-gradient(circle_at_center,_#3c3c3c,_#1c2424)]", /* Left is inside, right is outside  BG for the left side*/
-                bgcolor2: "bg-white",
-                textcolor1: "text-white", /* Main text colour, for text */
-                textcolor2: "text-[#edc337]", /*For the Titles */
-                textcolor3: "text-[#0474BC]", /* Emphasis on special words */
-                imageUrl: "/GlueMethod1.png",
-                imagealt: "Direct Application Tool",
-                imageUrl2: "/GlueMethod2.png",
-                imagealt2: "Direct Application Tool",
-                imageUrl3: "/GlueMethod3.png",
-                imagealt3: "Mixer",
-                img_num: 3,
-                subheading1: "OF THE",
+                bgColor: "bg-[radial-gradient(circle_at_center,_#3c3c3c,_#1c2424)]", /* Left is inside, right is outside  BG for the left side*/
+                textColorBasic: "text-white", /* Main text colour, for text */
+                textColorEmph: "text-[#edc337]", /*For the Titles */
+                textColorEmph2: "text-[#0474BC]", /* Emphasis on special words */
+                imgBgColor: "bg-white",
+                cols: 2,
+                imgs: [
+                    {
+                        img: "/GlueMethod1.png",
+                        alt: "Direct Application Tool",
+                    },
+                    {
+                        img: "/GlueMethod2.png",
+                        alt: "Direct Application Tool",
+                    }, 
+                    {
+                        img: "/GlueMethod3.png",
+                        alt: "Mixer"
+                    }
+                ],
+                subheading: "OF THE",
                 subheading2: "GLUE",
-                content_arr: [
+                contentArr: [
                     {
                         id: "D-1",
                         paragraph: `Daylun's  innovative vegetable glue is designed with sustainability and 

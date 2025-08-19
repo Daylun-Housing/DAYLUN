@@ -34,7 +34,7 @@ export default function MobileHeader() {
   return (
     <header
       className={cn(
-        `md:hidden bg-white sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200`,
+        `md:hidden bg-white sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200 px-6 py-4  `,
       )}
     >
       {/* DAYLUN LOGO */}
