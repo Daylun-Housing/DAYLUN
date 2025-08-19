@@ -2,6 +2,13 @@ import Image from "next/image";
 import { SectionData, Paragraph } from "./types";
 import clsx from "clsx";
 
+/**
+ * TEMPLATE PARAGRAPH
+ * @param {Paragraph} 
+ * @returns {JSX.Element}
+ * 
+ * Maps a paragraph configuration into text.
+ */
 function TemplatePara({ paragraph }: { paragraph: Paragraph }) {
     return (
         <p>
@@ -11,6 +18,13 @@ function TemplatePara({ paragraph }: { paragraph: Paragraph }) {
     );
 }
 
+/**
+ * Template Section.
+ * @param {string} 
+ * @returns {JSX.Element}
+ * 
+ * Takes a section configuration and maps it into the different 'slides'
+ */
 export default function TemplateSection({ section }: { section: SectionData }) {
     if(section.type === 'intro') {
 

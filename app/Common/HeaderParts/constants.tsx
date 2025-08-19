@@ -18,6 +18,34 @@ export const TOPBAR_ITEMS: TopBarItem[] = [
     title: "ABOUT",
     path: "/About",
     icon: <p className="w-[24px] h-[24px]">ABOUT</p>,
+    submenu: true,
+    subMenuItems: [
+      {
+        title: "ABOUT DAYLUN",
+        path: "/About",
+        icon: <p className="w-[24px] h-[24px]">About Daylun</p>,
+      },
+      {
+        title: "TECHNOLOGIES",
+        path: "/Technologies",
+        icon: <p className="w-[24px] h-[24px]">TECHNOLOGIES</p>,
+      },
+      {
+        title: "FACTORY PROJECT",
+        path: "https://bimalun.com/",
+        icon: <p className="w-[24px] h-[24px]">FACTORIES</p>,
+      },
+      {
+        title: "INVESTORS",
+        path: "/Investors",
+        icon: <p className="w-[24px] h-[24px]">INVESTOR</p>,
+      },
+      {
+        title: "ARTICLES",
+        path: "/Articles",
+        icon: <p className="w-[24px] h-[24px]">ARTICLES</p>,
+      },
+    ]
   },
   {
     title: "HOUSE BUILDER",
@@ -30,23 +58,9 @@ export const TOPBAR_ITEMS: TopBarItem[] = [
     icon: <p className="w-[24px] h-[24px]">STORE</p>,
   },
   {
-    title: "TECHNOLOGIES",
-    path: "/Technologies",
-    icon: <p className="w-[24px] h-[24px]">TECHNOLOGIES</p>,
+    title: "CAREERS",
+    path: "/Careers",
+    icon: <p className="w-[24px] h-[24px]">CAREERS</p>,
   },
-  {
-    title: "FACTORY PROJECT",
-    path: "https://bimalun.com/",
-    icon: <p className="w-[24px] h-[24px]">FACTORIES</p>,
-  },
-  {
-    title: "INVESTORS",
-    path: "/Investors",
-    icon: <p className="w-[24px] h-[24px]">INVESTOR</p>,
-  },
-  {
-    title: "ARTICLES",
-    path: "/Articles",
-    icon: <p className="w-[24px] h-[24px]">ARTICLES</p>,
-  },
+  
 ];

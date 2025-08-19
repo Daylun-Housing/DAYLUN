@@ -9,6 +9,11 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useState} from 'react';
 import Footer from "../Common/Footer";
 
+/**
+ * FALLBACK
+ * @returns {JSX.Element}
+ * FALLBACK in case of error. (e.g. routed to non-existant page.)
+ */
 function Fallback() {
   return (
       <StdLayout>
@@ -20,6 +25,12 @@ function Fallback() {
   )
 }
 
+/**
+ * PAGE
+ * @returns {JSX.Element}
+ * With the given section from route, the page will output the 
+ * page based on the given configuration.  
+ */
 export default function Page() {
 
     const searchParams = useSearchParams();
