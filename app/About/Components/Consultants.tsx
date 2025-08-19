@@ -23,14 +23,14 @@ const team = [
   },
   {
     name: "Michelle Y.",
-    title: "Director of AI, Operations, Marketing",
+    title: "AI Software Developer",
     image: "/MY.jpeg",
     linkedin: "https://www.linkedin.com/in/michellejyao/",
     bio: "Consultant on the integration of AI into operations and marketing, focusing on advanced automation with customer engagement and growth.",
   },
   {
     name: "Armaan R.",
-    title: "Director of Robotics Engineering",
+    title: "Founding Robotics Software Developer",
     image: "/AR.jpeg",
     linkedin: "https://www.linkedin.com/in/armaanrasheed/",
     bio: "Designs and deploys robotics solutions for manufacturing and automation, working towards efficient, scalable production.",
@@ -38,7 +38,7 @@ const team = [
 
   {
     name: "Aidan B.",
-    title: "Director of Engineering",
+    title: "Founding Robotics Software Developer",
     image: "/AB.png",
     linkedin: "https://www.linkedin.com/in/bilon/",
     bio: "Manages technical teams and engineering systems. Ensures all design and development efforts meet structural/functional standards.",
