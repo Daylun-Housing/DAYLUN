@@ -54,7 +54,7 @@ export const TOPBAR_ITEMS: TopBarItem[] = [
   },
   {
     title: "STORE",
-    path: "https://daylun.myshopify.com/",
+    path: "/Store",
     icon: <p className="w-[24px] h-[24px]">STORE</p>,
   },
   {

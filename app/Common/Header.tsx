@@ -82,7 +82,7 @@ export default function Header() {
         </div>
       </div>
         <a href="/HouseBuilder" className="hover:text-[var(--dark-blue)]">HOUSE BUILDER</a>
-        <a href="https://daylun.myshopify.com/" className="hover:text-[var(--dark-blue)]">STORE</a>
+        <a href="/Store" className="hover:text-[var(--dark-blue)]">STORE</a>
         <a href="/Careers" className="hover:text-[var(--dark-blue)]">CAREERS</a>
 
         {/*<form action="" className="relative"> 
