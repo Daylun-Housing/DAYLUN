@@ -14,7 +14,7 @@ export default function SearchGoogle() {
   useEffect(() => {
     if (!document.querySelector("script[src*='cse.google.com/cse.js']")) {
       const script = document.createElement("script");
-      script.src = "https://cse.google.com/cse.js?cx=f73b4d6ad88ce4eb5"; // This our custom search engine. 
+      script.src = "https://cse.google.com/cse.js?cx=92f0fd8eda8b1453f"; // This our custom search engine. 
       script.async = true;
       document.body.appendChild(script);
     }
