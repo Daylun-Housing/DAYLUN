@@ -168,6 +168,7 @@ export type Part = text_box | image_part | list_part | img_list | link_box | mix
 
 /**
  *  HERO TEMPLATE
+ * Configuration for the hero image.
  *      id:         unique id for section
  *      title:      title show for this hero section
  *      img:        background
@@ -190,6 +191,7 @@ export interface Hero_Temp {
 
 /**
  *  ARTICLE TEMPLATE
+ * Configuration for the main part of the article, e.g. paragraphs, images, etc.
  *      id:         unique id for section
  *      title:      title show for this hero section
  *      content:    list of all the Parts of the Article

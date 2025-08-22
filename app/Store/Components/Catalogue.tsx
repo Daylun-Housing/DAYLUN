@@ -3,17 +3,24 @@ import { useState } from "react";
 import Button_Template from "./StoreParts/buttons";
 import { IoFilterOutline } from "react-icons/io5";
 
-function ofType(arr : String[], selected : String[]) {
+/**
+ * ofType
+ * ofType checks if the item types have the selected types. 
+ * @param itemTypes 
+ * @param selectedTypes 
+ * @returns {boolean}
+ */
+function ofType(itemTypes : String[], selectedTypes : String[]) {
   let type = "";
 
-  if(selected.length == 0) {
+  if(selectedTypes.length == 0) {
     return true
   }
 
-  for(type in selected) {
+  for(type in selectedTypes) {
     console.log(type);
 
-    if(arr.includes(selected[type])) {
+    if(itemTypes.includes(selectedTypes[type])) {
       return true;
     }
   }
@@ -22,12 +29,22 @@ function ofType(arr : String[], selected : String[]) {
   
 }
 
+/**
+ * CATALOGUE
+ *  Catalogue is the store catalogue. It allows user to select different options and sort. 
+ * @returns {JSX.Element}
+ */
 export default function Catalogue() {
-    const options = ["adhesive", "drywall", "lumber", "hardware", "house kits", "tools"];
+    const options = ["adhesive", "drywall", "lumber", "hardware", "house kits", "tools"]; // Please add 
     const [selected, setSelected ] = useState<string[]>([])
     const [view, setView] = useState(false);
     const [sort, setSort] = useState<"alphabetical (A-Z)" | "alphabetical (Z-A)" | "price ascending" | "price descending">("alphabetical (A-Z)");
 
+    /**
+     * sortedOptions
+     * This is the sorting function that when a sort is applied, it will 
+     * arrange the items with the compare function. 
+     */
     const sortedOptions = [...contentData].sort((a, b) => {
       if(sort === "alphabetical (A-Z)") {
         return a.title.localeCompare(b.title);
@@ -42,12 +59,21 @@ export default function Catalogue() {
       return 0;
     })
 
+    /**
+     * toggle
+     * Shows the available sorting options. 
+     * @param item 
+     */
     const toggle = (item) => {
       setSelected((prev) =>
         prev.includes(item) ? prev.filter((x) => x !== item) : [...prev, item]
       );
     };
 
+    /**
+     * filterOn()
+     * This function shows the filter options or hides them. 
+     */
     function filterOn() {
       if(view) {
         setView(false);
@@ -64,10 +90,12 @@ export default function Catalogue() {
           
           <div className="relative rounded p-3 w-full text-[var(--txt-bright)] ">
             <div className="w-full flex items-center">
+              {/* Shows or hides the filters. */}
               <button onClick={() => filterOn()} className="flex items-center gap-x-2 ml-[5%] w-20">
                 <IoFilterOutline /> Filter
               </button>
 
+              {/* The filter options available. */}
               <div className="">
                 <label htmlFor="sort" className="mr-2">Sort by: </label>
                 <select id="sort" value={sort} onChange={(e) => setSort(e.target.value as "alphabetical (A-Z)" | "alphabetical (Z-A)" | "price ascending" | "price descending")}
@@ -80,6 +108,7 @@ export default function Catalogue() {
               </div>
             </div>
 
+            {/* The sorting options available. */}
             {view && 
           <div className="left-0 right-0 w-[120px] absolute z-10 bg-[var(--dark-blue)] border border-4 p-2 ml-[5%] rounded-md ">
             { options.map((item) => (
@@ -101,6 +130,7 @@ export default function Catalogue() {
             </div>
           </div>
 
+          {/* Products */}
           <div
             className={`z-0 relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-10 px-20 gap-y-5 justify-center items-center z-5`}
           > 
