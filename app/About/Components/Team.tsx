@@ -37,7 +37,7 @@ const team = [
   },
   {
     name: "Jeff L.",
-    title: "Software Engineering Assistant",
+    title: "Founding Software Developer",
     image: "/JL.jpeg",
     linkedin: "https://www.linkedin.com/in/jeff-luo-a8ba80217/",
     bio: "Lead developer on D2M.",
