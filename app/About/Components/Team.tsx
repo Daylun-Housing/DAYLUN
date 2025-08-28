@@ -37,7 +37,7 @@ const team = [
   },
   {
     name: "Jeff L.",
-    title: "Chief Information Officer",
+    title: "Software Engineering Assistant",
     image: "/JL.jpeg",
     linkedin: "https://www.linkedin.com/in/jeff-luo-a8ba80217/",
     bio: "Lead developer on D2M.",
@@ -68,7 +68,7 @@ const team = [
     title: "Software Engineering Assistant",
     image: "/placeholder.png",
     linkedin: "https://www.linkedin.com/in/shifan-he/",
-    bio: "Software Developer working to develop our D2M House Designer Software, and operate finance and operations.",
+    bio: "Software, finance and operations.",
   },
   {
     name: "Yash P.",
