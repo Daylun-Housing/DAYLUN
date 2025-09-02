@@ -66,7 +66,7 @@ const team = [
   {
     name: "Shifan H.",
     title: "Software Engineering Assistant",
-    image: "/placeholder.png",
+    image: "/SH.png",
     linkedin: "https://www.linkedin.com/in/shifan-he/",
     bio: "Software, finance and operations.",
   },
