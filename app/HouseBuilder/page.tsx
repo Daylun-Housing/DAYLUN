@@ -22,8 +22,8 @@ export default function HouseBuilder() {
       <Soon />
 
       {/* For When the Builder is Ready */}
-      <Video />
-      <Builder />
+      {/* <Video />
+      <Builder /> */}
 
       <Footer />
     </StdLayout>

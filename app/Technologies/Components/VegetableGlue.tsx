@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import { useIsVisible } from "../../JS_Scripts/Visible";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from 'next/link';
 
 /**
@@ -14,6 +14,7 @@ export default function VegetableGlue() {
   const ref_WhatWeDo = useRef(null);
   const is_visible_WWD = useIsVisible(ref_WhatWeDo);
   const router = useRouter();
+  const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
 
   /**
    * INFO PAGES
@@ -65,6 +66,11 @@ export default function VegetableGlue() {
           <button onClick={() => gotoInfoPages('vegetable_glue')} className="bg-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition">
             MORE INFO
           </button>
+          <br />
+          <br />
+          <button onClick={() => setIsPdfModalOpen(true)} className="bg-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 rounded-md scale-[60%] sm:scale-[70%] md:scale-[80%] lg:scale-100 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition">
+            VIEW SLIDE DECK
+          </button>
 
         </div>
       </div>
@@ -93,6 +99,35 @@ export default function VegetableGlue() {
       >
         <div className=" -translate-y-1/2 w-36 h-36 scale-0 md:scale-[60%] xl:scale-100 bg-[var(--dark-blue)] z-20" />
       </div>
+
+      {/* PDF Modal */}
+      {isPdfModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
+          onClick={() => setIsPdfModalOpen(false)}
+        >
+          <div 
+            className="relative w-full h-full max-w-7xl max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsPdfModalOpen(false)}
+              className="absolute top-4 right-4 z-10 bg-[var(--light-blue)] text-[var(--txt-bright)] hover:bg-[var(--hover-med-blue)] rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl transition"
+              aria-label="Close PDF viewer"
+            >
+              ×
+            </button>
+            
+            {/* PDF Viewer */}
+            <iframe
+              src="/Daylun's vegetable glue.pdf"
+              className="w-full h-full"
+              title="Vegetable Glue Slide Deck"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
