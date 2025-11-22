@@ -28,14 +28,13 @@ export default function Video() {
           <div className="text-xs sm:text-sm lg:text-lg gap-y-[2px]">
             <p className="leading-relaxed mb-4">
               We’re excited to announce that our House Builder platform is
-              currently in development — a powerful, all-in-one tool designed to
-              revolutionize how you plan and build your home. Our team, led by
-              Daylun, is working hard on an innovative system that will allow
+              currently in development: a powerful, all-in-one tool designed to
+              revolutionize how you plan and build your home. Our team at Daylun is working hard on an innovative system that will allow
               you to:
             </p>
             <ul className="list-disc pl-5 mb-4">
               <li>Enter your custom house size</li>
-              <li>Instantly generate a 3D model file</li>
+              <li>Generate a 3D model file</li>
               <li>
                 Receive complete engineering drawings for permitting and
                 construction
@@ -51,8 +50,8 @@ export default function Video() {
             </ul>
             Whether you’re an architect, a designer, or planning your dream
             home; this tool will streamline everything from concept to
-            construction. Stay tuned. The future of home building is almost
-            here.
+            construction. The future of home building is almost
+            here. Stay tuned!
           </div>
         </div>
         <div className="md:w-1/2 h-[300px] md:h-full flex justify-center">
