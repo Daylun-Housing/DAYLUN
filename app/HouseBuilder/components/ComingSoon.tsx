@@ -43,7 +43,7 @@ export default function Video() {
                 Get a 3D interior design model to collaborate with your
                 architect or designer
               </li>
-              <li>Automatically place an order in our factory, with</li>
+              <li>Seamlessly place an order in our factory, with</li>
               <li>
                 Real-time pricing based on your selections and specifications
               </li>
