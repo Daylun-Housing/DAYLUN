@@ -66,7 +66,7 @@ export default function HeroImage() {
             
             {/* PDF Viewer */}
             <iframe
-              src="/Daylun Inc Construction and materials co. .pdf"
+              src="/DaylunConstruction&Materials.pdf"
               className="w-full h-full"
               title="Daylun Pitch Deck"
             />

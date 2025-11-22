@@ -121,7 +121,7 @@ export default function VegetableGlue() {
             
             {/* PDF Viewer */}
             <iframe
-              src="/Daylun's vegetable glue.pdf"
+              src="/DaylunVegGlue.pdf"
               className="w-full h-full"
               title="Vegetable Glue Slide Deck"
             />
