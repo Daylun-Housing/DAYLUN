@@ -32,7 +32,7 @@ export default function HeroImage() {
             Technologies
           </p>
           <p className="mt-2 text-sm md:text-lg xl:text-xl text-gray-200">
-            See the innovative technologies our company uses
+            {/* See the innovative technologies our company uses */}
           </p>
           <div className="mt-6">
             <button 
