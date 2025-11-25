@@ -34,14 +34,14 @@ export default function HeroImage() {
           <p className="mt-2 text-sm md:text-lg xl:text-xl text-gray-200">
             {/* See the innovative technologies our company uses */}
           </p>
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <button 
               onClick={() => setIsPdfModalOpen(true)} 
               className="bg-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-6 py-3 rounded-md hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition text-sm md:text-base"
             >
               PITCH DECK
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
