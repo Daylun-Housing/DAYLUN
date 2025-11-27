@@ -217,11 +217,11 @@ export const contentData: Record<string, InfoContent> = {
                     },
                     {
                         id: "iwh-5",
-                        first: "Enhanced Irrigation Capabilities:",
+                        first: "Sustainability and Future Readiness:",
                         first_quality: "font-bold",
-                        paragraph: `With the increasing impact of climate change on 
-                        water resources, our permeable roadway system is more than just an infrastructure 
-                        solution; it is a step towards a sustainable future. This product reduces the ecological 
+                        paragraph: `With the increasing impact of climate change on
+                        water resources, our permeable roadway system is more than just an infrastructure
+                        solution; it is a step towards a sustainable future. This product reduces the ecological
                         footprint of road construction and maintenance, aligning with global sustainability goals.`
                     },
                     {
