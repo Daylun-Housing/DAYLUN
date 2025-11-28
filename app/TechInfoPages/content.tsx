@@ -271,7 +271,7 @@ Determined to find a better solution, Arthur spearheaded the development of an o
             {
                 id: 'applications-4',
                 type: 'applications',
-                title: 'NON-PERMEABLE STRUCTURES',
+                title: 'NON PERMEABLE STRUCTURAL',
                 bgColor: "bg-[radial-gradient(circle_at_center,_#8a7567,_#78655a)]", /* Left is inside, right is outside  BG for the left side*/
                 textColorBasic: "text-white", /* Main text colour, for text */
                 textColorEmph: "text-[#edc337]", /*For the Titles */
@@ -298,11 +298,11 @@ Determined to find a better solution, Arthur spearheaded the development of an o
                     },
                     {
                         id: "NPS-2",
-                        paragraph: `Building on the success of our Vegetable Glue in creating durable walkways and driveways, we've taken a groundbreaking step forward with our latest innovation. Our new formulation of Vegetable Glue is specifically designed for use in rammed earth foundation walls, marking a significant advancement in sustainable construction practices.`
+                        paragraph: `The construction industry often faces criticism for its environmental impact, primarily due to the extensive use of concrete, which is known for its substantial carbon footprint. By integrating our eco-friendly Vegetable Glue into the formation of foundation walls, we effectively address and mitigate this concern. Our specially formulated glue transforms the soil into a nonpermeable, robust material, enhancing the structural integrity of foundation walls with an impressive strength of 20 MPa, and we are on the cusp of increasing this to 25 MPa.`
                     },
                     {
                         id: "NPS-3",
-                        paragraph: `The construction industry often faces criticism for its environmental impact, primarily due to the extensive use of concrete, which is known for its substantial carbon footprint. By integrating our eco-friendly Vegetable Glue into the formation of foundation walls, we effectively address and mitigate this concern. Our specially formulated glue transforms the soil into a nonpermeable, robust material, enhancing the structural integrity of foundation walls with an impressive strength of 20 MPa, and we are on the cusp of increasing this to 25 MPa.`
+                        paragraph: `Building on the success of our Vegetable Glue in creating durable walkways and driveways, we've taken a groundbreaking step forward with our latest innovation. Our new formulation of Vegetable Glue is specifically designed for use in rammed earth foundation walls, marking a significant advancement in sustainable construction practices.`
                     },
                     {
                         id: "NPS-4",
@@ -313,7 +313,7 @@ Determined to find a better solution, Arthur spearheaded the development of an o
             {
                 id: 'applications-5',
                 type: 'applications',
-                title: 'NON PERMEABLE STRUCTURES',
+                title: 'NON PERMEABLE STRUCTURAL',
                 bgColor: "bg-[radial-gradient(circle_at_center,_#466b61,_#2e403b)]", /* Left is inside, right is outside  BG for the left side*/
                 textColorBasic: "text-white", /* Main text colour, for text */
                 textColorEmph: "text-[#edc337]", /*For the Titles */
@@ -332,31 +332,31 @@ Determined to find a better solution, Arthur spearheaded the development of an o
                     },
                     {
                         id: "NPS-02",
+                        paragraph: `Choose Daylun for your construction needs and be part of building a sustainable future. Our new house blocks offer an eco-friendly, practical solution to housing construction that leverages the untapped potential of recycled plastics.`
+                    },
+                    {
+                        id: "NPS-03",
                         first: "Recycling Challenges and Solutions:",
                         first_quality: "font-bold",
                         paragraph: `The traditional recycling process for plastics involves collection, shredding into pellets, and heating—steps that require significant energy and can release harmful gases. At Daylun, we're turning this process on its head. Instead of re-melting, we compress various types of plastic waste directly into molds.`
                     },
                     {
-                        id: "NPS-03",
+                        id: "NPS-04",
                         first: "Innovative Building Material:",
                         first_quality: "font-bold",
                         paragraph: `Utilizing a unique Lego block mold, we combine compressed plastic waste with our specially formulated vegetable glue to create robust house blocks. This method eliminates the emission of harmful off-gases and drastically reduces energy consumption compared to traditional plastic recycling methods.`
                     },
                     {
-                        id: "NPS-04",
+                        id: "NPS-05",
                         first: "Lasting Impact:",
                         first_quality: "font-bold",
                         paragraph: `Our blocks are designed to be as durable as the plastics they incorporate, ensuring that they last for decades without degrading or emitting gases. This makes them an ideal material for sustainable construction, particularly in areas heavily impacted by plastic waste.`
                     },
                     {
-                        id: "NPS-05",
+                        id: "NPS-06",
                         first: "Cost-Effective and Accessible:",
                         first_quality: "font-bold",
                         paragraph: `By utilizing readily available waste materials, we keep the production costs low, making this innovative solution accessible for large-scale implementation in regions needing affordable housing solutions.`
-                    },
-                    {
-                        id: "NPS-06",
-                        paragraph: `Choose Daylun for your construction needs and be part of building a sustainable future. Our new house blocks offer an eco-friendly, practical solution to housing construction that leverages the untapped potential of recycled plastics.`
                     }
                 ]
             },
