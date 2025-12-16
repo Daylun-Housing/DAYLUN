@@ -1,3 +1,6 @@
+// There is some outdated filler here. Trim it.
+
+
 import Image from "next/image";
 
 import { useIsVisible } from "../../JS_Scripts/Visible";
@@ -66,7 +69,7 @@ export default function HeroImage() {
             
             {/* PDF Viewer */}
             <iframe
-              src="/DaylunConstruction&Materials.pdf"
+              src="/DaylunConstruction&Materials2.pdf"
               className="w-full h-full"
               title="Daylun Pitch Deck"
             />
