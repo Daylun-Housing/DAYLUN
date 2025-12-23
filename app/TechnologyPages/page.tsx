@@ -121,19 +121,46 @@ export default function Page() {
 
             {/*Extra Information*/}
             <div className="relative flex flex-col items-center p-10 transition">
-              <h2 className="font-bold text-[clamp(1.2rem,3vw,2.5rem)] text-[var(--light-blue)] py-8">Why We Built This</h2>
-              <button onClick={handleButtonPressImpact} className="text-[clamp(0.75rem,1.5vw,1.25rem)] bg-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition w-[60%] hover:underline">Impact</button>
-              {impact && <p className="bg-[var(--light-blue)] text-[var(--txt-bright)] px-8 py-3 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition w-[60%] whitespace-pre-line text-[clamp(0.75rem,1.2vw,2rem)]">{impact}</p>}
+              <h2 className="font-bold text-[clamp(1.2rem,3vw,2.5rem)] text-[var(--txt-bright)] py-8">Why We Built This</h2>
+              <button
+                onClick={handleButtonPressImpact}
+                className="text-[clamp(0.75rem,1.5vw,1.25rem)] bg-[rgba(255,255,255,0.08)] border border-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 hover:bg-[rgba(255,255,255,0.16)] transition w-[60%] rounded-md"
+              >
+                Impact
+              </button>
+              {impact && (
+                <p className="bg-[rgba(255,255,255,0.08)] border border-[var(--light-blue)] text-[var(--txt-bright)] px-8 py-5 transition w-[60%] whitespace-pre-line text-[clamp(0.75rem,1.2vw,2rem)] rounded-md mt-4">
+                  {impact}
+                </p>
+              )}
 
               <br />
 
-              <button onClick={handleButtonPressWhy} className="text-[clamp(0.75rem,1.5vw,1.25rem)] bg-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition w-[60%] hover:underline">Why</button>
-              {why && <p className="bg-[var(--light-blue)] text-[var(--txt-bright)] px-8 py-3 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition w-[60%] text-[clamp(0.75rem,1.2vw,2rem)]">{why}</p>}
+              <button
+                onClick={handleButtonPressWhy}
+                className="text-[clamp(0.75rem,1.5vw,1.25rem)] bg-[rgba(255,255,255,0.08)] border border-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 hover:bg-[rgba(255,255,255,0.16)] transition w-[60%] rounded-md"
+              >
+                Why
+              </button>
+              {why && (
+                <p className="bg-[rgba(255,255,255,0.08)] border border-[var(--light-blue)] text-[var(--txt-bright)] px-8 py-5 transition w-[60%] text-[clamp(0.75rem,1.2vw,2rem)] rounded-md mt-4">
+                  {why}
+                </p>
+              )}
 
               <br />
 
-              <button onClick={handleButtonPressFeatures} className="text-[clamp(0.75rem,1.5vw,1.25rem)] bg-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition w-[60%] hover:underline">Features</button>
-              {features && <p className="bg-[var(--light-blue)] text-[var(--txt-bright)] px-8 py-3 hover:text-[var(--txt-faint-grey)] hover:bg-[var(--hover-med-blue)] transition w-[60%] whitespace-pre-line text-[clamp(0.75rem,1.2vw,2rem)]">{features}</p>}
+              <button
+                onClick={handleButtonPressFeatures}
+                className="text-[clamp(0.75rem,1.5vw,1.25rem)] bg-[rgba(255,255,255,0.08)] border border-[var(--light-blue)] text-[var(--txt-bright)] font-bold px-8 py-3 hover:bg-[rgba(255,255,255,0.16)] transition w-[60%] rounded-md"
+              >
+                Features
+              </button>
+              {features && (
+                <p className="bg-[rgba(255,255,255,0.08)] border border-[var(--light-blue)] text-[var(--txt-bright)] px-8 py-5 transition w-[60%] whitespace-pre-line text-[clamp(0.75rem,1.2vw,2rem)] rounded-md mt-4">
+                  {features}
+                </p>
+              )}
             </div>
 
             

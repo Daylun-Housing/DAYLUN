@@ -36,6 +36,11 @@ export const TOPBAR_ITEMS: TopBarItem[] = [
         icon: <p className="w-[24px] h-[24px]">FACTORIES</p>,
       },
       {
+        title: "SUSTAINABILITY",
+        path: "/Sustainability",
+        icon: <p className="w-[24px] h-[24px]">SUSTAINABILITY</p>,
+      },
+      {
         title: "INVESTORS",
         path: "/Investors",
         icon: <p className="w-[24px] h-[24px]">INVESTOR</p>,
@@ -53,9 +58,9 @@ export const TOPBAR_ITEMS: TopBarItem[] = [
     icon: <p className="w-[24px] h-[24px]">HOUSE BUILDER</p>,
   },
   {
-    title: "STORE",
-    path: "https://daylun.myshopify.com/",
-    icon: <p className="w-[24px] h-[24px]">STORE</p>,
+    title: "INVENTORY",
+    path: "/Inventory",
+    icon: <p className="w-[24px] h-[24px]">INVENTORY</p>,
   },
   {
     title: "CAREERS",

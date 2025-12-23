@@ -25,10 +25,10 @@ export default function LookingForMaterials() {
             <h3>
               Visit our
               <a
-                href="https://daylun.myshopify.com/"
+                href="/Inventory"
                 className="m-1 hover:text-[var(--dark-blue)] font-bold"
               >
-                store
+                inventory
               </a>
               to view our catalogue.
             </h3>

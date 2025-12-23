@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube, FaShopify, FaEnvelope } from "react-icons/fa6";
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube, FaEnvelope } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import dynamic from "next/dynamic";
 
@@ -69,6 +69,11 @@ export default function Header() {
               </a>
             </li>
             <li>
+              <a href="/Sustainability" className="block px-4 py-2 hover:bg-[var(--faint-blue)] hover:text-[var(--dark-blue)]" role="menuitem">
+                Sustainability
+              </a>
+            </li>
+            <li>
               <a href="/Articles" className="block px-4 py-2 hover:bg-[var(--faint-blue)] hover:text-[var(--dark-blue)]" role="menuitem">
                 Articles
               </a>
@@ -82,7 +87,7 @@ export default function Header() {
         </div>
       </div>
         <a href="/HouseBuilder" className="hover:text-[var(--dark-blue)]">HOUSE BUILDER</a>
-        <a href="https://daylun.myshopify.com/" className="hover:text-[var(--dark-blue)]">STORE</a>
+        <a href="/Inventory" className="hover:text-[var(--dark-blue)]">INVENTORY</a>
         <a href="/Careers" className="hover:text-[var(--dark-blue)]">CAREERS</a>
 
         {/*<form action="" className="relative"> 
@@ -100,11 +105,10 @@ export default function Header() {
       </nav>
 
       {/* Right: Social Icons */}
-      <div className="grid grid-cols-3 gap-2 sm:gap-4 text-[var(--light-blue)] text-[10px] md:text-md lg:text-xl">
+      <div className="flex items-center gap-3 sm:gap-4 text-[var(--light-blue)] text-[10px] md:text-md lg:text-xl">
         <a href="https://www.instagram.com/daylun_build/"><FaInstagram className="hover:text-[var(--dark-blue)]" /></a>
         <a href="https://www.facebook.com/profile.php?id=100077522941552"><FaFacebookF className="hover:text-[var(--dark-blue)]" /></a>
         <a href="https://www.youtube.com/@Daylun_Build"><FaYoutube className="hover:text-[var(--dark-blue)]" /></a>
-        <a href="https://daylun.myshopify.com/"><FaShopify className="hover:text-[var(--dark-blue)]" /></a>
         <a href="mailto:info@daylun.ca"><FaEnvelope className="hover:text-[var(--dark-blue)]" /></a>
         <a href="https://www.linkedin.com/company/daylun/?originalSubdomain=ca"><FaLinkedinIn className="hover:text-[var(--dark-blue)]" /></a>
       </div>
